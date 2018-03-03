@@ -70,7 +70,8 @@ L'adhérence d'un intervalle $I$ se note $\cl I$.
 \end{definition}
 
 En combinant les lignes du tableau ci-dessus,
-on peut définir chacune des limites:
+on peut déduire chacune des définitions de limites.
+Donnons quelques exemples importants de telles définitions.
 
 \begin{definition}
     [Limite réelle en un réel]
@@ -83,6 +84,32 @@ on peut définir chacune des limites:
     \end{align}
     si \emph{$f(x)$ est aussi proche que l'on veut de $L$}
     lorsque \emph{$x$ est suffisament proche de $a$ avec $x \in I$}.
+\end{definition}
+
+\begin{definition}
+    [Limite infinie en un réel par la droite]
+
+    Soit $f$ une fonction définie sur un intervalle $I$.
+    Soit $a \in \cl {I \cap [a, +\infty[}$.
+    On écrit
+    \begin{align}
+        \lim_{x \to a^+} f(x) = +\infty
+    \end{align}
+    si \emph{$f(x)$ est aussi proche que l'on veut de $L$}
+    lorsque \emph{$x$ est suffisament proche de $a$ avec $x \in I$ et $x \geq a$}.
+\end{definition}
+
+\begin{definition}
+    [Limite réelle à l'infini]
+
+    Soit $f$ une fonction définie sur un intervalle $I$.
+    Soit $L \in \R$ et supposons que $\sup I \notin \R$.
+    On écrit
+    \begin{align}
+        \lim_{x \to +\infty} f(x) = L
+    \end{align}
+    si \emph{$f(x)$ est aussi proche que l'on veut de $L$}
+    lorsque \emph{$x$ est suffisament grand avec $x \in I$}.
 \end{definition}
 
 \section{Propriétés des limites}
