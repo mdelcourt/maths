@@ -35,4 +35,55 @@ Plus simplement,
 la notion de limite est fondamentale
 car elle constitue le pilier sur lequel repose le \emph{calcul différentiel et intégral}.
 
+\section{Définitions de limites}
+
+Les bornes d'un intervalle $I$ sont appelées \emph{infimum} et \emph{suprémum} respectivement.
+Par exemple, l'infimum de $]3, 5]$ est $3$ alors que le suprémum est $5$.
+L'infimum et le suprémum d'un intervalle $I$ sont notés respectivement $\inf I$ et $\sup I$.
+
+L'\emph{adhérence} d'un intervalle est l'intervalle qui inclut en plus les bornes réelles.
+Par exemple, l'adhérence de $]3, 5[$ est $[3, 5]$.
+L'adhérence d'un intervalle $I$ se note $\cl I$.
+
+\begin{tabular}
+    {l p{3.2cm}  l p{5cm}}
+    \toprule
+    Maths & se lit\dots & Hypothèses & En français \\ \midrule
+    $\lim f(x) = L$ & $f(x)$ tend vers $L$ & $L \in \R$ & $f(x)$ est aussi proche que l'on veut de $L$ \\
+    $\lim f(x) = +\infty$ & $f(x)$ tend vers $+\infty$ & & $f(x)$ devient aussi grand que l'on veut\\
+    $\lim f(x) = -\infty$ & $f(x)$ tend vers $-\infty$ & & $f(x)$ devient aussi petit que l'on veut\\
+    $x \to a$ & $x$ tend vers $a$ & $a \in \cl {I}$ & $x$ est suffisament proche de $a$, avec $x \in I$\\
+    $x \to a^+$ & $x$ tend vers $a$ par la droite & $a \in \cl {I \cap [a, +\infty[}$ & $x$ est suffisament proche de $a$ avec $x \in I$ et $x \geq a$\\
+    $x \to a^-$ & $x$ tend vers $a$ par la gauche & $a \in \cl {I \cap ]-\infty, a]}$ & $x$ est suffisament proche de $a$ avec $x \in I$ et $x \leq a$\\
+    $x \to +\infty$ & $x$ tend vers $+\infty$ & $\sup I \notin \R$ & $x$ est suffisament grand avec $x \in I$\\
+    $x \to -\infty$ & $x$ tend vers $-\infty$ & $\inf I \notin \R$ & $x$ est suffisament petit avec $x \in I$\\
+    \bottomrule
+\end{tabular}
+
+\begin{definition}
+    [Limite]
+
+    Soit $f$ une fonction définie sur un intervalle $I$.
+    \textbf{[Hypothèses supplémentaires]}.
+    On écrit \textbf{[limite à définir]}
+    si \textbf{[comportement des ordonnées]}
+    lorsque \textbf{[comportement des abscisses]}.
+\end{definition}
+
+En combinant les lignes du tableau ci-dessus,
+on peut définir chacune des limites:
+
+\begin{definition}
+    [Limite réelle en un réel]
+
+    Soit $f$ une fonction définie sur un intervalle $I$.
+    Soit $a \in \cl I$ et $L \in \R$.
+    On écrit
+    \begin{align}
+        \lim_{x \to a} f(x) = L
+    \end{align}
+    si \emph{$f(x)$ est aussi proche que l'on veut de $L$}
+    lorsque \emph{$x$ est suffisament proche de $a$ avec $x \in I$}.
+\end{definition}
+
 \end{document}
