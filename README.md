@@ -16,9 +16,9 @@ qu'une somme importante soit déboursée pour leur lecture,
 et leur distribution est strictement contrôlée.
 
 Plusieurs projets ont émergé pour contrer cette tendance:
-mentionnons par exemple [https://gnu.org](GNU) en informatique,
-l'encyclopédie libre [https://wikipedia.org](Wikipédia),
-et les mouvements [https://creativecommons.org](Creative Commons)
+mentionnons par exemple [GNU](https://gnu.org) en informatique,
+l'encyclopédie libre [Wikipédia](https://wikipedia.org),
+et les mouvements [Creative Commons](https://creativecommons.org)
 et Open-Access.
 Tous ont en commun la promotion de l'accessibilité et du partage de la connaissance,
 tout en reconnaissant le droit aux auteurs le droit d'exiger
