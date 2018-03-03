@@ -38,6 +38,6 @@ et que la redistribution ait lieu **sous les mêmes termes**.
 
 Les objectifs de ce projet sont les suivants:
 
-- Écrire des notes pour les enseignants en mathématiques sous une license libre (Creative Commons Attribution-Share Alike);
+- Écrire des notes pour les enseignants en mathématiques sous une licence libre (Creative Commons Attribution-Share Alike);
 - Rendre les mathématiques plus concrètes et plus proches de ses applications;
 - Encourager la collaboration entre enseignants.
