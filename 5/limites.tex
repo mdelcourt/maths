@@ -86,4 +86,71 @@ on peut définir chacune des limites:
     lorsque \emph{$x$ est suffisament proche de $a$ avec $x \in I$}.
 \end{definition}
 
+\section{Propriétés des limites}
+
+\begin{proposition}
+    [Unicité des limites]
+
+    Soit $f$ une fonction définie sur un intervalle $I$.
+    Si la limite de $f$ en $a \in \cl I$ existe,
+    alors elle est \emph{unique}.
+\end{proposition}
+
+La limite d'une somme est la somme des limites
+lorsque cette dernière a un sens.
+
+\begin{proposition}
+    [Limite d'une somme]
+
+    Soient deux fonctions $f$ et $g$ définies sur un intervalle $I$.
+    Si les limites de $f$ et $g$ existent en $a \in \cl I$,
+    alors $f + g$ a une limite en $a$ et
+    \begin{align}
+        \lim_{x \to a} (f + g)(x) = \lim_{x \to a} f(x) + \lim_{x \to a} g(x).
+    \end{align}
+\end{proposition}
+
+La limite d'un produit est le produit des limites
+lorsque ce dernier a un sens.
+
+\begin{proposition}
+    [Limite d'un produit]
+
+    Soient deux fonctions $f$ et $g$ définies sur un intervalle $I$.
+    Si les limites de $f$ et $g$ existent en $a \in \cl I$,
+    alors $f g$ a une limite en $a$ et
+    \begin{align}
+        \lim_{x \to a} (fg)(x) = \left(\lim_{x \to a} f(x)\right) \left(\lim_{x \to a} g(x)\right).
+    \end{align}
+\end{proposition}
+
+La limite d'un quotient est le quotient des limites
+lorsque ce dernier a un sens.
+
+\begin{proposition}
+    [Limite d'un quotient]
+
+    Soient deux fonctions $f$ et $g$ définies sur un intervalle $I$.
+    Si les limites de $f$ et $g$ existent en $a \in \cl I$,
+    et si la limite de $g$ en $a$ est non nulle,
+    alors $f / g$ a une limite en $a$ et
+    \begin{align}
+        \lim_{x \to a} \left(\frac f g\right)(x) = \frac {\lim_{x \to a} f(x)} {\lim_{x \to a} g(x)}.
+    \end{align}
+\end{proposition}
+
+\begin{proposition}
+    [Limite d'une fonction composée]
+
+    Soit $f$ et $g$ deux fonctions définies sur les intervalles $g(I)$ et $I$ respectivement.
+    Soient $a \in \cl I$ et $b \in \cl {g(I)}$.
+
+    Si la limite de $g$ en $a$ existe et vaut $b$,
+    et si la limite de $f$ en $b$ existe,
+    alors
+    \begin{align}
+        \lim_{x \to a} f(g(x)) = \lim_{x \to b} f(x).
+    \end{align}
+\end{proposition}
+
 \end{document}
