@@ -1,0 +1,22 @@
+= Enseignement
+
+Cette page contient la dernière version PDF des notes de mathématiques tapées par:
+
+- David Bertrand, enseignant au Lycée Maria-Assumpta;
+- Khoi Nguyen, enseignant au Collège du Christ-Roi.
+
+Notre objectif est de créer un cours complet sous licence
+https://creativecommons.org/licenses/by-sa/2.0/be/[Creative Commons BY-SA].
+Plus d'information sur la page
+https://github.com/khoi-nguyen/maths[Github] de notre projet.
+
+Nous sommes à la recherche de contributeurs.
+Veuillez me contacter si vous êtes intéressés.
+
+== icon:download[] Téléchargements
+
+[.table]
+[cols="4,1,1"]
+|===
+| Nom du fichier | PDF | Source
+
