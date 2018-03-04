@@ -21,7 +21,7 @@ l'encyclopédie libre [Wikipédia](https://wikipedia.org),
 et les mouvements [Creative Commons](https://creativecommons.org)
 et Open-Access.
 Tous ont en commun la promotion de l'accessibilité et du partage de la connaissance,
-tout en reconnaissant le droit aux auteurs le droit d'exiger
+tout en reconnaissant aux auteurs le droit d'exiger
 que leur travail soit crédité dans les travaux dérivés.
 
 L'enseignement fait face aujourd'hui à des problèmes similaires.
