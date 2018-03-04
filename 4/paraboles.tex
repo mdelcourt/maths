@@ -1,0 +1,74 @@
+\documentclass[main.tex]{subfiles}
+\begin{document}
+
+\chapter{Paraboles}
+
+\section{Introduction}
+
+La fonction carrée est l'une des fonctions les plus importantes en mathématiques.
+Le théorème de Pythagore implique qu'elle fait partie intégrante de notre façon de mesurer les longueurs,
+et les lois de Newton montrent qu'elle décrit (approximativement) la trajectoire d'objets sous l'action du champ gravitationnel terrestre.
+
+\begin{proposition}
+    Soit $a, b, c \in \R$ avec $a \neq 0$.
+    La fonction définie par
+    \begin{align}
+        f(x) \defeq ax^2 + bx + c,
+        \quad x \in \R
+        \label{quadratic_equation}
+    \end{align}
+    peut être réécrite comme une manipulation graphique de la fonction carré.
+    Plus précisément, on a
+    \begin{align}
+        f(x) = a{\left(x + \frac b {2 a}\right)}^2 - {\frac \Delta {4a}}
+    \end{align}
+    où $\Delta \defeq b^2 - 4ac$.
+\end{proposition}
+\begin{proof}
+    Mettons en évidence $a$ dans~\eqref{quadratic_equation}:
+    \begin{align}
+        f(x) = \hspace{5cm}
+    \end{align}
+
+    En utilisant le fait que
+    \begin{align}
+        {\left(x + \frac b {2 a}\right)}^2 = \hspace{4cm},
+    \end{align}
+    on en déduit que
+    \begin{align}
+        f(x) &= a\left[{\left(x + \frac b {2a}\right)}^2 - \hspace{3cm}\right]\\
+             &=
+    \end{align}
+\end{proof}
+
+\begin{corollary}
+    Soit $a, b, c \in \R$ avec $a \neq 0$.
+    L'extremum de la fonction définie par
+    \begin{align}
+        f(x) \defeq ax^2 + bx + c,
+        \quad x \in \R
+    \end{align}
+    se trouve en $(-b/2a, -\Delta/4a)$.
+\end{corollary}
+\begin{proof}
+    L'extremum de la fonction carré est $(0, 0)$.
+    Puisque
+    \begin{align}
+        f(x) = a\left(x + \frac b {2a}\right)^2 - \frac \Delta {4a},
+    \end{align}
+    il nous suffit de suivre la trace de l'extremum au fil des transformations graphiques.
+
+    \begin{center}
+        \begin{tabular}{l{10cm} l{10cm}}
+            \toprule
+            Transformation & Position de l'extremum\\
+            \midrule
+            translation en abscisse de \hspace{3cm} & \\
+            dilatation en ordonnée de facteur \hspace {1cm} & \\
+            translation en ordonnée de \hspace{3cm} & \\
+            \bottomrule
+        \end{tabular}
+    \end{center}
+\end{proof}
+
+\end{document}
