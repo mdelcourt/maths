@@ -179,6 +179,11 @@ lorsque ce dernier a un sens.
     \end{align}
 \end{proposition}
 
+\section{Calcul de limites}
+
+Dans les cas les plus simples,
+le calcul de limites en un réel consiste simplement à \emph{évaluer} la fonction en ce réel.
+
 \section{Asymptotes}
 
 \begin{definition}
@@ -198,5 +203,19 @@ lorsque ce dernier a un sens.
     alors la droite d'équation $y = b$ est
     une \emph{asymptote horizontale} de $f$.
 \end{definition}
+
+\begin{figure}
+    \centering
+    \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.5cm,y=0.5cm]
+        \draw [color=cqcqcq,xstep=0.5cm,ystep=0.5cm] (-3.,-4.) grid (9.,8.);
+        \draw[->,color=black] (-3.,0.) -- (9.,0.);
+        \draw[->,color=black] (0.,-4.) -- (0.,8.);
+        \clip(-3.,-4.) rectangle (9.,8.);
+        \draw[line width=1.2pt,smooth,samples=200,domain=-3.0:9.0] plot(\x,{1.0/((\x)-3.0)+2.0});
+        \draw [line width=1.2pt] (3.,-4.) -- (3.,8.);
+        \draw [line width=1.2pt,domain=-3.:9.] plot(\x,{(--2.-0.*\x)/1.});
+    \end{tikzpicture}
+    \caption{Graphe de $f(x) = \frac 1 {x - 3} + 2$ et ses asymptotes.}
+\end{figure}
 
 \end{document}
