@@ -51,11 +51,11 @@ L'adhérence d'un intervalle $I$ se note $\cl I$.
     $\lim f(x) = L$ & $f(x)$ tend vers $L$ & $L \in \R$ & $f(x)$ est aussi proche que l'on veut de $L$ \\
     $\lim f(x) = +\infty$ & $f(x)$ tend vers $+\infty$ & & $f(x)$ devient aussi grand que l'on veut\\
     $\lim f(x) = -\infty$ & $f(x)$ tend vers $-\infty$ & & $f(x)$ devient aussi petit que l'on veut\\
-    $x \to a$ & $x$ tend vers $a$ & $a \in \cl {I}$ & $x$ est suffisament proche de $a$, avec $x \in I$\\
-    $x \to a^+$ & $x$ tend vers $a$ par la droite & $a \in \cl {I \cap [a, +\infty[}$ & $x$ est suffisament proche de $a$ avec $x \in I$ et $x \geq a$\\
-    $x \to a^-$ & $x$ tend vers $a$ par la gauche & $a \in \cl {I \cap ]-\infty, a]}$ & $x$ est suffisament proche de $a$ avec $x \in I$ et $x \leq a$\\
-    $x \to +\infty$ & $x$ tend vers $+\infty$ & $\sup I \notin \R$ & $x$ est suffisament grand avec $x \in I$\\
-    $x \to -\infty$ & $x$ tend vers $-\infty$ & $\inf I \notin \R$ & $x$ est suffisament petit avec $x \in I$\\
+    $x \to a$ & $x$ tend vers $a$ & $a \in \cl {I}$ & $x$ est suffisament proche de $a$, avec $x \in \dom f$\\
+    $x \to a^+$ & $x$ tend vers $a$ par la droite & $a \in \cl {I \cap [a, +\infty[}$ & $x$ est suffisament proche de $a$ avec $x \in \dom f$ et $x \geq a$\\
+    $x \to a^-$ & $x$ tend vers $a$ par la gauche & $a \in \cl {I \cap ]-\infty, a]}$ & $x$ est suffisament proche de $a$ avec $x \in \dom f$ et $x \leq a$\\
+    $x \to +\infty$ & $x$ tend vers $+\infty$ & $\sup I \notin \R$ & $x$ est suffisament grand avec $x \in \dom f$\\
+    $x \to -\infty$ & $x$ tend vers $-\infty$ & $\inf I \notin \R$ & $x$ est suffisament petit avec $x \in \dom f$\\
     \bottomrule
 \end{tabular}
 
@@ -83,7 +83,7 @@ Donnons quelques exemples importants de telles définitions.
         \lim_{x \to a} f(x) = L
     \end{align}
     si \emph{$f(x)$ est aussi proche que l'on veut de $L$}
-    lorsque \emph{$x$ est suffisament proche de $a$ avec $x \in I$}.
+    lorsque \emph{$x$ est suffisament proche de $a$ avec $x \in \dom f$}.
 \end{definition}
 
 \begin{figure}
@@ -115,7 +115,7 @@ Donnons quelques exemples importants de telles définitions.
         \lim_{x \to a^+} f(x) = +\infty
     \end{align}
     si \emph{$f(x)$ devient aussi grand que l'on veut}
-    lorsque \emph{$x$ est suffisament proche de $a$ avec $x \in I$ et $x \geq a$}.
+    lorsque \emph{$x$ est suffisament proche de $a$ avec $x \in \dom f$ et $x \geq a$}.
 \end{definition}
 
 \begin{definition}
@@ -128,7 +128,7 @@ Donnons quelques exemples importants de telles définitions.
         \lim_{x \to +\infty} f(x) = L
     \end{align}
     si \emph{$f(x)$ est aussi proche que l'on veut de $L$}
-    lorsque \emph{$x$ est suffisament grand avec $x \in I$}.
+    lorsque \emph{$x$ est suffisament grand avec $x \in \dom f$}.
 \end{definition}
 
 \section{Propriétés des limites}
