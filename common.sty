@@ -21,8 +21,9 @@
 }{
     \end{tikzpicture}
 }
+\newcommand{\drawpoint}[2][white]{\draw [fill=#1] (#2) circle (2.5pt);}
 \newcommand{\drawline}{\draw[line width=1.2pt]}
-\newcommand{\plotfunction}[2]{\draw[line width=1.2pt,smooth,samples=200,domain=#1] plot (\x, {#2});}
+\newcommand{\plotfunction}[3][200]{\draw[line width=1.2pt,smooth,samples=#1,domain=#2] plot (\x, {#3});}
 
 % Environments
 \newtheorem{theorem}{Théorème}[section]
