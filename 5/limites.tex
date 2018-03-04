@@ -86,6 +86,24 @@ Donnons quelques exemples importants de telles définitions.
     lorsque \emph{$x$ est suffisament proche de $a$ avec $x \in I$}.
 \end{definition}
 
+\begin{figure}
+    \centering
+    \begin{plot}{0.25}{-10}{-10}{10}{10}
+        \plotfunction{-10:-1}{\x}
+        \plotfunction{-0.99:10}{1/(\x + 1) + 1}
+        \drawpoint{-1, -1}
+        \drawpoint{1, 1.5}
+    \end{plot}
+    \caption{Graphe d'une fonction $f$}
+    Les limites intéressantes sont les suivantes:
+    \begin{align}
+        &\lim_{x \to -\infty} f(x) = -\infty, \quad
+        &\lim_{x \to +\infty} f(x) = 1,\\
+        &\lim_{x \to -1^-} f(x) = -1, \quad
+        &\lim_{x \to -1^+} f(x) = +\infty.
+    \end{align}
+\end{figure}
+
 \begin{definition}
     [Limite infinie en un réel par la droite]
 
