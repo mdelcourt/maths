@@ -71,4 +71,28 @@ et les lois de Newton montrent qu'elle décrit (approximativement) la trajectoir
     \end{center}
 \end{proof}
 
+\begin{figure}
+    \centering
+    \begin{plot}{0.25}{-4}{-1}{6}{16}
+        \plotfunction{-4:6} {3*(\x)^2 - 6*\x + 7}
+    \end{plot}
+    \caption{Graphe de $f(x) = 3x^2 - 6x + 7$.}
+    \label{figure:parabola_ex}
+\end{figure}
+
+\begin{example}
+    Soit la fonction
+    \begin{align}
+        f(x) \defeq 3x^2 - 6x + 7,
+        \quad x \in \R.
+    \end{align}
+    Le coordonnées du minimum sont
+    \begin{align}
+        \left(\frac {-(-6)} {2 . 3}, -\frac {(-6)^2 - 4.3.7} {4.3}\right)
+        = (1, 4).
+    \end{align}
+    On vérifie que c'est bien le cas en regardant le graphe de la fonction
+    (voir Figure~\ref{figure:parabola_ex}).
+\end{example}
+
 \end{document}
