@@ -187,11 +187,13 @@ lorsque ce dernier a un sens.
 \begin{proposition}
     [Limite d'une fonction composée]
 
-    Soit $f$ et $g$ deux fonctions définies sur les intervalles $g(I)$ et $I$ respectivement.
-    Soient $a \in \cl I$ et $b \in \cl {g(I)}$.
-
-    Si la limite de $g$ en $a$ existe et vaut $b$,
-    et si la limite de $f$ en $b$ existe,
+    Soit $f$ et $g$ deux fonctions définies sur les intervalles $J$ et $I$ respectivement.
+    Soient $a \in \cl I$ et $b \in \cl {J}$.
+    Si
+    \begin{align}
+        \lim_{x \to a} g(x) = b
+    \end{align}
+    et si $f$ a une limite en $b$,
     alors
     \begin{align}
         \lim_{x \to a} f(g(x)) = \lim_{x \to b} f(x).
