@@ -1,18 +1,20 @@
-# Manifeste
+## Manifeste
 
 Les mathématiques telles que présentées aujourd'hui dans l'enseignement secondaire
 sont le fruit d'une collaboration remarquable entre scientifiques à travers les siècles.
-Le libre accès aux travaux de leurs prédécesseurs ont permis aux mathématiciens
-d'ajouter leur pierre à l'édifice,
+Le libre accès aux travaux de leurs prédécesseurs a permis aux mathématiciens
+d'ajouter leur pierre à l'édifice
 et de transformer les mathématiques en ce qu'elles sont devenues aujourd'hui:
-un langage universel qui explique les phénomènes naturels,
-modélise les situations les plus complexes dans un éventail de domaines extrêmement large,
-et qui est utilisé pour faire des prédictions.
+un langage universel qui modélise les phénomènes naturels,
+décrit les situations les plus complexes dans un éventail de domaines extrêmement large
+et est utilisé pour faire des prédictions. 
+Ces prédictions sont rendues possibles par l'univocité du langage mathématique et par son inspiration empirique.
 
 Avec l'arrivée de l'Internet et des technologies numériques,
-il aurait été naturel d'imaginer que la collaboration est désormais plus facile que jamais.
-Cependant, force est de constater qu'un nombre important d'articles scientifiques requiert
-qu'une somme importante soit déboursée pour leur lecture,
+il a été naturel d'imaginer que la collaboration entre chercheurs, enseignants et élèves
+soit désormais plus facile que jamais.
+Cependant, force est de constater qu'un grand nombre d'articles scientifiques requiert
+qu'une somme importante soit déboursée pour leur lecture
 et leur distribution est strictement contrôlée.
 
 Plusieurs projets ont émergé pour contrer cette tendance:
@@ -25,14 +27,14 @@ tout en reconnaissant aux auteurs le droit d'exiger
 que leur travail soit crédité dans les travaux dérivés.
 
 L'enseignement fait face aujourd'hui à des problèmes similaires.
-Élèves et enseignants sont bien conscients des désavantages liés à l'utilisation de manuels scolaires:
+Élèves et enseignants sont bien conscients des inconvénients liés à l'utilisation de manuels scolaires:
 ils sont coûteux,
-deviennent obsolètes à chaque changement de programme,
+deviennent obsolètes à chaque changement de programme
 et lient les mains de l'enseignant lorsque celui-ci veut présenter un point de matière différemment.
 La réponse usuelle à cette problématique est d'écrire des notes qu'il ou elle distribue à ses élèves.
 Nous souhaitons aller plus loin:
 nous voulons encourager la collaboration entre enseignants
-en autorisant la modification et la redistribution.
+en autorisant la modification et la redistribution des notes.
 La seule chose que nous attendons en retour est que notre travail soit crédité,
 et que la redistribution ait lieu **sous les mêmes termes**.
 
