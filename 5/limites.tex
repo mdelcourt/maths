@@ -138,12 +138,21 @@ Donnons quelques exemples importants de telles définitions.
 
 \section{Propriétés des limites}
 
+La propriété suivante justifie le fait que nous pouvons parler de \emph{la} limite en un \emph{point adhérent}.
+Elle est fausse sans l'hypothèse d'adhérence.
+
 \begin{proposition}
     [Unicité des limites]
 
-    Soit $f$ une fonction définie sur un intervalle $I$.
-    Si la limite de $f$ en $a \in \cl I$ existe,
-    alors elle est \emph{unique}.
+    \subsubsection{Hypothèses}
+    \begin{itemize}
+        \item $f$ est une fonction;
+        \item $a \in \cl {\dom f}$;
+        \item $f$ admet $L_1, L_2 \in \R$ comme limite en $a$.
+    \end{itemize}
+
+    \subsubsection{Thèse}
+    On a $L_1 = L_2$.
 \end{proposition}
 
 La limite d'une somme est la somme des limites
