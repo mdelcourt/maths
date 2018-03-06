@@ -207,13 +207,22 @@ lorsque ce dernier a un sens.
 \begin{proposition}
     [Limite d'un quotient]
 
-    Soient deux fonctions $f$ et $g$ définies sur un intervalle $I$.
-    Si les limites de $f$ et $g$ existent en $a \in \cl I$,
-    et si la limite de $g$ en $a$ est non nulle,
-    alors $f / g$ a une limite en $a$ et
-    \begin{align}
-        \lim_{x \to a} \left(\frac f g\right)(x) = \frac {\lim_{x \to a} f(x)} {\lim_{x \to a} g(x)}.
-    \end{align}
+    \subsubsection{Hypothèses}
+    \begin{itemize}
+        \item $f, g$ deux fonctions;
+        \item $a \in \cl {\dom f/g}$;
+        \item $f$ et $g$ ont une limite en $a$;
+        \item $\lim_{x \to a} g(x) \neq 0$.
+    \end{itemize}
+
+    \subsubsection{Thèses}
+    \begin{itemize}
+        \item $f/g$ a une limite en $a$;
+        \item On a
+            \begin{align}
+                \lim_{x \to a} \left(\frac f g\right)(x) = \frac {\lim_{x \to a} f(x)} {\lim_{x \to a} g(x)}.
+            \end{align}
+    \end{itemize}
 \end{proposition}
 
 \begin{proposition}
