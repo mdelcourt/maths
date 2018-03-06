@@ -152,12 +152,21 @@ lorsque cette dernière a un sens.
 \begin{proposition}
     [Limite d'une somme]
 
-    Soient deux fonctions $f$ et $g$ définies sur un intervalle $I$.
-    Si les limites de $f$ et $g$ existent en $a \in \cl I$,
-    alors $f + g$ a une limite en $a$ et
-    \begin{align}
-        \lim_{x \to a} (f + g)(x) = \lim_{x \to a} f(x) + \lim_{x \to a} g(x).
-    \end{align}
+    \subsubsection{Hypothèses}
+    \begin{itemize}
+        \item $f, g$ deux fonctions;
+        \item $a \in \cl {\dom f \cap \dom g}$;
+        \item $f$ et $g$ ont une limite en $a$.
+    \end{itemize}
+
+    \subsubsection{Thèses}
+    \begin{itemize}
+        \item $f + g$ a une limite en $a$;
+        \item On a
+            \begin{align}
+                \lim_{x \to a} (f + g)(x) = \lim_{x \to a} f(x) + \lim_{x \to a} g(x).
+            \end{align}
+    \end{itemize}
 \end{proposition}
 
 La limite d'un produit est le produit des limites
