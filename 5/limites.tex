@@ -228,17 +228,22 @@ lorsque ce dernier a un sens.
 \begin{proposition}
     [Limite d'une fonction composée]
 
-    Soit $f$ et $g$ deux fonctions définies sur les intervalles $J$ et $I$ respectivement.
-    Soient $a \in \cl I$ et $b \in \cl {J}$.
-    Si
-    \begin{align}
-        \lim_{x \to a} g(x) = b
-    \end{align}
-    et si $f$ a une limite en $b$,
-    alors
-    \begin{align}
-        \lim_{x \to a} f(g(x)) = \lim_{x \to b} f(x).
-    \end{align}
+    \subsubsection{Hypothèses}
+    \begin{itemize}
+        \item $g, f$ deux fonctions;
+        \item $a \in \cl {\dom f}$;
+        \item $\lim_{x \to a} f(x)$ existe et appartient à $\cl {\dom g}$;
+        \item $g$ a une limite en $b \defeq \lim_{x \to a} f(x)$;
+    \end{itemize}
+
+    \subsubsection{Thèses}
+    \begin{itemize}
+        \item $g \circ f$ a une limite en $a$;
+        \item On a
+            \begin{align}
+                \lim_{x \to a} (g \circ f)(x) = \lim_{x \to b} g(x).
+            \end{align}
+    \end{itemize}
 \end{proposition}
 
 \section{Calcul de limites}
