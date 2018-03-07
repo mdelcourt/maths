@@ -2,6 +2,7 @@
 \usepackage{amsmath, amsthm, amssymb, amsfonts}
 \usepackage{arsclassica}
 \usepackage[francais]{babel}
+\usepackage[tikz]{bclogo}
 \usepackage{booktabs} % Tables
 \usepackage{cclicenses}
 \usepackage[colorlinks]{hyperref}
@@ -35,6 +36,7 @@
 \newenvironment{proposition}[1][]{\begin{tcbproposition}{#1}{}}{\end{tcbproposition}}
 \newtcbtheorem[number within=section]{tcbexample}{Exemple}{colback=white!5,colframe=grey!35!black,fonttitle=\bfseries}{th}
 \newenvironment{example}[1][]{\begin{tcbexample}{#1}{}}{\end{tcbexample}}
+\newenvironment{howto}[1][]{\begin{bclogo}[logo=\bcoutil]{#1}}{\end{bclogo}}
 
 % Operators
 \DeclareMathOperator{\dom}{dom}
