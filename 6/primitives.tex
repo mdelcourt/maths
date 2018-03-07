@@ -1,0 +1,47 @@
+\documentclass[main.tex]{subfiles}
+\begin{document}
+\chapter{Primitives}
+
+\section{Synthèse}
+
+\begin{proposition}
+    [Changement de variable]
+
+    \subsubsection{Hypothèses}
+    \begin{itemize}
+        \item $u$ est dérivable sur un intervalle $I$.
+        \item $f$ est primitivable sur $u(I)$.
+    \end{itemize}
+
+    \subsubsection{Thèses}
+    \begin{itemize}
+        \item $(f \circ u) u'$ est primitivable sur $I$;
+        \item On a
+            \begin{align}
+                \int f(u(x)) u'(x) \dd x
+                = F(u(x)) + C,
+            \end{align}
+            où $F$ est une primitive de $f$ sur $u(I)$.
+    \end{itemize}
+\end{proposition}
+\begin{proof}
+    Soit $F$ une primitive de $f$.
+    En partant du membre de droite,
+    et en se souvenant que la primitive est l'\emph{inverse} de la dérivée,
+    on a
+    \begin{align}
+        F(u(x)) + C
+        &= \int (F(u(x)) + C)' \dd x\\
+        &= \int F'(u(x)) u'(x) \dd x,
+    \end{align}
+    où la deuxième ligne a été obtenue par la dérivée de fonction composée.
+
+    Puisque $F$ est une primitive de $f$, $F' = f$ et donc
+    \begin{align}
+        F(u(x)) + C
+        &= \int f(u(x)) u'(x) \dd x,
+    \end{align}
+    ce qui était bien le résultat à prouver.
+\end{proof}
+
+\end{document}
