@@ -4,7 +4,7 @@ DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd $DIR
 
 # Build all .tex files in their respective folders
-find -name '*.tex' | xargs latexmk -cd
+find -name '*.tex' | grep -v contributors | xargs latexmk -cd
 
 # Send all PDF files to the website
 find -name '*.pdf' -print0 | rsync -av --files-from=- --from0 ./ khoi@nguyen.me.uk:~/www/files
