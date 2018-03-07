@@ -12,13 +12,13 @@ Pour ne citer qu'elle,
 la vitesse est introduite comme étant le quotient d'une mesure de distance et d'un intervalle de temps.
 Le cas du mouvement rectiligne uniforme mis à part,
 cette définition n'est malheureusement qu'approximative
-mais produit des résultats de plus en plus précis
+bien qu'elle produise des résultats de plus en plus précis
 au fur et à mesure que l'intervalle de temps considéré devient petit.
 Dans cette optique,
 il serait tentant de calculer le quotient sur un intervalle de temps nul,
-mais nous sortons malheureusement du domaine de définition d'un quotient.
+mais nous sortons malheureusement du domaine de définition du quotient.
 
-Les scientifiques rencontrent un problème similaire pour de nombreuses quantités physiques.
+Ce problème se manifeste pour de nombreuses quantités physiques.
 Pour les traiter toutes simultanément,
 nous identifions le problème abstrait sous-jacent suivant:
 peut-on généraliser la notion d'image d'un point en dehors du domaine?
@@ -28,7 +28,7 @@ Les applications des limites sont si vastes
 qu'elles ont profondément marqué les mathématiques.
 Ainsi, les nombres réels ont été définis pour assurer l'existence des limites.
 Par ailleurs,
-une volonté d'obtenir des limites plus esthétiques a forcé la disparition du degré comme mesure d'angle privilégiée au profit du radian.
+une volonté d'obtenir des limites plus esthétiques a conduit à la disparition du degré comme mesure d'angle privilégiée au profit du radian.
 
 Plus simplement,
 la notion de limite est fondamentale
@@ -36,28 +36,33 @@ car elle constitue le pilier sur lequel repose le \emph{calcul différentiel et 
 
 \section{Définitions de limites}
 
-Les bornes d'un intervalle $I$ non vide sont appelées \emph{infimum} et \emph{suprémum} respectivement.
-Par exemple, l'infimum de $]3, 5]$ est $3$ alors que le suprémum est $5$.
-L'infimum et le suprémum d'un intervalle $I$ sont notés respectivement $\inf I$ et $\sup I$.
+Les bornes d'un intervalle $I$ non vide sont appelées \emph{infimum} et \emph{supremum} de cet interval,
+et notées respectivement $\inf I$ et $\sup I$.
+Par exemple, l'infimum de $]3, 5]$ est $3$ et le supremum est $5$.
 
-L'\emph{adhérence} d'un intervalle est l'intervalle qui inclut en plus les bornes réelles.
+L'\emph{adhérence} d'un intervalle est l'intervalle fermé de même bornes.
 Par exemple, l'adhérence de $]3, 5[$ est $[3, 5]$.
 L'adhérence d'un intervalle $I$ se note $\cl I$.
 
-\begin{tabular}
-    {l p{3.2cm}  l p{5cm}}
-    \toprule
-    Maths & se lit\dots & Hypothèses & En français \\ \midrule
-    $\lim f(x) = L$ & $f(x)$ tend vers $L$ & $L \in \R$ & $f(x)$ est aussi proche que l'on veut de $L$ \\
-    $\lim f(x) = +\infty$ & $f(x)$ tend vers $+\infty$ & & $f(x)$ devient aussi grand que l'on veut\\
-    $\lim f(x) = -\infty$ & $f(x)$ tend vers $-\infty$ & & $f(x)$ devient aussi petit que l'on veut\\
-    $x \to a$ & $x$ tend vers $a$ & $a \in \cl {I}$ & $x$ est suffisament proche de $a$, avec $x \in \dom f$\\
-    $x \to a^+$ & $x$ tend vers $a$ par la droite & $a \in \cl {I \cap [a, +\infty[}$ & $x$ est suffisament proche de $a$ avec $x \in \dom f$ et $x \geq a$\\
-    $x \to a^-$ & $x$ tend vers $a$ par la gauche & $a \in \cl {I \cap ]-\infty, a]}$ & $x$ est suffisament proche de $a$ avec $x \in \dom f$ et $x \leq a$\\
-    $x \to +\infty$ & $x$ tend vers $+\infty$ & $\sup I \notin \R$ & $x$ est suffisament grand avec $x \in \dom f$\\
-    $x \to -\infty$ & $x$ tend vers $-\infty$ & $\inf I \notin \R$ & $x$ est suffisament petit avec $x \in \dom f$\\
-    \bottomrule
-\end{tabular}
+\begin{sidewaystable}
+    \centering
+    \caption{Tableau récapitulatif pour les définitions de limite}
+    \label{table:limit_definition}
+    \begin{tabular}
+        {l l l l}
+        \toprule
+        Maths & se lit\dots & Hypothèses & En français \\ \midrule
+        $\lim f(x) = L$ & $f(x)$ tend vers $L$ & $L \in \R$ & $f(x)$ est aussi proche que l'on veut de $L$ \\
+        $\lim f(x) = +\infty$ & $f(x)$ tend vers $+\infty$ & & $f(x)$ devient aussi grand que l'on veut\\
+        $\lim f(x) = -\infty$ & $f(x)$ tend vers $-\infty$ & & $f(x)$ devient aussi petit que l'on veut\\
+        $x \to a$ & $x$ tend vers $a$ & $a \in \cl {I}$ & $x$ est suffisament proche de $a$, avec $x \in \dom f$\\
+        $x \to a^+$ & $x$ tend vers $a$ par la droite & $a \in \cl {I \cap [a, +\infty[}$ & $x$ est suffisament proche de $a$ avec $x \in \dom f$ et $x \geq a$\\
+        $x \to a^-$ & $x$ tend vers $a$ par la gauche & $a \in \cl {I \cap ]-\infty, a]}$ & $x$ est suffisament proche de $a$ avec $x \in \dom f$ et $x \leq a$\\
+        $x \to +\infty$ & $x$ tend vers $+\infty$ & $\sup I \notin \R$ & $x$ est suffisament grand avec $x \in \dom f$\\
+        $x \to -\infty$ & $x$ tend vers $-\infty$ & $\inf I \notin \R$ & $x$ est suffisament petit avec $x \in \dom f$\\
+        \bottomrule
+    \end{tabular}
+\end{sidewaystable}
 
 \begin{definition}
     [Limite]
@@ -69,7 +74,7 @@ L'adhérence d'un intervalle $I$ se note $\cl I$.
     lorsque \textbf{[comportement des abscisses]}.
 \end{definition}
 
-En combinant les lignes du tableau ci-dessus,
+En combinant les lignes du tableau~\ref{table:limit_definition},
 on peut déduire chacune des définitions de limites.
 Donnons quelques exemples importants de telles définitions.
 
@@ -133,26 +138,44 @@ Donnons quelques exemples importants de telles définitions.
 
 \section{Propriétés des limites}
 
+La propriété suivante justifie le fait que nous pouvons parler de \emph{la} limite en un \emph{point adhérent}.
+Elle est fausse sans l'hypothèse d'adhérence.
+
 \begin{proposition}
     [Unicité des limites]
 
-    Soit $f$ une fonction définie sur un intervalle $I$.
-    Si la limite de $f$ en $a \in \cl I$ existe,
-    alors elle est \emph{unique}.
+    \subsubsection{Hypothèses}
+    \begin{itemize}
+        \item $f$ est une fonction;
+        \item $a \in \cl {\dom f}$;
+        \item $f$ admet $L_1, L_2 \in \R$ comme limite en $a$.
+    \end{itemize}
+
+    \subsubsection{Thèse}
+    On a $L_1 = L_2$.
 \end{proposition}
 
 La limite d'une somme est la somme des limites
 lorsque cette dernière a un sens.
 
 \begin{proposition}
-    [Limite d'une somme]
+    [Limite d'une somme ou différence]
 
-    Soient deux fonctions $f$ et $g$ définies sur un intervalle $I$.
-    Si les limites de $f$ et $g$ existent en $a \in \cl I$,
-    alors $f + g$ a une limite en $a$ et
-    \begin{align}
-        \lim_{x \to a} (f + g)(x) = \lim_{x \to a} f(x) + \lim_{x \to a} g(x).
-    \end{align}
+    \subsubsection{Hypothèses}
+    \begin{itemize}
+        \item $f, g$ deux fonctions;
+        \item $a \in \cl {\dom f \cap \dom g}$;
+        \item $f$ et $g$ ont une limite en $a$.
+    \end{itemize}
+
+    \subsubsection{Thèses}
+    \begin{itemize}
+        \item $f \pm g$ a une limite en $a$;
+        \item On a
+            \begin{align}
+                \lim_{x \to a} (f \pm g)(x) = \lim_{x \to a} f(x) \pm \lim_{x \to a} g(x).
+            \end{align}
+    \end{itemize}
 \end{proposition}
 
 La limite d'un produit est le produit des limites
@@ -161,12 +184,21 @@ lorsque ce dernier a un sens.
 \begin{proposition}
     [Limite d'un produit]
 
-    Soient deux fonctions $f$ et $g$ définies sur un intervalle $I$.
-    Si les limites de $f$ et $g$ existent en $a \in \cl I$,
-    alors $f g$ a une limite en $a$ et
-    \begin{align}
-        \lim_{x \to a} (fg)(x) = \left(\lim_{x \to a} f(x)\right) \left(\lim_{x \to a} g(x)\right).
-    \end{align}
+    \subsubsection{Hypothèses}
+    \begin{itemize}
+        \item $f, g$ deux fonctions;
+        \item $a \in \cl {\dom f \cap \dom g}$;
+        \item $f$ et $g$ ont une limite en $a$.
+    \end{itemize}
+
+    \subsubsection{Thèses}
+    \begin{itemize}
+        \item $f g$ a une limite en $a$;
+        \item On a
+        \begin{align}
+            \lim_{x \to a} (fg)(x) = \left(\lim_{x \to a} f(x)\right) \left(\lim_{x \to a} g(x)\right).
+        \end{align}
+    \end{itemize}
 \end{proposition}
 
 La limite d'un quotient est le quotient des limites
@@ -175,35 +207,59 @@ lorsque ce dernier a un sens.
 \begin{proposition}
     [Limite d'un quotient]
 
-    Soient deux fonctions $f$ et $g$ définies sur un intervalle $I$.
-    Si les limites de $f$ et $g$ existent en $a \in \cl I$,
-    et si la limite de $g$ en $a$ est non nulle,
-    alors $f / g$ a une limite en $a$ et
-    \begin{align}
-        \lim_{x \to a} \left(\frac f g\right)(x) = \frac {\lim_{x \to a} f(x)} {\lim_{x \to a} g(x)}.
-    \end{align}
+    \subsubsection{Hypothèses}
+    \begin{itemize}
+        \item $f, g$ deux fonctions;
+        \item $a \in \cl {\dom f/g}$;
+        \item $f$ et $g$ ont une limite en $a$;
+        \item $\lim_{x \to a} g(x) \neq 0$.
+    \end{itemize}
+
+    \subsubsection{Thèses}
+    \begin{itemize}
+        \item $f/g$ a une limite en $a$;
+        \item On a
+            \begin{align}
+                \lim_{x \to a} \left(\frac f g\right)(x) = \frac {\lim_{x \to a} f(x)} {\lim_{x \to a} g(x)}.
+            \end{align}
+    \end{itemize}
 \end{proposition}
 
 \begin{proposition}
     [Limite d'une fonction composée]
 
-    Soit $f$ et $g$ deux fonctions définies sur les intervalles $J$ et $I$ respectivement.
-    Soient $a \in \cl I$ et $b \in \cl {J}$.
-    Si
-    \begin{align}
-        \lim_{x \to a} g(x) = b
-    \end{align}
-    et si $f$ a une limite en $b$,
-    alors
-    \begin{align}
-        \lim_{x \to a} f(g(x)) = \lim_{x \to b} f(x).
-    \end{align}
+    \subsubsection{Hypothèses}
+    \begin{itemize}
+        \item $g, f$ deux fonctions;
+        \item $a \in \cl {\dom f}$;
+        \item $\lim_{x \to a} f(x)$ existe et appartient à $\cl {\dom g}$;
+        \item $g$ a une limite en $b \defeq \lim_{x \to a} f(x)$;
+    \end{itemize}
+
+    \subsubsection{Thèses}
+    \begin{itemize}
+        \item $g \circ f$ a une limite en $a$;
+        \item On a
+            \begin{align}
+                \lim_{x \to a} (g \circ f)(x) = \lim_{x \to b} g(x).
+            \end{align}
+    \end{itemize}
 \end{proposition}
 
 \section{Calcul de limites}
 
 Dans les cas les plus simples,
 le calcul de limites en un réel consiste simplement à \emph{évaluer} la fonction en ce réel.
+
+\begin{proposition}
+    Pour les \emph{fonctions usuelles} $f$,
+    la limite en un point du domaine est simplement une évaluation.
+    Autrement dit,
+    si $a \in \dom f$, alors
+    \begin{align}
+        \lim_{x \to a} f(x) = f(a).
+    \end{align}
+\end{proposition}
 
 \section{Asymptotes}
 

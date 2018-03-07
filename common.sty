@@ -1,11 +1,14 @@
 % Packages in alphabetic order
 \usepackage{amsmath, amsthm, amssymb, amsfonts}
+\usepackage{arsclassica}
 \usepackage[francais]{babel}
 \usepackage{booktabs} % Tables
 \usepackage{cclicenses}
 \usepackage[colorlinks]{hyperref}
 \usepackage[utf8]{inputenc}
+\usepackage{rotating}
 \usepackage{subfiles}
+\usepackage[theorems]{tcolorbox}
 
 % Tiks graphs
 \usepackage{pgf,tikz}
@@ -26,18 +29,20 @@
 \newcommand{\plotfunction}[3][200]{\draw[line width=1.2pt,smooth,samples=#1,domain=#2] plot (\x, {#3});}
 
 % Environments
-\newtheorem{theorem}{Théorème}[section]
-\newtheorem{definition}[theorem]{Définition}
-\newtheorem{proposition}[theorem]{Proposition}
-\newtheorem{corollary}[theorem]{Corollaire}
-\newtheorem{example}[theorem]{Exemple}
+\newtcbtheorem[number within=section]{tcbdefinition}{Définition}{colback=blue!5,colframe=blue!35!black,fonttitle=\bfseries}{th}
+\newenvironment{definition}[1][]{\begin{tcbdefinition}{#1}{}}{\end{tcbdefinition}}
+\newtcbtheorem[number within=section]{tcbproposition}{Proposition}{colback=green!5,colframe=green!35!black,fonttitle=\bfseries}{th}
+\newenvironment{proposition}[1][]{\begin{tcbproposition}{#1}{}}{\end{tcbproposition}}
+\newtcbtheorem[number within=section]{tcbexample}{Exemple}{colback=white!5,colframe=grey!35!black,fonttitle=\bfseries}{th}
+\newenvironment{example}[1][]{\begin{tcbexample}{#1}{}}{\end{tcbexample}}
 
 % Operators
 \DeclareMathOperator{\dom}{dom}
 
 % Macros
 \newcommand{\cl}[1]{\overline{#1}}
-\newcommand{\defeq}{\mathrel{\overset{\makebox[0pt]{\mbox{\normalfont\tiny\sffamily def}}}{=}}}
+\newcommand{\dd}{\,\mathrm{d}}
+\newcommand{\defeq}{\mathrel{\overset{\makebox[0pt]{\mbox{\normalfont\tiny\sffamily déf}}}{=}}}
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\R}{\mathbb{R}}
 
@@ -57,3 +62,14 @@
         \href{https://nguyen.me.uk/teaching.html}{https://nguyen.me.uk/teaching.html}
     }
 }
+
+% Footer
+\deftripstyle{pagestyle}
+  {\pagemark}
+  {}
+  {\titleinfo}
+  {\pagemark}
+  {}
+  {D.~Bertrand, K.~Nguyen, sous licence CC BY-SA.}
+
+\pagestyle{pagestyle}
