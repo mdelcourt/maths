@@ -28,6 +28,11 @@
 \newcommand{\drawpoint}[2][white]{\draw [fill=#1] (#2) circle (2.5pt);}
 \newcommand{\drawline}{\draw[line width=1.2pt]}
 \newcommand{\plotfunction}[3][200]{\draw[line width=1.2pt,smooth,samples=#1,domain=#2] plot (\x, {#3});}
+\newcommand{\intervalleoo}[2]{\mathopen{]}#1\,;#2\mathclose{[}}
+\newcommand{\intervalleff}[2]{\mathopen{[}#1\,;#2\mathclose{]}}
+\newcommand{\intervalleof}[2]{\mathopen{]}#1\,;#2\mathclose{]}}
+\newcommand{\intervallefo}[2]{\mathopen{[}#1\,;#2\mathclose{[}}
+\newcommand{\intervalle}[2]{\mathopen{(}#1\,;#2\mathclose{)}}
 
 % Environments
 \newtcbtheorem[number within=section]{tcbdefinition}{Définition}{colback=blue!5,colframe=blue!35!black,fonttitle=\bfseries}{th}
