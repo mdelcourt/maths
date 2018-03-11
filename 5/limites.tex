@@ -38,10 +38,10 @@ car elle constitue le pilier sur lequel repose le \emph{calcul différentiel et 
 
 Les bornes d'un intervalle $I$ non vide sont appelées \emph{infimum} et \emph{supremum} de cet intervalle,
 et notées respectivement $\inf I$ et $\sup I$.
-Par exemple, l'infimum de $]3, 5]$ est $3$ et le supremum est $5$.
+Par exemple, l'infimum de $\ocinterval{3}{5}$ est $3$ et le supremum est $5$.
 
 L'\emph{adhérence} d'un intervalle est l'intervalle fermé de même bornes.
-Par exemple, l'adhérence de $]3, 5[$ est $[3, 5]$.
+Par exemple, l'adhérence de $\oointerval{3}{5}$ est $\ccinterval{3}{5}$.
 L'adhérence d'un intervalle $I$ se note $\cl I$.
 
 \begin{sidewaystable}
@@ -56,8 +56,8 @@ L'adhérence d'un intervalle $I$ se note $\cl I$.
         $\lim f(x) = +\infty$ & $f(x)$ tend vers $+\infty$ & & $f(x)$ devient aussi grand que l'on veut\\
         $\lim f(x) = -\infty$ & $f(x)$ tend vers $-\infty$ & & $f(x)$ devient aussi petit que l'on veut\\
         $x \to a$ & $x$ tend vers $a$ & $a \in \cl {I}$ & $x$ est suffisament proche de $a$, avec $x \in \dom f$\\
-        $x \to a^+$ & $x$ tend vers $a$ par la droite & $a \in \cl {I \cap [a, +\infty[}$ & $x$ est suffisament proche de $a$ avec $x \in \dom f$ et $x \geq a$\\
-        $x \to a^-$ & $x$ tend vers $a$ par la gauche & $a \in \cl {I \cap ]-\infty, a]}$ & $x$ est suffisament proche de $a$ avec $x \in \dom f$ et $x \leq a$\\
+        $x \to a^+$ & $x$ tend vers $a$ par la droite & $a \in \cl {I \cap \cointerval{a}{+\infty}}$ & $x$ est suffisament proche de $a$ avec $x \in \dom f$ et $x \geq a$\\
+        $x \to a^-$ & $x$ tend vers $a$ par la gauche & $a \in \cl {I \cap \ocinterval{-\infty}{a}$ & $x$ est suffisament proche de $a$ avec $x \in \dom f$ et $x \leq a$\\
         $x \to +\infty$ & $x$ tend vers $+\infty$ & $\sup I \notin \R$ & $x$ est suffisament grand avec $x \in \dom f$\\
         $x \to -\infty$ & $x$ tend vers $-\infty$ & $\inf I \notin \R$ & $x$ est suffisament petit avec $x \in \dom f$\\
         \bottomrule
@@ -114,7 +114,7 @@ Donnons quelques exemples importants de telles définitions.
     [Limite infinie en un réel par la droite]
 
     Soit $f$ une fonction définie sur un intervalle $I$.
-    Soit $a \in \cl {I \cap [a, +\infty[}$.
+    Soit $a \in \cl {I \cap \cointerval{a}{+\infty}}$.
     On écrit
     \begin{align}
         \lim_{x \to a^+} f(x) = +\infty
