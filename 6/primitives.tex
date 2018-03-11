@@ -5,6 +5,46 @@
 \section{Synthèse}
 
 \begin{proposition}
+    [Primitivation par parties]
+
+    \subsubsection{Hypothèses}
+    \begin{itemize}
+        \item $f, g$ deux fonctions dérivables sur un intervalle $I$.
+    \end{itemize}
+
+    \subsubsection{Thèses}
+    \begin{itemize}
+        \item $f' g$ est primitivable sur $I$ ssi $f g'$ est primitivable sur $I$.
+        \item On a alors
+            \begin{align}
+                \int f'(x) g(x) \dd x
+                = f(x) g(x)
+                - \int f(x) g'(x) \dd x.
+            \end{align}
+    \end{itemize}
+\end{proposition}
+\begin{proof}
+    Partons de la formule de dérivation d'un produit
+    \begin{align*}
+        (f g)'(x) = f'(x) g(x) + f(x) g'(x).
+    \end{align*}
+
+    En réorganisant,
+    nous obtenons
+    \begin{align*}
+        f'(x) g(x) = (f g)'(x) - f(x) g'(x).
+    \end{align*}
+
+    En primitivant les deux côtés,
+    on obtient
+    \begin{align}
+        \int f'(x) g(x) \dd x
+        &= \int (f g)'(x) \dd x - \int f(x) g'(x) \dd x\\
+        &= f(x) g(x) - \int f(x) g'(x) \dd x.
+    \end{align}
+\end{proof}
+
+\begin{proposition}
     [Changement de variable]
 
     \subsubsection{Hypothèses}
