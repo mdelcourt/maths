@@ -333,6 +333,63 @@ En utilisant les propositions de la sections précédente, on obtient les résul
     \end{itemize}
 \end{proposition}
 
+On se rend compte que presque toutes les fonction auxquelles on pourrait penser sont continues en tout point de leur domaine de définition.
+Calculer les limites de ces fonctions en ces points est donc aisé.
+
+\begin{example}
+ 
+    Calculons $\lim_{x \to 2} x^2 + |x|.$ Les fonctions $g(x) = x^2$ et $h(x) = |x|$ sont continues en $2$ car ce sont des fonction usuelles.
+    La fonction $f(x) = g(x) + h(x) = x^2 + |x|$ est continue en $2$ car c'est une somme de fonctions continues en $2$.
+    On a donc $\lim_{x \to 2} x^2 + |x| = 2^2 + |2| = 6$.
+\end{example}
+
+\begin{example}
+ 
+    Calculons $\lim_{x \to 0} \sin x - \cos x.$ Les fonctions $g(x) = \sin x$ et $h(x) = \cos x$ sont continues en $0$ car ce sont des fonction usuelles.
+    La fonction $f(x) = g(x) - h(x) = \sin x - \cos x$ est continue en $0$ car c'est une différence de fonctions continues en $0$.
+    On a donc $\lim_{x \to 0} \sin x - \cos x = \sin 0 - \cos 0 = -1$.
+\end{example}
+
+\begin{example}
+ 
+    Calculons $\lim_{x \to 8} 4 \sqrt[3]{x}$ Les fonctions $g(x) = 4$ et $h(x) = \sqrt[3]{x}$ sont continues en $8$ car ce sont des fonction usuelles.
+    La fonction $f(x) = g(x)h(x) = 4 \sqrt[3]{x}$ est continue en $8$ car c'est un produit de fonctions continues en $8$.
+    On a donc $\lim_{x \to } 4 \sqrt[3]{x} = 4 \sqrt[3]{8} = 8$.
+\end{example}
+
+\begin{example}
+ 
+    Calculons $\lim_{x \to 4} 1/|x|$ Les fonctions $g(x) = 1$ et $h(x) = |x|$ sont continues en $4$ car ce sont des fonction usuelles.
+    La fonction $f(x) = g(x)/h(x) = 1/|x|$ est continue en $4$ car c'est un quotient de fonctions continues en $4$
+    et car $h(4) = |4| = 4 \ne 0$.
+    On a donc $\lim_{x \to } 1/|x| = 1/|4| = 1/4$.
+\end{example}
+
+\begin{example}
+ 
+    Calculons $\lim_{x \to 9} \sqrt{x^3}$. La fonction $g(x) = x^3$ est continue en $9$ car c'est une fonction usuelle. 
+    La fonction $h(x) = \sqrt{x}$ est continue en $g(9) = 729$.
+    La fonction $f(x) = \sqrt{x^3} = h(g(x)$ est donc continue en $9$.
+    On a donc $\lim_{x \to 9} \sqrt{x^3} = \sqrt{9^3} = 27$.
+\end{example}
+
+De manière générale, on peut admettre la proposition suivante :
+
+\begin{proposition}
+
+    \subsubsection{Hypothèses}
+    \begin{itemize}
+        \item $f, g$ deux fonctions polynômes;
+        \item $a \in \R$;
+        \item $g(a) \ne 0$.
+    \end{itemize}
+
+    \subsubsection{Thèses}
+    \begin{itemize}
+        \item $\lim_{x \to a} f(x)/g(x) = f(a)/g(a)$.
+    \end{itemize}
+\end{proposition}
+
 \section{Asymptotes}
 
 \begin{definition}
