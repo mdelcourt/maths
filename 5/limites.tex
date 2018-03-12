@@ -36,14 +36,6 @@ car elle constitue le pilier sur lequel repose le \emph{calcul différentiel et 
 
 \section{Définitions de limites}
 
-Les bornes d'un intervalle $I$ non vide sont appelées \emph{infimum} et \emph{supremum} de cet intervalle,
-et notées respectivement $\inf I$ et $\sup I$.
-Par exemple, l'infimum de $\ocinterval{3}{5}$ est $3$ et le supremum est $5$.
-
-L'\emph{adhérence} d'un intervalle est l'intervalle fermé de même bornes.
-Par exemple, l'adhérence de $\oointerval{3}{5}$ est $\ccinterval{3}{5}$.
-L'adhérence d'un intervalle $I$ se note $\cl I$.
-
 \begin{sidewaystable}
     \centering
     \caption{Tableau récapitulatif pour les définitions de limite}
@@ -55,11 +47,11 @@ L'adhérence d'un intervalle $I$ se note $\cl I$.
         $\lim f(x) = L$ & $f(x)$ tend vers $L$ & $L \in \R$ & $f(x)$ est aussi proche que l'on veut de $L$ \\
         $\lim f(x) = +\infty$ & $f(x)$ tend vers $+\infty$ & & $f(x)$ devient supérieur à n'importe quel nombre réel positif\\
         $\lim f(x) = -\infty$ & $f(x)$ tend vers $-\infty$ & & $f(x)$ devient inférieur à n'importe quel nombre réel négatif\\
-        $x \to a$ & $x$ tend vers $a$ & $a \in \cl {I}$ & $x$ est suffisament proche de $a$, avec $x \in \dom f$\\
-        $x \to a^+$ & $x$ tend vers $a$ par la droite & $a \in \cl {I \cap \cointerval{a}{+\infty}}$ & $x$ est suffisament proche de $a$ avec $x \in \dom f$ et $x \geq a$\\
-        $x \to a^-$ & $x$ tend vers $a$ par la gauche & $a \in \cl {I \cap \ocinterval{-\infty}{a}}$ & $x$ est suffisament proche de $a$ avec $x \in \dom f$ et $x \leq a$\\
-        $x \to +\infty$ & $x$ tend vers $+\infty$ & $\sup I \notin \R$ & $x$ est supérieur à un nombre réel positif suffisament grand avec $x \in \dom f$\\
-        $x \to -\infty$ & $x$ tend vers $-\infty$ & $\inf I \notin \R$ & $x$ est inférieur à un nombre réel négatif suffisament grand en valeur absolue avec $x \in \dom f$\\
+        $x \to a$ & $x$ tend vers $a$ & $a \in \cl {\dom f}$ & $x$ est suffisament proche de $a$, avec $x \in \dom f$\\
+        $x \to a^+$ & $x$ tend vers $a$ par la droite & $a \in \cl {\dom f \cap \cointerval{a}{+\infty}}$ & $x$ est suffisament proche de $a$ avec $x \in \dom f$ et $x \geq a$\\
+        $x \to a^-$ & $x$ tend vers $a$ par la gauche & $a \in \cl {\dom f \cap \ocinterval{-\infty}{a}}$ & $x$ est suffisament proche de $a$ avec $x \in \dom f$ et $x \leq a$\\
+        $x \to +\infty$ & $x$ tend vers $+\infty$ & $\dom f$ non majoré & $x$ est supérieur à un nombre réel positif suffisament grand avec $x \in \dom f$\\
+        $x \to -\infty$ & $x$ tend vers $-\infty$ & $\dom f$ non minoré & $x$ est inférieur à un nombre réel négatif suffisament grand en valeur absolue avec $x \in \dom f$\\
         \bottomrule
     \end{tabular}
 \end{sidewaystable}
@@ -67,7 +59,7 @@ L'adhérence d'un intervalle $I$ se note $\cl I$.
 \begin{definition}
     [Limite]
 
-    Soit $f$ une fonction définie sur un intervalle $I$.
+    Soit $f$ une fonction.
     \textbf{[Hypothèses supplémentaires]}.
     On écrit \textbf{[limite à définir]}
     si \textbf{[comportement des ordonnées]}
@@ -81,8 +73,8 @@ Donnons quelques exemples importants de telles définitions.
 \begin{definition}
     [Limite réelle en un réel]
 
-    Soit $f$ une fonction définie sur un intervalle $I$.
-    Soit $a \in \cl I$ et $L \in \R$.
+    Soit $f$ une fonction.
+    Soit $a \in \cl {\dom f}$ et $L \in \R$.
     On écrit
     \begin{align}
         \lim_{x \to a} f(x) = L
@@ -113,8 +105,8 @@ Donnons quelques exemples importants de telles définitions.
 \begin{definition}
     [Limite infinie en un réel par la droite]
 
-    Soit $f$ une fonction définie sur un intervalle $I$.
-    Soit $a \in \cl {I \cap \cointerval{a}{+\infty}}$.
+    Soit $f$ une fonction.
+    Soit $a \in \cl {\dom f \cap \cointerval{a}{+\infty}}$.
     On écrit
     \begin{align}
         \lim_{x \to a^+} f(x) = +\infty
@@ -126,8 +118,8 @@ Donnons quelques exemples importants de telles définitions.
 \begin{definition}
     [Limite réelle à l'infini]
 
-    Soit $f$ une fonction définie sur un intervalle $I$.
-    Soit $L \in \R$ et supposons que $\sup I \notin \R$.
+    Soit $f$ une fonction.
+    Soit $L \in \R$ et supposons que $\dom f$ ne soit pas majoré.
     On écrit
     \begin{align}
         \lim_{x \to +\infty} f(x) = L
@@ -390,7 +382,7 @@ De manière générale, on peut admettre la proposition suivante :
 \begin{definition}
     [Asymptote verticale]
 
-    Soit $f$ une fonction définie sur un intervalle $I$ et $a \in \cl I$.
+    Soit $f$ une fonction et $a \in \cl {\dom f}$.
     Si une limite latérale en $a$ a un sens, existe et est infinie,
     alors la droite d'équation $x = a$ est
     une \emph{asymptote verticale} de $f$.
@@ -399,7 +391,7 @@ De manière générale, on peut admettre la proposition suivante :
 \begin{definition}
     [Asymptote horizontale]
 
-    Soit $f$ une fonction définie sur un intervalle $I$.
+    Soit $f$ une fonction.
     Si l'une des limites à l'infini a un sens, existe et vaut $b \in \R$,
     alors la droite d'équation $y = b$ est
     une \emph{asymptote horizontale} de $f$.
