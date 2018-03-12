@@ -28,10 +28,10 @@
 \newcommand{\plotfunction}[3][200]{\draw[line width=1.2pt,smooth,samples=#1,domain=#2] plot (\x, {#3});}
 
 % Environments
-\newenvironment{definition}[1][]{\begin{bclogo}[logo=\bcbook]{Définition: #1}}{\end{bclogo}}
-\newenvironment{proposition}[1][]{\begin{bclogo}[logo=\bcbook]{Proposition: #1}}{\end{bclogo}}
-\newenvironment{example}[1][]{\begin{bclogo}[logo=\bccrayon]{Exemple #1}}{\end{bclogo}}
-\newenvironment{howto}[1][]{\begin{bclogo}[logo=\bcoutil]{#1}}{\end{bclogo}}
+\newenvironment{definition}[1][]{\begin{bclogo}[logo=\bcbook,noborder=true]{Définition: #1}}{\end{bclogo}}
+\newenvironment{proposition}[1][]{\begin{bclogo}[logo=\bcbook,noborder=true]{Proposition: #1}}{\end{bclogo}}
+\newenvironment{example}[1][]{\begin{bclogo}[logo=\bccrayon,noborder=true]{Exemple #1}}{\end{bclogo}}
+\newenvironment{howto}[1][]{\begin{bclogo}[logo=\bcoutil,noborder=true]{#1}}{\end{bclogo}}
 
 % Operators
 \DeclareMathOperator{\dom}{dom}
