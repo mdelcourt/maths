@@ -4,6 +4,7 @@
 \usepackage[tikz]{bclogo}
 \usepackage{booktabs} % Tables
 \usepackage{cclicenses}
+\usepackage{fancyhdr}
 \usepackage[colorlinks]{hyperref}
 \usepackage[utf8]{inputenc}
 \usepackage{rotating}
@@ -65,12 +66,11 @@
 }
 
 % Footer
-\deftripstyle{pagestyle}
-  {\pagemark}
-  {}
-  {\titleinfo}
-  {\pagemark}
-  {}
-  {\href{https://nguyen.me.uk/teaching.html}{https://nguyen.me.uk/teaching.html} sous licence CC BY-SA.}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\thepage}
+\lhead{D.~Bertrand, K.~Nguyen}
+\rfoot{\thepage}
+\lfoot{\small {\href{https://nguyen.me.uk/teaching.html}{https://nguyen.me.uk/teaching.html}, sous licence CC BY-SA.}}
 
 \pagestyle{pagestyle}
