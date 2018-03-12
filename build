@@ -6,15 +6,20 @@ cd $DIR
 # Build all .tex files in their respective folders
 find -name '*.tex' | grep -v contributors | xargs latexmk -cd
 
-# Send all PDF files to the website
-find -name '*.pdf' -print0 | rsync -av --files-from=- --from0 ./ khoi@nguyen.me.uk:~/www/files
 
-# Generate the webpage
-cp web.adoc temp.adoc
-find -name '*.pdf' | \
-    sed 's/^\.\///;s/\.pdf$//' | sort | \
-    xargs -I {} echo -e '| {}\n| link:/files/{}.pdf[icon:file-pdf[]]\n| https://github.com/khoi-nguyen/maths/tree/master/{}.tex[icon:align-justify[]]\n\n' \
-    >> temp.adoc
-echo "|===" >> temp.adoc
-scp temp.adoc khoi@nguyen.me.uk:~/www/teaching.adoc
-rm temp.adoc
+function deploy() {
+    # Send all PDF files to the website
+    find -name '*.pdf' -print0 | rsync -av --files-from=- --from0 ./ khoi@nguyen.me.uk:~/www/files
+
+    # Generate the webpage
+    cp web.adoc temp.adoc
+    find -name '*.pdf' | \
+        sed 's/^\.\///;s/\.pdf$//' | sort | \
+        xargs -I {} echo -e '| {}\n| link:/files/{}.pdf[icon:file-pdf[]]\n| https://github.com/khoi-nguyen/maths/tree/master/{}.tex[icon:align-justify[]]\n\n' \
+        >> temp.adoc
+    echo "|===" >> temp.adoc
+    scp temp.adoc khoi@nguyen.me.uk:~/www/teaching.adoc
+    rm temp.adoc
+}
+
+[[ "$USER" == 'khoi' ]] && deploy
