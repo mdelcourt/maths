@@ -1,15 +1,14 @@
 % Packages in alphabetic order
 \usepackage{amsmath, amsthm, amssymb, amsfonts}
-\usepackage{arsclassica}
 \usepackage[francais]{babel}
 \usepackage[tikz]{bclogo}
 \usepackage{booktabs} % Tables
 \usepackage{cclicenses}
+\usepackage{fancyhdr}
 \usepackage[colorlinks]{hyperref}
 \usepackage[utf8]{inputenc}
 \usepackage{rotating}
 \usepackage{subfiles}
-\usepackage[theorems]{tcolorbox}
 
 % Tiks graphs
 \usepackage{pgf,tikz}
@@ -30,13 +29,10 @@
 \newcommand{\plotfunction}[3][200]{\draw[line width=1.2pt,smooth,samples=#1,domain=#2] plot (\x, {#3});}
 
 % Environments
-\newtcbtheorem[number within=section]{tcbdefinition}{Définition}{colback=blue!5,colframe=blue!35!black,fonttitle=\bfseries}{th}
-\newenvironment{definition}[1][]{\begin{tcbdefinition}{#1}{}}{\end{tcbdefinition}}
-\newtcbtheorem[number within=section]{tcbproposition}{Proposition}{colback=green!5,colframe=green!35!black,fonttitle=\bfseries}{th}
-\newenvironment{proposition}[1][]{\begin{tcbproposition}{#1}{}}{\end{tcbproposition}}
-\newtcbtheorem[number within=section]{tcbexample}{Exemple}{colback=white!5,colframe=grey!35!black,fonttitle=\bfseries}{th}
-\newenvironment{example}[1][]{\begin{tcbexample}{#1}{}}{\end{tcbexample}}
-\newenvironment{howto}[1][]{\begin{bclogo}[logo=\bcoutil]{#1}}{\end{bclogo}}
+\newenvironment{definition}[1][]{\begin{bclogo}[logo=\bcbook,noborder=true]{Définition: #1}}{\end{bclogo}}
+\newenvironment{proposition}[1][]{\begin{bclogo}[logo=\bcbook,noborder=true]{Proposition: #1}}{\end{bclogo}}
+\newenvironment{example}[1][]{\begin{bclogo}[logo=\bccrayon,noborder=true]{Exemple #1}}{\end{bclogo}}
+\newenvironment{howto}[1][]{\begin{bclogo}[logo=\bcoutil,noborder=true]{#1}}{\end{bclogo}}
 
 % Operators
 \DeclareMathOperator{\dom}{dom}
@@ -70,12 +66,11 @@
 }
 
 % Footer
-\deftripstyle{pagestyle}
-  {\pagemark}
-  {}
-  {\titleinfo}
-  {\pagemark}
-  {}
-  {\href{https://nguyen.me.uk/teaching.html}{https://nguyen.me.uk/teaching.html} sous licence CC BY-SA.}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\thepage}
+\lhead{D.~Bertrand, K.~Nguyen}
+\rfoot{\thepage}
+\lfoot{\small {\href{https://nguyen.me.uk/teaching.html}{https://nguyen.me.uk/teaching.html}, sous licence CC BY-SA.}}
 
 \pagestyle{pagestyle}
