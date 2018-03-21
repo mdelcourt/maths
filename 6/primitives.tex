@@ -101,4 +101,30 @@
     ce qui était bien le résultat à prouver.
 \end{proof}
 
+\section{Techniques de primitivations}
+
+\subsection{Primitives immédiates}
+
+\begin{proposition}
+    [Primitives immédiates]
+
+    Soit $p \in \R \setminus \{1\}$.
+
+    \begin{align}
+        \int a \dd x &= ax + C &
+        \int x^p \dd x &= \frac {x^{p + 1}} {p + 1} + C\\
+        \int e^x \dd x &= e^x + C &
+        \int a^x \dd x &= \frac {a^x} {\ln a} + C\\
+        \int \cos x \dd x &= \sin x + C &
+        \int \sin x \dd x &= -\cos x + C\\
+        \int \frac 1 {1 + x^2} \dd x &= \arctan x + C.
+    \end{align}
+    \begin{align}
+        \int \frac 1 x \dd x &= \ln \abs x + C &
+        \int \frac 1 {\cos^2 x} \dd x &= \tan x + C \\
+        \int \frac 1 {\sin^2 x} \dd x &= \cot x + C &
+        \int \frac 1 {\sqrt {1 - x^2}} \dd x &= \arcsin x + C.
+    \end{align}
+\end{proposition}
+
 \end{document}
