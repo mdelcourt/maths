@@ -1,23 +1,16 @@
 \usepackage{../macros}
+\usepackage[colorlinks]{hyperref}
 
-% Authors
-\author{%
-    \href{mailto:david.brtrnd@gmail.com}{D.~Bertrand}
-    \and \href{mailto:khoi@nguyen.me.uk}{K.~Nguyen}
-    \and \href{mailto:urbain@vaes.uk}{U.~Vaes}
-    \thanks{%
-        Les sources de ce document sont accessibles à l'adresse
-        \href{https://github.com/khoi-nguyen/maths}{https://github.com/khoi-nguyen/maths}
-        sous licence Creative Commons BY-SA\@.
-        Nous encourageons la redistribution et les modifications de ces notes
-        à condition que leurs auteurs originaux soient correctement crédités,
-        et que le document résultant soit partagé \emph{dans les mêmes conditions}.
-        La dernière version PDF de ce document peut être téléchargée sur
-        \href{https://nguyen.me.uk/teaching.html}{https://nguyen.me.uk/teaching.html}
-    }
-}
+% Environments
+\newenvironment{definition}[1][]{\begin{bclogo}[logo=\bcbook,noborder=true]{Définition: #1}}{\end{bclogo}}
+\newenvironment{proposition}[1][]{\begin{bclogo}[logo=\bcbook,noborder=true]{Proposition: #1}}{\end{bclogo}}
+\newenvironment{theorem}[1][]{\begin{bclogo}[logo=\bcbook,noborder=true]{Théorème: #1}}{\end{bclogo}}
+\newenvironment{example}[1][]{\begin{bclogo}[logo=\bccrayon,noborder=true]{Exemple: #1}}{\end{bclogo}}
+\newenvironment{exercise}[1][]{\begin{bclogo}[logo=\bccrayon,noborder=true]{Exercice: #1}}{\end{bclogo}}
+\newenvironment{howto}[1][]{\begin{bclogo}[logo=\bcoutil,noborder=true]{#1}}{\end{bclogo}}
 
 % Footer
+\usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
 \rhead{\thepage}
