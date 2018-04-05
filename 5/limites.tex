@@ -36,36 +36,6 @@ car elle constitue le pilier sur lequel repose le \emph{calcul différentiel et 
 
 \section{Définitions de limites}
 
-\begin{sidewaystable}
-    \centering
-    \caption{Tableau récapitulatif pour les définitions de limite}
-    \label{table:limit_definition}
-    \begin{tabular}
-        {l l l l}
-        \toprule
-        Maths & se lit\dots & Hypothèses & En français \\ \midrule
-        $\lim f(x) = L$ & $f(x)$ tend vers $L$ & $L \in \R$ & $f(x)$ est aussi proche que l'on veut de $L$ \\
-        $\lim f(x) = +\infty$ & $f(x)$ tend vers $+\infty$ & & $f(x)$ devient supérieur à n'importe quel nombre réel positif\\
-        $\lim f(x) = -\infty$ & $f(x)$ tend vers $-\infty$ & & $f(x)$ devient inférieur à n'importe quel nombre réel négatif\\
-        $x \to a$ & $x$ tend vers $a$ & $a \in \cl {\dom f}$ & $x$ est suffisament proche de $a$, avec $x \in \dom f$\\
-        $x \to a^+$ & $x$ tend vers $a$ par la droite & $a \in \cl {\dom f \cap \cointerval{a}{+\infty}}$ & $x$ est suffisament proche de $a$ avec $x \in \dom f$ et $x \geq a$\\
-        $x \to a^-$ & $x$ tend vers $a$ par la gauche & $a \in \cl {\dom f \cap \ocinterval{-\infty}{a}}$ & $x$ est suffisament proche de $a$ avec $x \in \dom f$ et $x \leq a$\\
-        $x \to +\infty$ & $x$ tend vers $+\infty$ & $\dom f$ non majoré & $x$ est supérieur à un nombre réel positif suffisament grand avec $x \in \dom f$\\
-        $x \to -\infty$ & $x$ tend vers $-\infty$ & $\dom f$ non minoré & $x$ est inférieur à un nombre réel négatif suffisament grand en valeur absolue avec $x \in \dom f$\\
-        \bottomrule
-    \end{tabular}
-\end{sidewaystable}
-
-\begin{definition}
-    [Limite]
-
-    Soit $f$ une fonction.
-    \textbf{[Hypothèses supplémentaires]}.
-    On écrit \textbf{[limite à définir]}
-    si \textbf{[comportement des ordonnées]}
-    lorsque \textbf{[comportement des abscisses]}.
-\end{definition}
-
 En combinant les lignes du tableau~\ref{table:limit_definition},
 on peut déduire chacune des définitions de limites.
 Donnons quelques exemples importants de telles définitions.
@@ -406,5 +376,37 @@ De manière générale, on peut admettre la proposition suivante :
     \end{plot}
     \caption{Graphe de $f(x) = \frac 1 {x - 3} + 2$ et ses asymptotes.}
 \end{figure}
+
+\section{Résumé}
+
+\begin{definition}
+    [Limite]
+
+    Soit $f$ une fonction.
+    \textbf{[Hypothèses supplémentaires]}.
+    On écrit \textbf{[limite à définir]}
+    si \textbf{[comportement des ordonnées]}
+    lorsque \textbf{[comportement des abscisses]}.
+\end{definition}
+
+\begin{sidewaystable}
+    \centering
+    \caption{Tableau récapitulatif pour les définitions de limite}
+    \label{table:limit_definition}
+    \begin{tabular}
+        {l l l l}
+        \toprule
+        Maths & se lit\dots & Hypothèses & En français \\ \midrule
+        $\lim f(x) = L$ & $f(x)$ tend vers $L$ & $L \in \R$ & $f(x)$ est aussi proche que l'on veut de $L$ \\
+        $\lim f(x) = +\infty$ & $f(x)$ tend vers $+\infty$ & & $f(x)$ devient supérieur à n'importe quel nombre réel positif\\
+        $\lim f(x) = -\infty$ & $f(x)$ tend vers $-\infty$ & & $f(x)$ devient inférieur à n'importe quel nombre réel négatif\\
+        $x \to a$ & $x$ tend vers $a$ & $a \in \cl {\dom f}$ & $x$ est suffisament proche de $a$, avec $x \in \dom f$\\
+        $x \to a^+$ & $x$ tend vers $a$ par la droite & $a \in \cl {\dom f \cap \cointerval{a}{+\infty}}$ & $x$ est suffisament proche de $a$ avec $x \in \dom f$ et $x \geq a$\\
+        $x \to a^-$ & $x$ tend vers $a$ par la gauche & $a \in \cl {\dom f \cap \ocinterval{-\infty}{a}}$ & $x$ est suffisament proche de $a$ avec $x \in \dom f$ et $x \leq a$\\
+        $x \to +\infty$ & $x$ tend vers $+\infty$ & $\dom f$ non majoré & $x$ est supérieur à un nombre réel positif suffisament grand avec $x \in \dom f$\\
+        $x \to -\infty$ & $x$ tend vers $-\infty$ & $\dom f$ non minoré & $x$ est inférieur à un nombre réel négatif suffisament grand en valeur absolue avec $x \in \dom f$\\
+        \bottomrule
+    \end{tabular}
+\end{sidewaystable}
 
 \end{document}
