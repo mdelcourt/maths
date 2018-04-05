@@ -3,6 +3,14 @@
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd $DIR
 
+# Create handout files
+ag --tex -l documentclass.beamer | while read filename; do
+    echo $filename
+    handout="$(echo "$filename" | sed 's/\.tex$//').handout.tex"
+    cp "$filename" "$handout"
+    sed -i 's/documentclass/documentclass[handout]/' "$handout"
+done
+
 # Build all .tex files in their respective folders
 find -name '*.tex' | grep -v contributors | xargs latexmk -cd
 
