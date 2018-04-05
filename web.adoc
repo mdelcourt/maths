@@ -6,7 +6,13 @@ Cette page contient la dernière version PDF des notes de mathématiques tapées
 - Khoi Nguyen, enseignant au Collège du Christ-Roi.
 
 Notre objectif est de créer un cours complet sous licence
-https://creativecommons.org/licenses/by-sa/2.0/be/[Creative Commons BY-SA].
+https://creativecommons.org/licenses/by-sa/2.0/be/[Creative Commons BY-SA]:
+vous êtes libres de modifier et de redistribuer ces notes,
+à condition que vous créditiez les auteurs originaux
+et que la redistribution ait lieu sous les mêmes termes.
+En particulier,
+*nous rompons délibérément avec la pratique trop courante dans l'enseignement d'interdire le partage de ressources entre enseignants*.
+
 Plus d'information sur la page
 https://github.com/khoi-nguyen/maths[Github] de notre projet.
 
