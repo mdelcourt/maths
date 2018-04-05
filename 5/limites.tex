@@ -238,6 +238,56 @@ donc s'il vous plaît défendez-moi et montrez-leur ceci:
 
 \subsection{Interprétation graphique}
 
+Trois cas se présentent lorsqu'une limite existe en un réel.
+
+\begin{enumerate}
+    \item Si la limite existe en $a$ et est réelle,
+        et que $a \in \dom f$,
+        alors $(a, f(a))$ est un \textbf{point plein}.
+        Par exemple,
+        dans le graphe ci-dessous,
+        \begin{center}
+            \begin{plot}{0.5}{-6}{-2}{6}{2}
+                \plotfunction{-6:6}{0.05*\x^3}
+                \drawpoint[black]{0, 0}
+            \end{plot}
+        \end{center}
+        on a $\lim_{x \to 0} f(x) = 0$ donc $(0, 0)$ est un \emph{point plein}.
+    \item Si la limite existe en $a$ et est réelle,
+        et que $a \notin \dom f$,
+        alors $(a, \lim_{x \to a} f(x))$ est un \textbf{point creux}.
+        Par exemple,
+        dans le graphe ci-dessous,
+        \begin{center}
+            \begin{plot}{0.5}{-6}{-2}{6}{2}
+                \plotfunction{-6:6}{0.05*\x^3}
+                \drawpoint{0, 0}
+            \end{plot}
+        \end{center}
+        on a $\lim_{x \to 0} f(x) = 0$ donc $(0, 0)$ est un \emph{point creux}.
+    \item Si une limite latérale en $a$ est infinie,
+        alors nous avons une \textbf{asymptote verticale} en $a$.
+        Intuitivement,
+        on voit que proche de $a$,
+        le graphe de $f$ se rapproche de la droite d'équation
+        \begin{align}
+            AV_a \equiv x = a.
+        \end{align}
+        Dans l'exemple suivant,
+        \begin{center}
+            \begin{plot}{0.25}{-6}{-1}{6}{12}
+                \plotfunction{-6:6}{1/(\x - 1)^2 + 2}
+                \drawline (1, -1) -- (1, 13);
+            \end{plot}
+        \end{center}
+        on remarque que $\lim_{x \to 1} = +\infty$,
+        et qu'autour de $1$,
+        le graphe est proche de l'\emph{asymptote verticale} d'équation
+        \begin{align}
+            AV_1 \equiv x = 1.
+        \end{align}
+\end{enumerate}
+
 \begin{definition}
     [Asymptote verticale]
 
