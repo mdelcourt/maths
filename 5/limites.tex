@@ -189,6 +189,25 @@ donc s'il vous plaît défendez-moi et montrez-leur ceci:
     lorsque \textbf{$x$ est suffisament proche de $a$ avec $x \in \dom f$}.
 \end{definition}
 
+\begin{example}
+    [Limite infinie en un réel]
+
+    Supposons que nous considérons la fonction $f$ dont le graphe est esquissé ci-dessous.
+
+    \begin{center}
+        \begin{plot}{0.5}{-6}{-1}{6}{12}
+            \plotfunction{-6:6}{1/(\x - 1)^2}
+        \end{plot}
+    \end{center}
+
+    Nous remarquons que les images deviennent aussi grande que l'on souhaite
+    lorsque les abscisses sont suffisament proches de $1$.
+    Nous pouvons écrire
+    \begin{align}
+        \lim_{x \to 1} f(x) = +\infty.
+    \end{align}
+\end{example}
+
 \subsection{Interprétation graphique}
 
 \begin{definition}
