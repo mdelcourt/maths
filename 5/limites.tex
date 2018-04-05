@@ -59,6 +59,26 @@ car elle constitue le pilier sur lequel repose le \emph{calcul différentiel et 
     lorsque \textbf{$x$ est suffisament proche de $a$ avec $x \in \dom f$}.
 \end{definition}
 
+\begin{example}
+    [Limite en un réel]
+
+    Supposons que nous considérons la fonction $f$ dont le graphe est esquissé ci-dessous.
+
+    \begin{center}
+        \begin{plot}{0.5}{-6}{-6}{6}{6}
+            \plotfunction{-6:6}{0.25*\x^3 - 0.8*\x^2 - \x - 1}
+            \drawpoint{0, -1}
+        \end{plot}
+    \end{center}
+
+    Nous remarquons que les images deviennent aussi proches que l'on veut de $-1$
+    lorsque les abscisses sont suffisament proches de $0$.
+    Nous pouvons écrire
+    \begin{align}
+        \lim_{x \to 0} f(x) = -1.
+    \end{align}
+\end{example}
+
 \subsection{Interprétation graphique}
 
 \begin{definition}
