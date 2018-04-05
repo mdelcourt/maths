@@ -208,6 +208,28 @@ donc s'il vous plaît défendez-moi et montrez-leur ceci:
     \end{align}
 \end{example}
 
+\subsection{Limites latérales}
+
+\begin{example}
+    [Fonctions homographiques]
+
+    Il est clair que la fonction $f$ définie par
+    \begin{align}
+        f(x) = \frac 1 {x + 1},
+    \end{align}
+    dont le graphe est ci-dessous,
+    \begin{center}
+        \begin{plot}{0.5}{-6}{-6}{6}{6}
+            \plotfunction{-6:0.99}{1/(\x - 1)}
+            \plotfunction{1.01:6}{1/(\x - 1)}
+        \end{plot}
+    \end{center}
+    n'a pas de limite, même infinie, en $1$.
+\end{example}
+
+Nous serions tenté de dire que la limite en $1$ par la gauche est $-\infty$,
+tandis que la limite en $1$ par la droite est $+\infty$.
+
 \subsection{Interprétation graphique}
 
 \begin{definition}
