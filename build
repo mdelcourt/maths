@@ -12,7 +12,7 @@ ag --tex -l documentclass.beamer | while read filename; do
 done
 
 # Build all .tex files in their respective folders
-find -name '*.tex' | grep -v contributors | xargs latexmk -cd
+find -name '*.tex' | grep -v contributors | xargs latexmk -silent -pdf -cd
 
 
 function deploy() {
