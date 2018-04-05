@@ -79,6 +79,32 @@ car elle constitue le pilier sur lequel repose le \emph{calcul différentiel et 
     \end{align}
 \end{example}
 
+Il faut faire très attention
+lorsque une limite est calculée à l'intérieur du domaine.
+Nous rompons consciemment avec la plupart des ouvrages mathématiques
+en disant que la limite n'existe pas dans l'exemple suivant.
+
+\begin{example}
+    [Limite pointée]
+
+    Supposons que nous considérons la fonction $f$ dont le graphe est esquissé ci-dessous.
+
+    \begin{center}
+        \begin{plot}{0.5}{-6}{-6}{6}{6}
+            \plotfunction{-6:6}{0.25*\x^3 - 0.8*\x^2 - \x - 1}
+            \drawpoint{0, -1}
+            \drawpoint[black]{0, 2}
+        \end{plot}
+    \end{center}
+
+    Nous remarquons que les images ne sont pas systématiquement proches de $-1$
+    lorsque l'on considère des $x$ proches de $0$.
+    En particulier, $x = 0$ est proche de $0$
+    alors que son image vaut $2$ qui est loin de $-1$.
+    Dès lors,
+    la limite $\lim_{x \to 0} f(x)$ n'existe pas.
+\end{example}
+
 \subsection{Interprétation graphique}
 
 \begin{definition}
