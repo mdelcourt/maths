@@ -127,4 +127,161 @@
     \end{align}
 \end{proposition}
 
+\subsection{Substitution ou ``changement de variable facile''}
+
+\subsubsection{Quand l'appliquer?}
+
+Statistiquement,
+c'est la technique la plus utilisée dans vos exercices (de loin).
+À essayer à tout prix.
+
+La question qu'il faut se poser est la suivante:
+a-t-on une \textbf{multiplication} par un terme qui ressemble à une dérivée de quelque chose qui apparaît autre part?
+
+Ensuite, suivre les étapes suivantes:
+\begin{enumerate}
+    \item Choix de $u$;
+    \item Calculer la dérivée $u'$;
+    \item Écrire la primitive de telle sorte qu'à part exactement une multiplication par $u'$,
+        toute dépendance en $x$ s'écrit dépend en fait de $u(x)$.
+    \item Remplacer $u$ par $x$ dans un \textbf{calcul intermédiaire à part}.
+    \item Résoudre cette primitive différente.
+    \item La solution finale est la solution de la primitive plus simple,
+        où $x$ est remplacé par $u(x)$.
+\end{enumerate}
+
+\begin{example}
+    Calculons la primitive
+    \begin{align}
+        I \defeq \int \frac {x^2} {\cos^2 (x^3)} \dd x.
+    \end{align}
+
+    On pose $u(x) = x^3$,
+    de telle sorte que $u'(x) = 3x^2$.
+    Dès lors, on a
+    \begin{align}
+        I &= \int \frac {3 x^2} {3 \cos^2 (x^3)} \dd x\\
+          &= \frac 1 3 \int \frac {u'(x)} {\cos^2 (u(x))} \dd x.
+    \end{align}
+
+    En remplaçant $u(x)$ par $x$,
+    on calcule
+    \begin{align}
+        \int \frac 1 {\cos^2 x} \dd x = \tan x + C.
+    \end{align}
+
+    On en conclut (en remplaçant $x$ par $u(x)$ ci-dessus) que
+    \begin{align}
+        I = \tan (x^3) + C
+    \end{align}
+\end{example}
+
+\subsection{Primitivation par parties}
+
+\subsubsection{Quand l'appliquer?}
+
+Vraiment en dernier recours,
+c'est une technique assez coûteuse.
+
+\begin{enumerate}
+    \item Produit entre
+        \begin{itemize}
+            \item une fonction qui devient ``moins complexe'' après dérivation (e.g.~polynôme)
+            \item une fonction facile à primitiver (e.g.~primitive immédiate).
+        \end{itemize}
+    \item Produit entre fonctions trigonométriques/exponentielles.
+    \item Fonction seule n'apparaissant pas dans la liste des primitives immédiates ($\ln$, $\arctan$)
+\end{enumerate}
+
+\subsubsection{Cas 1}
+
+On fait le choix suivant:
+
+\begin{itemize}
+    \item la fonction qui devient moins complexe après dérivation est la fonction ``normale''.
+    \item la fonction facile à primitiver est la fonction ``prime''.
+\end{itemize}
+
+\begin{example}
+    Cherchons à calculer la primitive suivante:
+    \begin{align}
+        I \defeq \int x \sin x \dd x.
+    \end{align}
+
+    Comme $x$ deviendra plus simple après dérivation,
+    nous la choisissons comme fonction normale
+    (elle sera dérivée dans le membre de droite)
+    et nous posons
+    \begin{align}
+        f(x) &= x\\
+        g'(x) &= \sin x
+    \end{align}
+    de telle sorte que $g(x) = -\cos x$.
+
+    Par la formule de primitivation par parties,
+    nous obtenons
+    \begin{align}
+        I &= x (-\cos x) - \int 1 (-\cos x) \dd x\\
+          &= -x \cos x + \int \cos x \dd x\\
+          &= -x \cos x + \sin x + C
+    \end{align}
+\end{example}
+
+\subsubsection{Cas 2}
+
+Le calcul de ces primitives requiert \textbf{deux applications} de l'intégration par parties.
+
+Le choix est libre,
+mais il faut faire le même choix pour les deux applications.
+
+\begin{example}
+    J'aurais eu le temps de le taper si les 6G avaient été au lit plus tôt pendant la retraite.
+    Voir cours.
+\end{example}
+
+\subsubsection{Cas 3}
+
+On choisit $1$ comme fonction dérivée (avec le symbole prime)
+et le reste comme fonction ``normale'' (c'est-à-dire \emph{à dériver}).
+
+\begin{example}
+    Calculons
+    \begin{align}
+        I \defeq \int 1 \ln x.
+    \end{align}
+
+    Pour cela,
+    posons
+    \begin{align}
+        f'(x) &= 1\\
+        g(x) &= \ln x
+    \end{align}
+    de telle sorte que $f(x) = x$.
+
+    La formule de primitivation par parties donne:
+    \begin{align}
+        I &= x \ln x - \int x \frac 1 x \dd x\\
+          &= x \ln x - x + C.
+    \end{align}
+\end{example}
+
+\subsection{Changement de variables}
+
+Le changement de variable $u(x)$ sera toujours donné.
+Les étapes sont les mêmes que pour la substitution,
+mais il faut un peu plus travailler pour se débarasser complètement
+de la dépendance explicite en $x$.
+
+Voir feuille manuscrite pour des exemples supplémentaires.
+
+\subsection{Règles du jeu pour la compétence C2}
+
+Vous perdez des points lorsque:
+
+\begin{itemize}
+    \item vous oubliez $+ C$ dans chaque membre ne comportant pas de symbole de primitive;
+    \item vous faites des erreurs de parenthèses et de priorité des opérations (regardez votre interro précédente);
+    \item vous faites des erreurs de calcul (la pénalité sera d'autant plus importante si vous simplifiez l'exercice).
+\end{itemize}
+
 \end{document}
