@@ -40,6 +40,41 @@ car elle constitue le pilier sur lequel repose le \emph{calcul différentiel et 
 
 \subsection{Adhérence}
 
+Un point \emph{adhérent} à un ensemble est un \emph{réel} qui appartient ou ``colle'' à cet ensemble.
+L'ensemble des points adhérents à un ensemble $A \subset \R$
+s'appelle l'\emph{adhérence de $A$} et se dénote $\cl A$.
+
+Dans le cadre d'un cours du secondaire,
+l'adhérence se calcule facilement:
+\begin{howto}
+    [Calcul d'adhérence]
+
+    \begin{enumerate}
+        \item On réecrit l'ensemble comme union d'intervalles.
+        \item L'adhérence contient en plus les bornes \emph{réelles} de chacun des intervalles.
+    \end{enumerate}
+\end{howto}
+
+En pratique,
+nous calculons l'adhérence du domaine d'une fonction.
+
+\begin{example}
+    [Adhérence d'un domaine]
+
+    Calculons l'adhérence du domaine de la fonction définie par
+    \begin{align}
+        f(x) = \sqrt{\frac {x + 3}{x - 10}}.
+    \end{align}
+    On vérifie que
+    \begin{align}
+        \dom f = \ocinterval {-\infty} {-3} \cup \oointerval {10} {+\infty},
+    \end{align}
+    et donc on en conclut que
+    \begin{align}
+        \cl {\dom f} = \ocinterval {-\infty} {-3} \cup \cointerval {10} {+\infty}.
+    \end{align}
+\end{example}
+
 \subsection{Définition de limite}
 
 \begin{definition}
