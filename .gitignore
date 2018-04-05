@@ -22,3 +22,4 @@ log.xml
 *.snm
 *.thm
 *.handout.tex
+temp*.adoc
