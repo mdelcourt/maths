@@ -81,4 +81,38 @@
     \end{align}
 \end{example}
 
+\section{Comportement avec les opérations sur les fonctions}
+
+Une dérivée peut se calculer terme par terme.
+
+\begin{proposition}
+    [Dérivée d'une somme/différence]
+
+    \subsubsubsection*{Hypothèse}
+
+    \begin{itemize}
+        \item $f, g$ deux fonctions dérivables en $x \in \R$;
+    \end{itemize}
+
+    \subsubsubsection*{Thèse}
+    La fonction $f \pm g$ est dérivable en $x$
+    et on a
+    \begin{align}
+        (f \pm g)'(x) = f'(x) \pm g'(x).
+    \end{align}
+\end{proposition}
+\begin{proof}
+    Le quotient différentiel de $f \pm g$ s'écrit
+    \begin{align}
+        \frac {(f \pm g)(x + h) - (f \pm g)(x)} h
+        &= \frac {f(x + h) - f(x)} h \pm \frac {g(x + h) - g(x)} h
+    \end{align}
+
+    En faisant tendre $h$ vers $0$ des deux côtés,
+    on obtient
+    \begin{align}
+        (f \pm g)'(x) = f'(x) \pm g'(x).
+    \end{align}
+\end{proof}
+
 \end{document}
