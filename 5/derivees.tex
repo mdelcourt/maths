@@ -39,4 +39,24 @@
     une dérivée est une limite d'un quotient différentiel.
 \end{remark}
 
+\begin{example}
+    [Dérivée de $x^2$]
+
+    Calculons la dérivée de $f(x) = x^2$ en un $x \in \R$ quelconque.
+    Dans ce but,
+    analysons le quotient différentiel
+    \begin{align}
+        \frac {f(x + h) - f(x)} h
+        &= \frac {{(x + h)}^2 - x^2} h\\
+        &= \frac {x^2 + 2xh + h^2 - x^2} h\\
+        &= 2x + h
+    \end{align}
+
+    En faisant tendre $h$ vers $0$ des deux côtés,
+    on obtient
+    \begin{align}
+        f'(x) = 2x.
+    \end{align}
+\end{example}
+
 \end{document}
