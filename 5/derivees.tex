@@ -59,4 +59,24 @@
     \end{align}
 \end{example}
 
+\begin{example}
+    [Dérivée de $\sqrt x$]
+
+    Calculons la dérivée de $f(x) = \sqrt x$ en un $x \in \R^+$ quelconque.
+    Dans ce but,
+    analysons le quotient différentiel
+    \begin{align}
+        \frac {f(x + h) - f(x)} h
+        &= \frac {\sqrt {x + h} - \sqrt x} h\\
+        &= \frac {x + h - x} {h (\sqrt {x + h} + \sqrt {x})}\\
+        &= \frac 1 {\sqrt {x + h} + \sqrt {x}}
+    \end{align}
+
+    En faisant tendre $h$ vers $0$ des deux côtés,
+    on obtient
+    \begin{align}
+        f'(x) = \frac 1 {2 \sqrt x}
+    \end{align}
+\end{example}
+
 \end{document}
