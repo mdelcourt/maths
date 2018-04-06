@@ -300,38 +300,6 @@ Trois cas se présentent lorsqu'une limite existe en un réel.
 
 \section{Limites à l'infini}
 
-\begin{figure}
-    \centering
-    \begin{plot}{0.25}{-10}{-10}{10}{10}
-        \plotfunction{-10:-1}{\x}
-        \plotfunction{-0.99:10}{1/(\x + 1) + 1}
-        \drawpoint{-1, -1}
-        \drawpoint{1, 1.5}
-    \end{plot}
-    \caption{Graphe d'une fonction $f$}
-    Les limites intéressantes sont les suivantes:
-    \begin{align}
-        &\lim_{x \to -\infty} f(x) = -\infty, \quad
-        &\lim_{x \to +\infty} f(x) = 1,\\
-        &\lim_{x \to -1^-} f(x) = -1, \quad
-        &\lim_{x \to -1^+} f(x) = +\infty\\
-        &\lim_{x \to 1} f(x) = 1,5.
-    \end{align}
-\end{figure}
-
-\begin{definition}
-    [Limite infinie en un réel par la droite]
-
-    Soit $f$ une fonction.
-    Soit $a \in \cl {\dom f \cap \cointerval{a}{+\infty}}$.
-    On écrit
-    \begin{align}
-        \lim_{x \to a^+} f(x) = +\infty
-    \end{align}
-    si \emph{$f(x)$ devient supérieur à n'importe quel nombre positif}
-    lorsque \emph{$x$ est suffisament proche de $a$ avec $x \in \dom f$ et $x \geq a$}.
-\end{definition}
-
 \begin{definition}
     [Limite réelle à l'infini]
 
