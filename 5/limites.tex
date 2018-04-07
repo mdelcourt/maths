@@ -246,12 +246,12 @@ Trois cas se présentent lorsqu'une limite existe en un réel.
         Par exemple,
         dans le graphe ci-dessous,
         \begin{center}
-            \begin{plot}{0.5}{-6}{-2}{6}{2}
-                \plotfunction{-6:6}{0.05*\x^3}
-                \drawpoint[black]{0, 0}
+            \begin{plot}{0.5}{-6}{-1}{6}{3}
+                \plotfunction{-6:6}{0.05*\x^3 + 1}
+                \drawpoint[black]{0, 1}
             \end{plot}
         \end{center}
-        on a $\lim_{x \to 0} f(x) = 0$ donc $f$ est \emph{continue} en $0$.
+        on a $\lim_{x \to 0} f(x) = 1$ donc $f$ est \emph{continue} en $0$.
     \item Si la limite existe en $a \notin \dom f$ et est réelle,
         alors $(a, \lim_{x \to a} f(x))$ est un \textbf{point creux}.
         Par exemple,
