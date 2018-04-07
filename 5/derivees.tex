@@ -139,4 +139,29 @@ Une dérivée peut se calculer terme par terme.
     \end{align}
 \end{proof}
 
+\begin{proposition}
+    [Dérivée d'un produit]
+
+    Soient $f, g$ deux fonctions dérivables en $x \in \R$.
+    Alors $f g$ est dérivable en $x$ et
+    \begin{align}
+        (f g)'(x) = f'(x) g(x) + f(x) g'(x).
+    \end{align}
+\end{proposition}
+\begin{proof}
+    Le quotient différentiel de $f g$ s'écrit
+    \begin{align}
+        \frac {(f g)(x + h) - (f g)(x)} h
+        &= \frac {f(x + h) g(x + h) - f(x) g(x)} h\\
+        &= \frac {f(x + h) g(x + h) - f(x) g(x + h) + f(x) g(x + h) - f(x) g(x)} h\\
+        &= \left(\frac {f(x + h) - f(x)} h\right) g(x + h) + f(x) \left(\frac {g(x + h) - g(x)} h\right)
+    \end{align}
+
+    En faisant tendre $h$ vers $0$ des deux côtés,
+    on obtient
+    \begin{align}
+        (f g)'(x) = f'(x) g(x) + f(x) g'(x).
+    \end{align}
+\end{proof}
+
 \end{document}
