@@ -268,4 +268,40 @@ Une dérivée peut se calculer terme par terme.
     \end{align}
 \end{proof}
 
+\begin{proposition}
+    [Dérivée d'un quotient]
+
+    Soient $f, g$ deux fonctions dérivables en $x \in \R$.
+    Si $g'(x) \neq 0$,
+    alors $\frac f g$ est dérivable en $x$ et
+    \begin{align}
+        \left(\frac f g\right)'(x) = \frac {f'(x) g(x) - f(x) g'(x)} {g^2(x)}
+    \end{align}
+\end{proposition}
+\begin{proof}
+    Clairement,
+    on a
+    \begin{align}
+        \left(\frac f g\right)'(x)
+        = \left(f \frac 1 g\right)'(x)
+        = f'(x) \frac 1 {g(x)} + f(x) \left(\frac 1 g\right)'(x).
+    \end{align}
+
+    Il ne reste plus qu'à calculer la dérivée de $\frac 1 g$.
+    Pour ce faire,
+    si nous dénotons par $\iota(x) = \frac 1 x$ la fonction inverse
+    alors $\frac 1 g = \iota \circ g$ et la dérivée vaut
+    \begin{align}
+        \left(\frac 1 g\right)'(x) = \iota'(g(x)) g'(x) = \frac {-g'(x)} {g^2(x)}.
+    \end{align}
+
+    En combinant tout,
+    nous obtenons
+    \begin{align}
+        \left(\frac f g\right)'(x)
+        &= f'(x) \frac 1 {g(x)} - f(x) \frac {g'(x)} {g^2(x)}\\
+        &= \frac {f'(x) g(x) - f(x) g'(x)} {g^2(x)}
+    \end{align}
+\end{proof}
+
 \end{document}
