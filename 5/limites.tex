@@ -373,6 +373,33 @@ Trois cas se présentent lorsqu'une limite existe en un réel.
     est une \emph{asymptote oblique} de $f$.
 \end{definition}
 
+\begin{example}
+    [Asymptote oblique]
+
+    Considérons la fonction $f$ définie par
+    \begin{align}
+        f(x) = \frac 1 2 x + 1 + \frac 1 x.
+    \end{align}
+
+    Nous voyons que
+    \begin{align}
+        \lim_{x \to \pm \infty} (f(x) - (\frac 1 2 x + 1)) = \lim_{x \to \pm \infty} \frac 1 x = 0,
+    \end{align}
+    ce qui signifie que la droite
+    \begin{align}
+        AO \equiv y = \frac 1 2 x + 1
+    \end{align}
+    est une \emph{asymptote oblique}.
+
+    Nous vérifions graphiquement la tendance du graphe à s'éloigner de moins en moins de l'asymptote pour les grandes valeurs.
+    \begin{center}
+        \begin{plot}{0.25}{-12}{-12}{12}{12}
+            \plotfunction{-12:12}{0.5*\x + 1 + 1/\x}
+            \plotfunction{-12:12}{0.5*\x + 1}
+        \end{plot}
+    \end{center}
+\end{example}
+
 \section{Propriétés des limites}
 
 \section{Calcul de limites}
