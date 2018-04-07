@@ -110,7 +110,12 @@
         f(x + h) = \left(\frac {f(x + h) - f(x)} h\right) h + f(x).
     \end{align}
 
-    En faisant tendre $h$ vers $0$ des deux côtés
+    En faisant tendre $h$ vers $0$ des deux côtés\footnote{%
+        Techniquement, on fait tendre $h \to 0$ avec la contrainte supplémentaire $h \neq 0$.
+        En d'autres termes, on calcule une limite \emph{épointée}.
+        Il faut ensuite conclure qu'au vu du résultat obtenu (i.e.\ $f(x)$),
+        la contrainte peut être levée.
+    }
     et en employant les propriétés des limites,
     on obtient
     \begin{align}
