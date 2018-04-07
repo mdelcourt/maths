@@ -298,6 +298,40 @@ Trois cas se présentent lorsqu'une limite existe en un réel.
     est une \emph{asymptote verticale} de $f$.
 \end{definition}
 
+\subsection{Propriétés des limites}
+
+Les limites se comportent bien avec les opérations arithmétiques.
+
+\begin{howto}
+    [Opérations sur les limites]
+
+    \begin{itemize}
+        \item La limite d'une somme est la somme des limites si ces dernières sont \textbf{réelles}:
+            \begin{align}
+                \lim_{x \to a} (f + g)(x) = \lim_{x \to a} f(x) + \lim_{x \to a} g(x)
+            \end{align}
+        \item La limite d'une différence est la différence des limites si ces dernières sont \textbf{réelles}:
+            \begin{align}
+                \lim_{x \to a} (f - g)(x) = \lim_{x \to a} f(x) - \lim_{x \to a} g(x)
+            \end{align}
+        \item La limite d'un produit est le produit des limites si ces dernières sont \textbf{réelles}:
+            \begin{align}
+                \lim_{x \to a} (f g)(x) = \left(\lim_{x \to a} f(x)\right) \left(\lim_{x \to a} g(x)\right)
+            \end{align}
+        \item La limite d'un quotient est le quotient des limites si ces dernières sont \textbf{réelles}
+            et si la limite du dénominateur est non nulle.
+            \begin{align}
+                \lim_{x \to a} \frac f g(x) = \frac {\lim_{x \to a} f(x)} {\lim_{x \to a} g(x)}
+            \end{align}
+        \item Si $g$ est une fonction élémentaire (au sens du chapitre précédent),
+            alors
+            \begin{align*}
+                \lim_{x \to a} g(f(x)) = g(\lim_{x \to a} f(x)),
+            \end{align*}
+            à condition que le membre de droite soit bien défini.
+    \end{itemize}
+\end{howto}
+
 \section{Limites à l'infini}
 
 \begin{definition}
