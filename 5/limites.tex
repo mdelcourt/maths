@@ -665,6 +665,77 @@ mais elle ne sera plus causée par des racines.
 
 \subsection{Calcul des limites à l'infini}
 
+\subsubsection{Limite de $k x^n$, $k \neq 0$}
+
+Les limites à l'infini de $k x^n$, $k \neq 0$ sont infinies.
+Le signe se détermine par une étude de signe pour les très grandes (resp.\ petites) valeurs.
+De manière très (trop\footnote{Si j'expliquais bien, je n'encouragerais pas ça.}) pragmatique,
+on a
+\begin{align*}
+    \lim_{x \to +\infty} k x^n &= (\sign k) \infty\\
+    \lim_{x \to -\infty} k x^n &=
+    \begin{cases}
+        (-\sign k) \infty & \text{si}\ n\ \text{est impair,} \\
+        (\sign k) \infty & \text{sinon.}
+    \end{cases}
+\end{align*}
+
+\subsubsection{Limite de $\frac k {x^n}$, $k \neq 0$}
+
+Ca vaut toujours $0$,
+vu qu'on divise $k$ par quelque chose qui devient de plus en plus grand.
+\begin{align}
+    \lim_{x \to \pm \infty} \frac k {x^n} = 0.
+\end{align}
+
+\subsubsection{Règle de la plus haute puissance}
+
+\begin{remark}
+    [Règle de la plus haute puissance]
+
+    Dans le calcul des limites à l'infini,
+    seul le \emph{terme avec la plus haute puissance} compte.
+
+    On se débarasse progressivement des termes avec des puissances plus basses,
+    dans l'ordre de la priorité des opérations (sans tenir compte des parenthèses)
+    (d'abord dans les puissances et racines, puis dans les numérateurs/dénominateurs, etc.).
+\end{remark}
+
+\begin{example}
+    [Limite à l'infini]
+
+    Calculons la limite
+    \begin{align*}
+        \lim_{x \to \pm \infty} \frac {3x^2 + 4 x^9 - 2 x^7 + 4} {-2x^3 + 2x^5 + 3}.
+    \end{align*}
+
+    En appliquant la règle de la plus haute puissance au numérateur et au dénominateur,
+    on obtient
+    \begin{align*}
+        \lim_{x \to \pm \infty} \frac {3x^2 + 4 x^9 - 2 x^7 + 4} {-2x^3 + 2x^5 + 3}
+        &= \lim_{x \to \pm \infty} \frac {4 x^9} {2 x^5}\\
+        &= \lim_{x \to \pm \infty} 2 x^4 = +\infty.
+    \end{align*}
+\end{example}
+
+\begin{example}
+    [Limite à l'infini]
+
+    Calculons la limite
+    \begin{align}
+        \lim_{x \to \pm \infty} \frac {\sqrt{4x^4 + 5x} + x^2 - 5} {3 x^2 - 5x + 2}.
+    \end{align}
+
+    En appliquant la règle de la plus haute puissance à la racine,
+    puis au numérateur et au dénominateur,
+    on obtient
+    \begin{align}
+        \lim_{x \to \pm \infty} \frac {\sqrt{4x^4 + 5x} + x^2 - 5} {3 x^2 - 5x + 2}
+        &= \lim_{x \to \pm \infty} \frac {\sqrt{4x^4} + x^2 - 5} {3 x^2 - 5x + 2}\\
+        &= \lim_{x \to \pm \infty} \frac {3 x^2 - 5} {3 x^2 - 5x + 2} = 1.
+    \end{align}
+\end{example}
+
 \section{Résumé}
 
 En combinant les lignes du tableau~\ref{table:limit_definition},
