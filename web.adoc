@@ -11,7 +11,7 @@ vous êtes libres de modifier et de redistribuer ces notes,
 à condition que vous créditiez les auteurs originaux
 et que la redistribution ait lieu sous les mêmes termes.
 En particulier,
-*nous rompons délibérément avec la pratique trop courante dans l'enseignement d'interdire le partage de ressources entre enseignants*.
+*nous rompons délibérément avec la pratique trop courante dans l'enseignement d'interdire le partage de ressources*.
 
 Plus d'information sur la page
 https://github.com/khoi-nguyen/maths[Github] de notre projet.
