@@ -369,7 +369,8 @@ pour signifier le \emph{numérateur} et \emph{dénominateur} respectivement.
         \end{align}
     \item Si $n(a) \neq 0$ mais $d(a) = 0$,
         alors les limites latérales en $a$ sont \emph{infinies}
-        et on utilise un tableau de signe pour déterminer les signes de ces limites.
+        et on utilise un tableau de signe pour déterminer les signes de ces limites
+        (voir sous-section~\ref{subsubsection:indetermination_k_sur_0}).
     \item Si $n(a) = d(a) = 0$,
         alors on applique les étapes suivantes.
         \begin{enumerate}
@@ -378,6 +379,34 @@ pour signifier le \emph{numérateur} et \emph{dénominateur} respectivement.
             \item On recommence.
         \end{enumerate}
 \end{enumerate}
+
+\subsubsection{Indétermination $k$ sur $0$}\label{subsubsection:indetermination_k_sur_0}
+
+Nous sommes dans le cas où $n(a) \neq 0$ mais $d(a) = 0$.
+Pour $x$ proche de $a$ mais distinct de $a$,
+$d(x)$ sera très proche de $0$ mais non nul,
+rendant le quotient $\frac {n(x)} {d(x)}$ très grand (en valeur absolue).
+Il suit alors que les limites
+\begin{align}
+    \lim_{x \to a^-} \frac {n(x)} {d(x)},
+    \quad
+    \lim_{x \to a^+} \frac {n(x)} {d(x)}
+\end{align}
+seront infinies,
+et qu'il ne reste qu'à déterminer le signe des limites ci-dessus.
+Pour ce faire,
+nous utiliserons un tableau de signe.
+
+Remarquons que le numérateur $n$ ne change pas de signe autour de $a$ (puisque $n(a) \neq 0$).
+Dès lors,
+les expressions
+\begin{align}
+    \frac {n(x)} {d(x)}
+    \quad \text{et} \quad
+    \frac {n(a)} {d(x)}
+\end{align}
+ont le même signe proche de $a$,
+et pour des raisons pratiques nous étudierons le signe de la deuxième.
 
 \subsubsection{Technique du binôme conjugué}
 
