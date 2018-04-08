@@ -10,7 +10,7 @@
 \usepackage[euler]{textgreek}
 
 % Tikz graphs
-\usepackage{pgf,tikz}
+\usepackage{pgf,tikz,tkz-tab}
 \usepackage{mathrsfs}
 \usetikzlibrary{arrows}
 \definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882} % Grid color
@@ -26,6 +26,15 @@
 \newcommand{\drawpoint}[2][white]{\draw [fill=#1] (#2) circle (2.5pt);}
 \newcommand{\drawline}{\draw[line width=1.2pt]}
 \newcommand{\plotfunction}[3][200]{\draw[line width=1.2pt,smooth,samples=#1,domain=#2] plot (\x, {#3});}
+\newcommand{\signtable}[3]{%
+    \begin{center}
+        \begin{tikzpicture}
+            \tkzTabInit{#1}{#2}
+            #3
+        \end{tikzpicture}
+    \end{center}
+}
+\newcommand{\signrow}[1]{\tkzTabLine{#1}}
 
 % Operators
 \DeclareMathOperator{\dom}{dom}
