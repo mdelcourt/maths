@@ -328,6 +328,26 @@ La \emph{croissance} est liée à la dérivée via le théorème suivant.
         \frac {f(b) - f(a)} {b - a} = f'(c).
     \end{align}
 \end{proposition}
+\begin{proof}[Ébauche de preuve]
+    Définissons la fonction
+    \begin{align}
+        g(x) = f(x) - \frac {f(b) - f(a)} {b - a} (x - a).
+    \end{align}
+
+    On vérifie que $g(a) = g(b)$ par choix de $g$.
+    Puisque $g$ atteint un extremum sur $\ccinterval a b$,
+    disons en $c \in \ccinterval a b$,
+    et donc on a $g'(c) = 0$ par le théorème de Fermat.
+
+    Cependant,
+    \begin{align}
+        g'(x) = f'(x) - \frac {f(b) - f(a)} {b - a}
+    \end{align}
+    de telle sorte que $g'(c) = 0$ s'écrit
+    \begin{align}
+        0 = f'(c) - \frac {f(b) - f(a)} {b - a}.
+    \end{align}
+\end{proof}
 
 \begin{proposition}
     Soit $f$ une fonction dérivable sur un intervalle $I$.
