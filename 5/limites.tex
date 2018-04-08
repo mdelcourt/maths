@@ -471,6 +471,58 @@ et pour des raisons pratiques nous étudierons le signe de la deuxième.
 
 \subsubsection{Factorisation}
 
+Si le numérateur et le dénominateur sont des polynômes s'annulant tous les deux en $a$,
+alors $x - a$ est un facteur commun du numérateur et du dénominateur.
+On peut alors le simplifier.
+
+\begin{example}
+    [Indétermination $0$ sur $0$]
+
+    Calculons la limite
+    \begin{align}
+        \lim_{x \to 1} \frac {2x^2 + x - 3} {3x^2 - 8x + 5}.
+    \end{align}
+
+    On vérifie qu'une évaluation en $1$ donne $[\frac 0 0]$.
+    En factorisant, on obtient
+    \begin{align}
+        \lim_{x \to 1} \frac {2x^2 + x - 3} {3x^2 - 8x + 5}
+        &= \lim_{x \to 1} \frac {(x - 1)(2x + 3)} {(x - 1)(3x - 5)}\\
+        &= \lim_{x \to 1} \frac {2x + 3} {3x - 5} = - \frac 5 2.
+    \end{align}
+\end{example}
+
+Remarquons qu'il est aussi possible d'obtenir des cas moins favorables après la simplification.
+
+\begin{example}
+    [Indétermination $0$ sur $0$]
+
+    Calculons la limite
+    \begin{align}
+        \lim_{x \to 1} \frac {2x^2 + x - 3} {x^2 - 2x + 1}.
+    \end{align}
+
+    On vérifie qu'une évaluation en $1$ donne $[\frac 0 0]$.
+    En factorisant, on obtient
+    \begin{align}
+        \lim_{x \to 1} \frac {2x^2 + x - 3} {x^2 - 2x + 1}
+        &= \lim_{x \to 1} \frac {(x - 1)(2x + 3)} {{(x - 1)}^2}\\
+        &= \lim_{x \to 1} \frac {2x + 3} {x - 1} = \left[\frac 5 0\right].
+    \end{align}
+    
+    En faisant le tableau de signe,
+    \signtable{$x$/0.75, $5$/0.75, $x - 1$/0.75, $\frac 5 {x - 1}$/0.75}{,$1$,}{%
+        \signrow{,+,+,+,}
+        \signrow{,-,0,+,}
+        \signrow{,-,d,+,}
+    }
+    nous en déduisons que
+    \begin{align}
+        \lim_{x \to 1^-} \frac {2x^2 + x - 3} {x^2 - 2x + 1} &= -\infty\\
+        \lim_{x \to 1^+} \frac {2x^2 + x - 3} {x^2 - 2x + 1} &= +\infty
+    \end{align}
+\end{example}
+
 \section{Limites à l'infini}
 
 \begin{definition}
