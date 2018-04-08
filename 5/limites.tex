@@ -353,6 +353,32 @@ Les limites se comportent bien avec les opérations arithmétiques.
 
 \subsection{Calcul de limites}
 
+Dans toute cette section,
+nous supposerons que nous devons calculer la limite
+\begin{align}
+    \lim_{x \to a} \frac {n(x)} {d(x)},
+\end{align}
+où les lettres $n$ et $d$ ont été choisies
+pour signifier le \emph{numérateur} et \emph{dénominateur} respectivement.
+
+\begin{enumerate}
+    \item Si $d(a) \neq 0$, 
+        alors
+        \begin{align}
+            \lim_{x \to a} \frac {n(x)} {d(x)} = \frac {n(a)} {d(a)}.
+        \end{align}
+    \item Si $n(a) \neq 0$ mais $d(a) = 0$,
+        alors les limites latérales en $a$ sont \emph{infinies}
+        et on utilise un tableau de signe pour déterminer les signes de ces limites.
+    \item Si $n(a) = d(a) = 0$,
+        alors on applique les étapes suivantes.
+        \begin{enumerate}
+            \item On se débarasse des racines carrées gênantes via la technique du binôme conjugué;
+            \item On met en évidence le facteur $(x - a)$ dans $n$ et $d$ pour ensuite le simplifier.
+            \item On recommence.
+        \end{enumerate}
+\end{enumerate}
+
 \subsubsection{Technique du binôme conjugué}
 
 \subsubsection{Factorisation}
