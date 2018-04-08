@@ -362,16 +362,17 @@ où les lettres $n$ et $d$ ont été choisies
 pour signifier le \emph{numérateur} et \emph{dénominateur} respectivement.
 
 \begin{enumerate}
-    \item Si $d(a) \neq 0$,
-        alors
+    \item Si le dénominateur ne s'annule pas en $a$,
+        alors la limite s'obtient en évaluant la fraction en $a$.
         \begin{align}
             \lim_{x \to a} \frac {n(x)} {d(x)} = \frac {n(a)} {d(a)}.
         \end{align}
-    \item Si $n(a) \neq 0$ mais $d(a) = 0$,
+    \item Si seul le dénominateur s'annule en $a$
+        (on parle alors d'indétermination de type $\left[\frac k 0\right]$),
         alors les limites latérales en $a$ sont \emph{infinies}
         et on utilise un tableau de signe pour déterminer les signes de ces limites
-        (voir sous-section~\ref{subsubsection:indetermination_k_sur_0}).
-    \item Si $n(a) = d(a) = 0$,
+        (voir ci-dessous).
+    \item Si le numérateur et le dénominateur s'annulent en $a$,
         alors on applique les étapes suivantes.
         \begin{enumerate}
             \item On se débarasse des racines carrées gênantes via la technique du binôme conjugué;
@@ -380,9 +381,9 @@ pour signifier le \emph{numérateur} et \emph{dénominateur} respectivement.
         \end{enumerate}
 \end{enumerate}
 
-\subsubsection{Indétermination $k$ sur $0$}\label{subsubsection:indetermination_k_sur_0}
+\subsubsection{Indétermination $k$ sur $0$}
 
-Nous sommes dans le cas où $n(a) \neq 0$ mais $d(a) = 0$.
+Nous sommes dans le cas où seul le dénominateur s'annule en $a$.
 Pour $x$ proche de $a$ mais distinct de $a$,
 $d(x)$ sera très proche de $0$ mais non nul,
 rendant le quotient $\frac {n(x)} {d(x)}$ très grand (en valeur absolue).
