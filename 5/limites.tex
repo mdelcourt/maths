@@ -414,6 +414,39 @@ et pour des raisons pratiques nous étudierons le signe de la deuxième.
 
     Supposons que nous voulions calculer la limite
     \begin{align}
+        \lim_{x \to 0} \frac 1 x.
+    \end{align}
+
+    En évaluant en $x = 0$,
+    nous obtenons formellement $\left[\frac {1} {0}\right]$.
+    Nous savons dès lors que les limites latérales en $1$ sont infinies.
+
+    Le tableau de signe
+    \signtable{$x$/0.75, $1$/0.75, $x$/0.75, $\frac 1 x$/0.75}{,$0$,}{%
+        \signrow{,+,+,+,}
+        \signrow{,-,0,+,}
+        \signrow{,-,d,+,}
+    }
+    nous permet de déduire (en regardant les signes aux alentours de $1$) que
+    \begin{align}
+        \lim_{x \to 0^-} \frac 1 x &= -\infty\\
+        \lim_{x \to 0^+} \frac 1 x &= +\infty.
+    \end{align}
+
+    Cela peut se vérifier graphiquement:
+    \begin{center}
+        \begin{plot}{0.25}{-12}{-12}{12}{12}
+            \plotfunction{-12:-0.01}{1/\x}
+            \plotfunction{0.01:12}{1/\x}
+        \end{plot}
+    \end{center}
+\end{example}
+
+\begin{example}
+    [Indétermination $k$ sur $0$]
+
+    Supposons que nous voulions calculer la limite
+    \begin{align}
         \lim_{x \to 1} \frac {x^3 - 7x - 6} {x^2 - 3x + 2}.
     \end{align}
 
