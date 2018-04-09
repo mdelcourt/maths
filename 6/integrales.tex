@@ -1,4 +1,24 @@
 \documentclass[main.tex]{subfiles}
 \begin{document}
+
 \chapter{Intégrales}
+
+\section{Définition}
+
+\begin{definition}
+    [Intégrale de Cauchy]
+
+    Soit $f$ une fonction continue sur $\ccinterval a b$ avec $a < b$.
+
+    \begin{itemize}
+        \item $\ccinterval a b$ est sudvidisé en $n$ sous-intervalles de même longueur $\Delta x$;
+        \item $x_j$ appartient au $i$\textsuperscript{è} sous-intervalle pour chaque $j = 1, \dots, n$.
+    \end{itemize}
+
+    L'\emph{intégrale} de $f$ sur $\ccinterval a b$ est définie comme étant le nombre réel
+    \begin{align}
+        \int_a^b f(x) \dd x \defeq \lim_{n \to \infty} \sum_{j = 1}^n f(x_j) \Delta x.
+    \end{align}
+\end{definition}
+
 \end{document}
