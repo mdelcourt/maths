@@ -829,4 +829,53 @@ Les limites importantes sont:
     \draw [->,-latex] (S) to [out=225, in=270] (E);
 \end{tikzpicture}
 
+\subsubsection{Calcul de limite à l'infini}
+
+Dans le schéma ci-dessous,
+PHP fait référence à la règle de la \emph{plus haute puissance}.
+
+Si on est dans le cas
+\begin{align}
+    \lim_{x \to \pm \infty} \frac {P_n(x)} {P_{n - 1}(x)},
+\end{align}
+où $P_n$ et $P_{n - 1}$ sont des polynômes de degrés $n$ et $n - 1$ respectivement,
+alors il faut calculer l'\emph{asymptote oblique}.
+
+\begin{tikzpicture}
+    [
+        grow                    = right,
+        sibling distance        = 5em,
+        level distance          = 10em,
+        edge from parent/.style = {draw, -latex},
+        sloped
+    ]
+    \node (P) {PHP}
+    child {%
+        node (S) {Simplifications}
+        child {%
+            node {$\begin{aligned}\lim_{x \to \pm \infty} k = k\end{aligned}$}
+            child {%
+                node [bordered] {$AH \equiv y = k$}
+            }
+        }
+        child {%
+            node {$\begin{aligned}\lim_{x \to \pm \infty} \frac k {x^n} = 0\end{aligned}$}
+            child {%
+                node [bordered] {$AH \equiv y = 0$}
+            }
+        }
+        child {%
+            node {$\begin{aligned}\lim_{x \to \pm \infty} k x^n\end{aligned}$}
+            child {%
+                node {$(\sign k) \infty$}
+            }
+            child {%
+                node {$(-\sign k) \infty$}
+                edge from parent node [above] {$-\infty$, $n$ impair}
+            }
+        }
+    };
+    \draw [->,-latex] (S) to [out=270, in=270] (P);
+\end{tikzpicture}
+
 \end{document}
