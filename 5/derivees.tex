@@ -191,26 +191,26 @@ est justifié par la proposition suivante (admise sans preuve).
 Une dérivée peut se calculer terme par terme.
 
 \begin{proposition}
-    [Dérivée d'une somme/différence]
+    [Dérivée d'une somme]
 
-    Soient $f, g$ deux fonctions dérivables en $x \in \R$;
-    Alors $f \pm g$ est dérivable en $x$ et
+    Soient $f, g$ deux fonctions dérivables en $a \in \R$.
+    Alors $f + g$ est dérivable en $a$ et
     \begin{align}
-        (f \pm g)'(x) = f'(x) \pm g'(x).
+        (f + g)'(a) = f'(a) + g'(a).
     \end{align}
 \end{proposition}
 \begin{proof}
-    Soit $h \neq 0$.
-    Le quotient différentiel de $f \pm g$ s'écrit
+    Soit $x \in \dom f$.
+    Le quotient différentiel de $f + g$ s'écrit
     \begin{align}
-        \frac {(f \pm g)(x + h) - (f \pm g)(x)} h
-        &= \frac {f(x + h) - f(x)} h \pm \frac {g(x + h) - g(x)} h.
+        \frac {(f + g)(x) - (f + g)(a)} {x - a}
+        &= \frac {f(x) - f(a)} {x - a} + \frac {g(x) - g(a)} {x - a}.
     \end{align}
 
-    En faisant tendre $h$ vers $0$ des deux côtés,
+    En faisant tendre $x$ vers $a$ des deux côtés,
     on obtient
     \begin{align}
-        (f \pm g)'(x) = f'(x) \pm g'(x).
+        (f + g)'(a) = f'(a) + g'(a).
     \end{align}
 \end{proof}
 
