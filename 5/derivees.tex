@@ -134,33 +134,33 @@ les mathématiques ont acquis le pouvoir d'exprimer les lois naturelles et de mo
 \begin{proposition}
     [Dérivabilité et continuité]
 
-    Soit $f$ une fonction dérivable en $x \in \R$.
+    Soit $f$ une fonction dérivable en $a \in \R$.
     La limite
     \begin{align}
-        \lim_{h \to 0} f(x + h)
+        \lim_{x \to a} f(x)
     \end{align}
-    existe et vaut $f(x)$
-    (autrement dit, $f$ est \emph{continue} en $x$).
+    existe et vaut $f(a)$
+    (autrement dit, $f$ est \emph{continue} en $a$).
 \end{proposition}
 \begin{proof}
-    Soit $h \neq 0$.
+    Soit $x \in \dom f$.
     On vérifie que
     \begin{align}
-        f(x + h) = \left(\frac {f(x + h) - f(x)} h\right) h + f(x).
+        f(x) = \left(\frac {f(x) - f(a)} {x - a}\right) (x - a) + f(a).
     \end{align}
 
-    En faisant tendre $h$ vers $0$ des deux côtés\footnote{%
-        Techniquement, on fait tendre $h \to 0$ avec la contrainte supplémentaire $h \neq 0$.
+    En faisant tendre $x$ vers $a$ des deux côtés\footnote{%
+        Techniquement, on fait tendre $x \to a$ avec la contrainte supplémentaire $x \neq a$.
         En d'autres termes, on calcule une limite \emph{épointée}.
-        Il faut ensuite conclure qu'au vu du résultat obtenu (i.e.\ $f(x)$),
+        Il faut ensuite conclure qu'au vu du résultat obtenu (i.e.\ $f(a)$),
         la contrainte peut être levée.
     }
     et en employant les propriétés des limites,
     on obtient
     \begin{align}
-        \lim_{h \to 0} f(x + h)
-        &= \left(\lim_{h \to 0} \frac {f(x + h) - f(x)} h\right) \lim_{h \to 0} h + \lim_{h \to 0} f(x)\\
-        &= f'(x) \cdot 0 + f(x) = f(x).
+        \lim_{x \to a} f(x)
+        &= \left(\lim_{x \to a} \frac {f(x) - f(a)} {x - a}\right) \lim_{x \to a} {x - a} + \lim_{x \to a} f(a)\\
+        &= f'(a) \cdot 0 + f(a) = f(a).
     \end{align}
 \end{proof}
 
