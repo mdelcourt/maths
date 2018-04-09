@@ -6,14 +6,15 @@
 \section{Introduction}
 
 L'introduction du concept de dérivée est historiquement importante,
-puisqu'elle coincide avec la naissance de l'analyse mathématique et de la mécanique classique de Newton.
-Ce année-là\footnote{%
+puisqu'elle coïncide avec la naissance de l'analyse mathématique et de la mécanique classique de Newton.
+Cette année-là\footnote{%
     L'année 1666 est souvent qualifiée de \emph{miraculeuse} (\emph{annus mirabilis} pour les prétentieux)
-    car Newton fait des avancées considérables dans l'étude de:
+    car Newton fait des avancées considérables dans l'étude de 
     l'analyse mathématique, la dynamique, l'optique et la gravitation.
 
     Un autre example d'\emph{annus mirabilis} est l'année 2009 du FC Barcelone.
     Ils ont gagné la Liga, la Coupe, la Super Coupe, la Champions League, la Super Coupe d'Europe et la Coupe du monde des clubs.
+    Cet exploit leur permet d'être inconstestablement considéré comme le deuxième plus grand club de football d'Espagne.
 },
 les mathématiques ont acquis le pouvoir d'exprimer les lois naturelles et de modéliser des situations complexes.
 
@@ -26,7 +27,7 @@ les mathématiques ont acquis le pouvoir d'exprimer les lois naturelles et de mo
 
     \begin{itemize}
         \item $f$ est une fonction;
-        \item $x \in \cl {\dom f}$ est un point \emph{non-isolé} de $\dom f$.
+        \item $x \in \dom f$ est un point \emph{non-isolé} de $\dom f$.
     \end{itemize}
 
     \subsubsection*{Définition}
@@ -74,6 +75,7 @@ les mathématiques ont acquis le pouvoir d'exprimer les lois naturelles et de mo
         \frac {f(x + h) - f(x)} h
         &= \frac {{(x + h)}^2 - x^2} h\\
         &= \frac {x^2 + 2xh + h^2 - x^2} h\\
+        &= \frac {2xh + h^2} h\\
         &= 2x + h
     \end{align}
 
@@ -93,7 +95,10 @@ les mathématiques ont acquis le pouvoir d'exprimer les lois naturelles et de mo
     \begin{align}
         \frac {f(x + h) - f(x)} h
         &= \frac {\sqrt {x + h} - \sqrt x} h\\
+        &= \frac {\sqrt {x + h} - \sqrt x} h \cdot \frac{\sqrt{x + h} + \sqrt x}{\sqrt{x + h} + \sqrt x}\\
+        &= \frac {(\sqrt {x + h})^2 - (\sqrt{x})^2}{h (\sqrt {x + h} + \sqrt {x})}\\
         &= \frac {x + h - x} {h (\sqrt {x + h} + \sqrt {x})}\\
+        &= \frac {h} {h (\sqrt {x + h} + \sqrt {x})}\\
         &= \frac 1 {\sqrt {x + h} + \sqrt {x}}
     \end{align}
 
@@ -113,7 +118,9 @@ les mathématiques ont acquis le pouvoir d'exprimer les lois naturelles et de mo
     \begin{align}
         \frac {f(x + h) - f(x)} h
         &= \frac {\frac 1 {x + h} - \frac 1 x} h\\
+        &= \frac{\frac{x - (x + h)}{x (x + h)}}{h}\\
         &= \frac {x - (x + h)} {h x (x + h)}\\
+        &= \frac{-h}{h x (x + h)}\\
         &= \frac {-1} {x (x + h)}
     \end{align}
 
