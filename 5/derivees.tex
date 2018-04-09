@@ -68,66 +68,62 @@ les mathématiques ont acquis le pouvoir d'exprimer les lois naturelles et de mo
 \begin{example}
     [Dérivée de $x^2$]
 
-    Calculons la dérivée de $f(x) = x^2$ en un $x \in \R$ quelconque.
+    Calculons la dérivée de $f(x) = x^2$ en un $a \in \R$ quelconque.
     Dans ce but,
     analysons le quotient différentiel
     \begin{align}
-        \frac {f(x + h) - f(x)} h
-        &= \frac {{(x + h)}^2 - x^2} h\\
-        &= \frac {x^2 + 2xh + h^2 - x^2} h\\
-        &= \frac {2xh + h^2} h\\
-        &= 2x + h
+        \frac {f(x) - f(a)}{x - a}
+        &= \frac {x^2 - a^2}{x - a}\\
+        &= \frac {(x + a)(x - a)}{x - a}\\
+        &= x + a
     \end{align}
 
-    En faisant tendre $h$ vers $0$ des deux côtés,
+    En faisant tendre $x$ vers $a$ des deux côtés,
     on obtient
     \begin{align}
-        f'(x) = 2x.
+        f'(a) = 2a.
     \end{align}
 \end{example}
 
 \begin{example}
     [Dérivée de $\sqrt x$]
 
-    Calculons la dérivée de $f(x) = \sqrt x$ en un $x \in \R^+$ quelconque.
+    Calculons la dérivée de $f(x) = \sqrt x$ en un $a \in \R^+$ quelconque.
     Dans ce but,
     analysons le quotient différentiel
     \begin{align}
-        \frac {f(x + h) - f(x)} h
-        &= \frac {\sqrt {x + h} - \sqrt x} h\\
-        &= \frac {\sqrt {x + h} - \sqrt x} h \cdot \frac{\sqrt{x + h} + \sqrt x}{\sqrt{x + h} + \sqrt x}\\
-        &= \frac {(\sqrt {x + h})^2 - (\sqrt{x})^2}{h (\sqrt {x + h} + \sqrt {x})}\\
-        &= \frac {x + h - x} {h (\sqrt {x + h} + \sqrt {x})}\\
-        &= \frac {h} {h (\sqrt {x + h} + \sqrt {x})}\\
-        &= \frac 1 {\sqrt {x + h} + \sqrt {x}}
+        \frac {f(x) - f(a)}{x - a}
+        &= \frac {\sqrt x - \sqrt a}{x - a}\\
+        &= \frac {\sqrt x - \sqrt a}{x - a} \cdot \frac{\sqrt x + \sqrt a}{\sqrt x + \sqrt a}\\
+        &= \frac {(\sqrt x)^2 - (\sqrt a)^2}{(x - a) (\sqrt x + \sqrt a)}\\
+        &= \frac {x - a} {(x - a) (\sqrt x + \sqrt a)}\\
+        &= \frac 1 {\sqrt x + \sqrt a}
     \end{align}
 
-    En faisant tendre $h$ vers $0$ des deux côtés,
+    En faisant tendre $x$ vers $a$ des deux côtés,
     on obtient
     \begin{align}
-        f'(x) = \frac 1 {2 \sqrt x}
+        f'(a) = \frac 1 {2 \sqrt a}
     \end{align}
 \end{example}
 
 \begin{example}
     [Dérivée de $\frac 1 x$]
 
-    Calculons la dérivée de $f(x) = \frac 1 x$ en un $x \in \R_0$ quelconque.
+    Calculons la dérivée de $f(x) = \frac 1 x$ en un $a \in \R_0$ quelconque.
     Dans ce but,
     analysons le quotient différentiel
     \begin{align}
-        \frac {f(x + h) - f(x)} h
-        &= \frac {\frac 1 {x + h} - \frac 1 x} h\\
-        &= \frac{\frac{x - (x + h)}{x (x + h)}}{h}\\
-        &= \frac {x - (x + h)} {h x (x + h)}\\
-        &= \frac{-h}{h x (x + h)}\\
-        &= \frac {-1} {x (x + h)}
+        \frac {f(x) - f(a)} h
+        &= \frac {\frac 1 x - \frac 1 a}{x - a}\\
+        &= \frac{\frac{a - x}{ax}}{x - a}\\
+        &= \frac {-1}{ax}
     \end{align}
 
-    En faisant tendre $h$ vers $0$ des deux côtés,
+    En faisant tendre $x$ vers $a$ des deux côtés,
     on obtient
     \begin{align}
-        f'(x) = \frac {-1} {x^2}.
+        f'(a) = \frac {-1} {a^2}.
     \end{align}
 \end{example}
 
@@ -143,7 +139,7 @@ les mathématiques ont acquis le pouvoir d'exprimer les lois naturelles et de mo
     (autrement dit, $f$ est \emph{continue} en $a$).
 \end{proposition}
 \begin{proof}
-    Soit $x \in \dom f$.
+    Soit $x \in \dom f \setminus \{a\}$.
     On vérifie que
     \begin{align}
         f(x) = \left(\frac {f(x) - f(a)} {x - a}\right) (x - a) + f(a).
@@ -159,7 +155,7 @@ les mathématiques ont acquis le pouvoir d'exprimer les lois naturelles et de mo
     on obtient
     \begin{align}
         \lim_{x \to a} f(x)
-        &= \left(\lim_{x \to a} \frac {f(x) - f(a)} {x - a}\right) \lim_{x \to a} {x - a} + \lim_{x \to a} f(a)\\
+        &= \left(\lim_{x \to a} \frac {f(x) - f(a)} {x - a}\right) \lim_{x \to a} (x - a) + \lim_{x \to a} f(a)\\
         &= f'(a) \cdot 0 + f(a) = f(a).
     \end{align}
 \end{proof}
@@ -240,7 +236,7 @@ Une dérivée peut se calculer terme par terme.
         \frac {(f g)(x) - (f g)(a)} {x - a}
         &= \frac {f(x) g(x) - f(a) g(a)} {x - a}\\
         &= \frac {f(x) g(x) - f(a) g(x) + f(a) g(x) - f(a) g(a)} {x - a}\\
-        &= \left(\frac {f(x) - f(a)} {x - a}\right) g(x) + f(x) \left(\frac {g(x) - g(a)} {x - a}\right).
+        &= \left(\frac {f(x) - f(a)} {x - a}\right) g(x) + f(a) \left(\frac {g(x) - g(a)} {x - a}\right).
     \end{align}
 
     En faisant tendre $x$ vers $a$ des deux côtés,
