@@ -95,14 +95,17 @@ les mathématiques ont acquis le pouvoir d'exprimer les lois naturelles et de mo
     \begin{align}
         \frac {f(x + h) - f(x)} h
         &= \frac {\sqrt {x + h} - \sqrt x} h\\
+        &= \frac {\sqrt {x + h} - \sqrt x} h \cdot \frac{\sqrt{x + h} + \sqrt x}{\sqrt{x + h} + \sqrt x}\\
+        &= \frac {(\sqrt {x + h})^2 - (\sqrt{x})^2}{h (\sqrt {x + h} + \sqrt {x})}\\
         &= \frac {x + h - x} {h (\sqrt {x + h} + \sqrt {x})}\\
+        &= \frac {h} {h (\sqrt {x + h} + \sqrt {x})}\\
         &= \frac 1 {\sqrt {x + h} + \sqrt {x}}
     \end{align}
 
     En faisant tendre $h$ vers $0$ des deux côtés,
     on obtient
     \begin{align}
-        f'(x) = \frac 1 {2 \sqrt x}
+        f'(x) = \frac 1 {\sqrt x} + \frac 1 {\sqrt x} = \frac 1 {2 \sqrt x}
     \end{align}
 \end{example}
 
