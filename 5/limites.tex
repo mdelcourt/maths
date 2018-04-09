@@ -840,7 +840,7 @@ Les limites importantes sont:
     [
         grow                    = right,
         sibling distance        = 5em,
-        level distance          = 9em,
+        level distance          = 10em,
         edge from parent/.style = {draw, -latex},
         sloped
     ]
@@ -859,7 +859,7 @@ Les limites importantes sont:
         }
     }
     child {%
-        node {$\left[\dfrac k 0\right]$}
+        node {$\left[\dfrac k 0\right]$, $k \neq 0$}
         child {%
             node {TS de $\dfrac k {d(x)}$}
             child {%
@@ -869,8 +869,13 @@ Les limites importantes sont:
     }
     child {%
         node {$L \in \R$}
-        child{%
+        child {%
             node [bordered] {Point creux: $(a, L)$}
+            edge from parent node [above] {$a \notin \dom$}
+        }
+        child {%
+            node [bordered] {continue en $a$}
+            edge from parent node [above] {$a \in \dom$}
         }
     };
     \draw [->,-latex] (B) to (F);
@@ -913,9 +918,10 @@ alors il faut calculer l'\emph{asymptote oblique}.
             }
         }
         child {%
-            node {$\begin{aligned}\lim_{x \to \pm \infty} k x^n\end{aligned}$}
+            node {$\begin{aligned}\lim_{x \to \pm \infty} k x^n\end{aligned}$, $k \neq 0$}
             child {%
                 node {$(\sign k) \infty$}
+                edge from parent node [below] {sinon}
             }
             child {%
                 node {$(-\sign k) \infty$}
