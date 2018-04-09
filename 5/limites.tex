@@ -736,6 +736,33 @@ vu qu'on divise $k$ par quelque chose qui devient de plus en plus grand.
     \end{align}
 \end{example}
 
+\subsubsection{Asymptotes obliques}
+
+Dans le cadre du cours de mathématiques $4$ heures,
+le cas ne se présente que lorsque nous traitons un quotient de type
+\begin{align}
+    \lim_{x \to \pm \infty} \frac {P_n(x)} {P_{n - 1}(x)},
+\end{align}
+où $P_n$ et $P_{n - 1}$ désignent des polynômes de degrés $n$ et $n - 1$ respectivement.
+
+Pour trouver l'équation de l'asymptote oblique,
+on effectue alors la division euclidienne de $P_n$ par $P_{n - 1}$.
+On obtient alors
+\begin{align}
+    \frac {P_n(x)} {P_{n - 1}(x)} = Q_1(x) + \frac {R_{n - 2}(x)} {P_{n - 1}(x)},
+\end{align}
+où $Q_1$ et $R_{n - 2}$ sont des polynômes de degré $1$ et $n - 2$ respectivement.
+
+L'équation de l'asymptote oblique est dès lors donnée par
+\begin{align}
+    AO \equiv y = Q_1(x),
+\end{align}
+puisque l'on vérifie aisément que
+\begin{align}
+    \lim_{x \to \pm \infty} \left(\frac {P_n(x)} {P_{n - 1}(x)} - Q_1(x)\right)
+    = \lim_{x \to \pm \infty} \frac {R_{n - 2}(x)} {P_{n - 1}(x)} = 0.
+\end{align}
+
 \section{Résumé}
 
 En combinant les lignes du tableau~\ref{table:limit_definition},
