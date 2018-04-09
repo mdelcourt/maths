@@ -288,36 +288,37 @@ Une dérivée peut se calculer terme par terme.
 \begin{proposition}
     [Dérivée d'un quotient]
 
-    Soient $f, g$ deux fonctions dérivables en $x \in \R$.
-    Si $g'(x) \neq 0$,
-    alors $\frac f g$ est dérivable en $x$ et
+    Soient $f, g$ deux fonctions dérivables en $a \in \R$.
+    Si $g'(a) \neq 0$,
+    alors $\frac f g$ est dérivable en $a$ et
     \begin{align}
-        \left(\frac f g\right)'(x) = \frac {f'(x) g(x) - f(x) g'(x)} {g^2(x)}
+        \left(\frac f g\right)'(a) = \frac {f'(a) g(a) - f(a) g'(a)} {g^2(a)}
     \end{align}
 \end{proposition}
 \begin{proof}
+    Soit $x \in \dom f \setminus \{a\}$.
     Clairement,
     on a
     \begin{align}
-        \left(\frac f g\right)'(x)
-        = \left(f \frac 1 g\right)'(x)
-        = f'(x) \frac 1 {g(x)} + f(x) \left(\frac 1 g\right)'(x).
+        \left(\frac f g\right)'(a)
+        = \left(f \frac 1 g\right)'(a)
+        = f'(a) \frac 1 {g(a)} + f(a) \left(\frac 1 g\right)'(a).
     \end{align}
 
     Il ne reste plus qu'à calculer la dérivée de $\frac 1 g$.
     Pour ce faire,
-    si nous dénotons par $\iota(x) = \frac 1 x$ la fonction inverse
+    si nous dénotons par $\iota(a) = \frac 1 a$ la fonction inverse
     alors $\frac 1 g = \iota \circ g$ et la dérivée vaut
     \begin{align}
-        \left(\frac 1 g\right)'(x) = \iota'(g(x)) g'(x) = \frac {-g'(x)} {g^2(x)}.
+        \left(\frac 1 g\right)'(a) = \iota'(g(a)) g'(a) = \frac {-g'(a)} {g^2(a)}.
     \end{align}
 
     En combinant tout,
     nous obtenons
     \begin{align}
-        \left(\frac f g\right)'(x)
-        &= f'(x) \frac 1 {g(x)} - f(x) \frac {g'(x)} {g^2(x)}\\
-        &= \frac {f'(x) g(x) - f(x) g'(x)} {g^2(x)}
+        \left(\frac f g\right)'(a)
+        &= f'(a) \frac 1 {g(a)} - f(a) \frac {g'(a)} {g^2(a)}\\
+        &= \frac {f'(a) g(a) - f(a) g'(a)} {g^2(a)}
     \end{align}
 \end{proof}
 
