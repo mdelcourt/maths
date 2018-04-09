@@ -771,4 +771,62 @@ Donnons quelques exemples importants de telles définitions.
     \end{tabular}
 \end{sidewaystable}
 
+\subsection{Exercice type}
+
+L'exercice typique est de vous donner une fonction,
+en vous demandant de calculer toutes les limites importantes
+et de donner les interprétations graphiques.
+
+Les limites importantes sont:
+\begin{itemize}
+    \item $-\infty$, $+\infty$;
+    \item tous les points adhérents \emph{hors} du domaine.
+\end{itemize}
+
+\subsubsection{Calcul de limite en un réel}
+
+\tikzset{%
+    bordered/.style = {shape=rectangle, draw}
+}
+\begin{tikzpicture}
+    [
+        grow                    = right,
+        sibling distance        = 5em,
+        level distance          = 9em,
+        edge from parent/.style = {draw, -latex},
+        sloped
+    ]
+    \node (E) {Évaluation en $a$}
+    child {%
+        node {$\left[\dfrac 0 0\right]$}
+        child {%
+            node (F) {factorisation}
+            child {%
+                node (S) {simplification}
+            }
+        }
+        child {%
+            node (B) {binôme conjugué}
+            edge from parent node [above] {$\sqrt{\ }$?}
+        }
+    }
+    child {%
+        node {$\left[\dfrac k 0\right]$}
+        child {%
+            node {TS de $\dfrac k {d(x)}$}
+            child {%
+                node [bordered] {$AV_a \equiv x = a$}
+            }
+        }
+    }
+    child {%
+        node {$L \in \R$}
+        child{%
+            node [bordered] {Point creux: $(a, L)$}
+        }
+    };
+    \draw [->,-latex] (B) to (F);
+    \draw [->,-latex] (S) to [out=225, in=270] (E);
+\end{tikzpicture}
+
 \end{document}
