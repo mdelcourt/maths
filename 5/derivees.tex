@@ -68,21 +68,20 @@ les mathématiques ont acquis le pouvoir d'exprimer les lois naturelles et de mo
 \begin{example}
     [Dérivée de $x^2$]
 
-    Calculons la dérivée de $f(x) = x^2$ en un $x \in \R$ quelconque.
+    Calculons la dérivée de $f(x) = x^2$ en un $a \in \R$ quelconque.
     Dans ce but,
     analysons le quotient différentiel
     \begin{align}
-        \frac {f(x + h) - f(x)} h
-        &= \frac {{(x + h)}^2 - x^2} h\\
-        &= \frac {x^2 + 2xh + h^2 - x^2} h\\
-        &= \frac {2xh + h^2} h\\
-        &= 2x + h
+        \frac {f(x - a) - f(a)}{x - a}
+        &= \frac {x^2 - a^2}{x - a}\\
+        &= \frac {(x + a)(x - a)}{x - a}\\
+        &= x + a
     \end{align}
 
-    En faisant tendre $h$ vers $0$ des deux côtés,
+    En faisant tendre $x$ vers $a$ des deux côtés,
     on obtient
     \begin{align}
-        f'(x) = 2x.
+        f'(a) = 2a.
     \end{align}
 \end{example}
 
