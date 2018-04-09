@@ -72,7 +72,7 @@ les mathématiques ont acquis le pouvoir d'exprimer les lois naturelles et de mo
     Dans ce but,
     analysons le quotient différentiel
     \begin{align}
-        \frac {f(x - a) - f(a)}{x - a}
+        \frac {f(x) - f(a)}{x - a}
         &= \frac {x^2 - a^2}{x - a}\\
         &= \frac {(x + a)(x - a)}{x - a}\\
         &= x + a
@@ -116,7 +116,7 @@ les mathématiques ont acquis le pouvoir d'exprimer les lois naturelles et de mo
     \begin{align}
         \frac {f(x) - f(a)} h
         &= \frac {\frac 1 x - \frac 1 a}{x - a}\\
-        &= \frac{{a - x}{ax}}{x - a}\\
+        &= \frac{\frac{a - x}{ax}}{x - a}\\
         &= \frac {-1}{ax}
     \end{align}
 
@@ -139,7 +139,7 @@ les mathématiques ont acquis le pouvoir d'exprimer les lois naturelles et de mo
     (autrement dit, $f$ est \emph{continue} en $a$).
 \end{proposition}
 \begin{proof}
-    Soit $x \in \dom f$.
+    Soit $x \in \dom f \setminus \{a\}$.
     On vérifie que
     \begin{align}
         f(x) = \left(\frac {f(x) - f(a)} {x - a}\right) (x - a) + f(a).
@@ -155,7 +155,7 @@ les mathématiques ont acquis le pouvoir d'exprimer les lois naturelles et de mo
     on obtient
     \begin{align}
         \lim_{x \to a} f(x)
-        &= \left(\lim_{x \to a} \frac {f(x) - f(a)} {x - a}\right) \lim_{x \to a} {x - a} + \lim_{x \to a} f(a)\\
+        &= \left(\lim_{x \to a} \frac {f(x) - f(a)} {x - a}\right) \lim_{x \to a} (x - a) + \lim_{x \to a} f(a)\\
         &= f'(a) \cdot 0 + f(a) = f(a).
     \end{align}
 \end{proof}
@@ -236,7 +236,7 @@ Une dérivée peut se calculer terme par terme.
         \frac {(f g)(x) - (f g)(a)} {x - a}
         &= \frac {f(x) g(x) - f(a) g(a)} {x - a}\\
         &= \frac {f(x) g(x) - f(a) g(x) + f(a) g(x) - f(a) g(a)} {x - a}\\
-        &= \left(\frac {f(x) - f(a)} {x - a}\right) g(x) + f(x) \left(\frac {g(x) - g(a)} {x - a}\right).
+        &= \left(\frac {f(x) - f(a)} {x - a}\right) g(x) + f(a) \left(\frac {g(x) - g(a)} {x - a}\right).
     \end{align}
 
     En faisant tendre $x$ vers $a$ des deux côtés,
