@@ -196,7 +196,7 @@ Une dérivée peut se calculer terme par terme.
     \end{align}
 \end{proposition}
 \begin{proof}
-    Soit $x \in \dom f$.
+    Soit $x \in \dom f \setminus \{a\}$.
     Le quotient différentiel de $f + g$ s'écrit
     \begin{align}
         \frac {(f + g)(x) - (f + g)(a)} {x - a}
@@ -211,28 +211,38 @@ Une dérivée peut se calculer terme par terme.
 \end{proof}
 
 \begin{proposition}
+    [Dérivée d'une différence]
+
+    Soient $f, g$ deux fonctions dérivables en $a \in \R$.
+    Alors $f - g$ est dérivable en $a$ et
+    \begin{align}
+        (f - g)'(a) = f'(a) - g'(a).
+    \end{align}
+\end{proposition}
+
+\begin{proposition}
     [Dérivée d'un produit]
 
-    Soient $f, g$ deux fonctions dérivables en $x \in \R$.
+    Soient $f, g$ deux fonctions dérivables en $a \in \R$.
     Alors $f g$ est dérivable en $x$ et
     \begin{align}
-        (f g)'(x) = f'(x) g(x) + f(x) g'(x).
+        (f g)'(a) = f'(a) g(a) + f(a) g'(a).
     \end{align}
 \end{proposition}
 \begin{proof}
-    Soit $h \neq 0$.
+    Soit $x \in \dom f \setminus \{a\}$.
     Le quotient différentiel de $f g$ s'écrit
     \begin{align}
-        \frac {(f g)(x + h) - (f g)(x)} h
-        &= \frac {f(x + h) g(x + h) - f(x) g(x)} h\\
-        &= \frac {f(x + h) g(x + h) - f(x) g(x + h) + f(x) g(x + h) - f(x) g(x)} h\\
-        &= \left(\frac {f(x + h) - f(x)} h\right) g(x + h) + f(x) \left(\frac {g(x + h) - g(x)} h\right).
+        \frac {(f g)(x) - (f g)(a)} {x - a}
+        &= \frac {f(x) g(x) - f(a) g(a)} {x - a}\\
+        &= \frac {f(x) g(x) - f(a) g(x) + f(a) g(x) - f(a) g(a)} {x - a}\\
+        &= \left(\frac {f(x) - f(a)} {x - a}\right) g(x) + f(x) \left(\frac {g(x) - g(a)} {x - a}\right).
     \end{align}
 
-    En faisant tendre $h$ vers $0$ des deux côtés,
+    En faisant tendre $x$ vers $a$ des deux côtés,
     on obtient
     \begin{align}
-        (f g)'(x) = f'(x) g(x) + f(x) g'(x).
+        (f g)'(a) = f'(a) g(a) + f(a) g'(a).
     \end{align}
 \end{proof}
 
@@ -242,68 +252,69 @@ Une dérivée peut se calculer terme par terme.
     \subsubsection{Hypothèses}
 
     \begin{enumerate}
-        \item $f$ une fonction dérivable en $x$;
-        \item $g$ une fonction dérivable en $f(x)$.
+        \item $f$ une fonction dérivable en $a$;
+        \item $g$ une fonction dérivable en $f(a)$.
     \end{enumerate}
 
     \subsubsection{Thèse}
 
-    Alors $g \circ f$ est dérivable en $x$ et
+    Alors $g \circ f$ est dérivable en $a$ et
     \begin{align}
-        (g \circ f)'(x) = g'(f(x)) f'(x).
+        (g \circ f)'(a) = g'(f(a)) f'(a).
     \end{align}
 \end{proposition}
 \begin{proof}[Preuve lorsque $f$ est injective]
-    Soit $h \neq 0$.
+    Soit $x \in \dom f \setminus \{a\}$.
     Le quotient différentiel de $g \circ f$ s'écrit
     \begin{align}
-        \frac {(g \circ f)(x + h) - (g \circ f)(x)} h
-        &= \frac {g(f(x + h)) - g(f(x))} h\\
-        &= \frac {g(f(x + h)) - g(f(x))} {f(x + h) - f(x)} \frac {f(x + h) - f(x)} h.
+        \frac {(g \circ f)(x) - (g \circ f)(a)} {x - a}
+        &= \frac {g(f(x)) - g(f(a))} {x - a}\\
+        &= \frac {g(f(x)) - g(f(a))} {f(x) - f(a)} \frac {f(x) - f(a)} {x - a}.
     \end{align}
     Notons que l'hypothèse d'injectivité nous assure qu'il n'y a pas de division par $0$.
 
-    En faisant tendre $h$ vers $0$ des deux côtés,
-    et en se souvenant qu'alors $f(x + h)$ tend vers $f(x)$ par continuité,
+    En faisant tendre $x$ vers $a$ des deux côtés,
+    et en se souvenant qu'alors $f(x)$ tend vers $f(a)$ par continuité,
     on obtient
     \begin{align}
-        (g \circ f)'(x) = g'(f(x)) f'(x).
+        (g \circ f)'(a) = g'(f(a)) f'(a).
     \end{align}
 \end{proof}
 
 \begin{proposition}
     [Dérivée d'un quotient]
 
-    Soient $f, g$ deux fonctions dérivables en $x \in \R$.
-    Si $g'(x) \neq 0$,
-    alors $\frac f g$ est dérivable en $x$ et
+    Soient $f, g$ deux fonctions dérivables en $a \in \R$.
+    Si $g'(a) \neq 0$,
+    alors $\frac f g$ est dérivable en $a$ et
     \begin{align}
-        \left(\frac f g\right)'(x) = \frac {f'(x) g(x) - f(x) g'(x)} {g^2(x)}
+        \left(\frac f g\right)'(a) = \frac {f'(a) g(a) - f(a) g'(a)} {g^2(a)}
     \end{align}
 \end{proposition}
 \begin{proof}
+    Soit $x \in \dom f \setminus \{a\}$.
     Clairement,
     on a
     \begin{align}
-        \left(\frac f g\right)'(x)
-        = \left(f \frac 1 g\right)'(x)
-        = f'(x) \frac 1 {g(x)} + f(x) \left(\frac 1 g\right)'(x).
+        \left(\frac f g\right)'(a)
+        = \left(f \frac 1 g\right)'(a)
+        = f'(a) \frac 1 {g(a)} + f(a) \left(\frac 1 g\right)'(a).
     \end{align}
 
     Il ne reste plus qu'à calculer la dérivée de $\frac 1 g$.
     Pour ce faire,
-    si nous dénotons par $\iota(x) = \frac 1 x$ la fonction inverse
+    si nous dénotons par $\iota(a) = \frac 1 a$ la fonction inverse
     alors $\frac 1 g = \iota \circ g$ et la dérivée vaut
     \begin{align}
-        \left(\frac 1 g\right)'(x) = \iota'(g(x)) g'(x) = \frac {-g'(x)} {g^2(x)}.
+        \left(\frac 1 g\right)'(a) = \iota'(g(a)) g'(a) = \frac {-g'(a)} {g^2(a)}.
     \end{align}
 
     En combinant tout,
     nous obtenons
     \begin{align}
-        \left(\frac f g\right)'(x)
-        &= f'(x) \frac 1 {g(x)} - f(x) \frac {g'(x)} {g^2(x)}\\
-        &= \frac {f'(x) g(x) - f(x) g'(x)} {g^2(x)}
+        \left(\frac f g\right)'(a)
+        &= f'(a) \frac 1 {g(a)} - f(a) \frac {g'(a)} {g^2(a)}\\
+        &= \frac {f'(a) g(a) - f(a) g'(a)} {g^2(a)}
     \end{align}
 \end{proof}
 
