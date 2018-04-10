@@ -102,12 +102,10 @@ les réels les plus intéressants sont les \textbf{points adhérents hors du dom
 
     Supposons que nous considérons la fonction $f$ dont le graphe est esquissé ci-dessous.
 
-    \begin{center}
-        \begin{plot}{0.5}{-6}{-6}{6}{6}
-            \plotfunction{-6:6}{0.25*\x^3 - 0.8*\x^2 - \x - 1}
-            \drawpoint{0, -1}
-        \end{plot}
-    \end{center}
+    \begin{plot}{0.5}{-6}{-6}{6}{6}
+        \plotfunction{-6:6}{0.25*\x^3 - 0.8*\x^2 - \x - 1}
+        \drawpoint{0, -1}
+    \end{plot}
 
     Nous remarquons que les images deviennent aussi proches que l'on veut de $-1$
     lorsque les abscisses sont suffisament proches de $0$.
@@ -127,13 +125,11 @@ en disant que la limite n'existe pas dans l'exemple suivant.
 
     Supposons que nous considérons la fonction $f$ dont le graphe est esquissé ci-dessous.
 
-    \begin{center}
-        \begin{plot}{0.5}{-6}{-6}{6}{6}
-            \plotfunction{-6:6}{0.25*\x^3 - 0.8*\x^2 - \x - 1}
-            \drawpoint{0, -1}
-            \drawpoint[black]{0, 2}
-        \end{plot}
-    \end{center}
+    \begin{plot}{0.5}{-6}{-6}{6}{6}
+        \plotfunction{-6:6}{0.25*\x^3 - 0.8*\x^2 - \x - 1}
+        \drawpoint{0, -1}
+        \drawpoint[black]{0, 2}
+    \end{plot}
 
     Nous remarquons que les images ne sont pas systématiquement proches de $-1$
     lorsque l'on considère des $x$ proches de $0$.
@@ -192,11 +188,9 @@ donc s'il vous plaît défendez-nous et montrez-leur ceci:
 
     Supposons que nous considérons la fonction $f$ dont le graphe est esquissé ci-dessous.
 
-    \begin{center}
-        \begin{plot}{0.5}{-6}{-1}{6}{12}
-            \plotfunction{-6:6}{1/(\x - 1)^2}
-        \end{plot}
-    \end{center}
+    \begin{plot}{0.5}{-6}{-1}{6}{12}
+        \plotfunction{-6:6}{1/(\x - 1)^2}
+    \end{plot}
 
     Nous remarquons que les images deviennent aussi grande que l'on souhaite
     lorsque les abscisses sont suffisament proches de $1$.
@@ -216,12 +210,10 @@ donc s'il vous plaît défendez-nous et montrez-leur ceci:
         f(x) = \frac 1 {x + 1},
     \end{align}
     dont le graphe est ci-dessous,
-    \begin{center}
-        \begin{plot}{0.5}{-6}{-6}{6}{6}
-            \plotfunction{-6:0.99}{1/(\x - 1)}
-            \plotfunction{1.01:6}{1/(\x - 1)}
-        \end{plot}
-    \end{center}
+    \begin{plot}{0.5}{-6}{-6}{6}{6}
+        \plotfunction{-6:0.99}{1/(\x - 1)}
+        \plotfunction{1.01:6}{1/(\x - 1)}
+    \end{plot}
     n'a pas de limite, même infinie, en $1$.
 
     Nous serions tenté de dire que la limite en $1$ par la gauche est $-\infty$,
@@ -243,23 +235,19 @@ Trois cas se présentent lorsqu'une limite existe en un réel.
         alors on dit que $f$ est \textbf{continue} en $a$.
         Par exemple,
         dans le graphe ci-dessous,
-        \begin{center}
-            \begin{plot}{0.5}{-6}{-1}{6}{3}
-                \plotfunction{-6:6}{0.05*\x^3 + 1}
-                \drawpoint[black]{0, 1}
-            \end{plot}
-        \end{center}
+        \begin{plot}{0.5}{-6}{-1}{6}{3}
+            \plotfunction{-6:6}{0.05*\x^3 + 1}
+            \drawpoint[black]{0, 1}
+        \end{plot}
         on a $\lim_{x \to 0} f(x) = 1$ donc $f$ est \emph{continue} en $0$.
     \item Si la limite existe en $a \notin \dom f$ et est réelle,
         alors $(a, \lim_{x \to a} f(x))$ est un \textbf{point creux}.
         Par exemple,
         dans le graphe ci-dessous,
-        \begin{center}
-            \begin{plot}{0.5}{-6}{-2}{6}{2}
-                \plotfunction{-6:6}{0.05*\x^3}
-                \drawpoint{0, 0}
-            \end{plot}
-        \end{center}
+        \begin{plot}{0.5}{-6}{-2}{6}{2}
+            \plotfunction{-6:6}{0.05*\x^3}
+            \drawpoint{0, 0}
+        \end{plot}
         on a $\lim_{x \to 0} f(x) = 0$ donc $(0, 0)$ est un \emph{point creux}.
     \item Si une limite latérale en $a$ est infinie,
         alors nous avons une \textbf{asymptote verticale} en $a$.
@@ -270,12 +258,10 @@ Trois cas se présentent lorsqu'une limite existe en un réel.
             AV_a \equiv x = a.
         \end{align}
         Dans l'exemple suivant,
-        \begin{center}
-            \begin{plot}{0.25}{-6}{-1}{6}{12}
-                \plotfunction{-6:6}{1/(\x - 1)^2 + 2}
-                \drawline (1, -1) -- (1, 13);
-            \end{plot}
-        \end{center}
+        \begin{plot}{0.25}{-6}{-1}{6}{12}
+            \plotfunction{-6:6}{1/(\x - 1)^2 + 2}
+            \drawline (1, -1) -- (1, 13);
+        \end{plot}
         on remarque que $\lim_{x \to 1} f(x) = +\infty$,
         et qu'autour de $1$,
         le graphe est proche de l'\emph{asymptote verticale} d'équation
@@ -441,12 +427,10 @@ et pour des raisons pratiques nous étudierons le signe de la deuxième.
     \end{align}
 
     Cela peut se vérifier graphiquement:
-    \begin{center}
-        \begin{plot}{0.25}{-12}{-12}{12}{12}
-            \plotfunction{-12:-0.01}{1/\x}
-            \plotfunction{0.01:12}{1/\x}
-        \end{plot}
-    \end{center}
+    \begin{plot}{0.25}{-12}{-12}{12}{12}
+        \plotfunction{-12:-0.01}{1/\x}
+        \plotfunction{0.01:12}{1/\x}
+    \end{plot}
     
     Puisque les limites latérales ne coïcident pas, nous écrivons
     \begin{align}
@@ -611,11 +595,9 @@ mais elle ne sera plus causée par des racines.
     [Limite réelle à l'infini]
 
     Considérons la fonction $f$ dont le graphe est esquissé ci-dessous.
-    \begin{center}
-        \begin{plot}{0.25}{-1}{-3}{30}{5}
-            \plotfunction{-1:30}{10*sin(90*\x)/(\x + 5) + 1}
-        \end{plot}
-    \end{center}
+    \begin{plot}{0.25}{-1}{-3}{30}{5}
+        \plotfunction{-1:30}{10*sin(90*\x)/(\x + 5) + 1}
+    \end{plot}
 
     Nous voyons que les images associées à des $x$ grands ont tendance à rester de plus en plus proche de $1$.
     Nous pouvons alors écrire
@@ -625,12 +607,10 @@ mais elle ne sera plus causée par des racines.
 
     Nous voyons également que le graphe reste de plus en plus près de la droite d'équation $y = 1$,
     comme le montre la figure suivante:
-    \begin{center}
-        \begin{plot}{0.25}{-1}{-3}{30}{5}
-            \plotfunction{-1:30}{10*sin(90*\x)/(\x + 5) + 1}
-            \plotfunction{-1:30}{1}
-        \end{plot}
-    \end{center}
+    \begin{plot}{0.25}{-1}{-3}{30}{5}
+        \plotfunction{-1:30}{10*sin(90*\x)/(\x + 5) + 1}
+        \plotfunction{-1:30}{1}
+    \end{plot}
 
     Cette droite s'appelle une \emph{asymptote horizontale}.
 \end{example}
@@ -699,12 +679,10 @@ mais elle ne sera plus causée par des racines.
     est une \emph{asymptote oblique}.
 
     Nous vérifions graphiquement la tendance du graphe à s'approcher de plus en plus de l'asymptote pour les grandes valeurs de $x$.
-    \begin{center}
-        \begin{plot}{0.25}{-12}{-12}{12}{12}
-            \plotfunction{-12:12}{0.5*\x + 1 + 1/\x}
-            \plotfunction{-12:12}{0.5*\x + 1}
-        \end{plot}
-    \end{center}
+    \begin{plot}{0.25}{-12}{-12}{12}{12}
+        \plotfunction{-12:12}{0.5*\x + 1 + 1/\x}
+        \plotfunction{-12:12}{0.5*\x + 1}
+    \end{plot}
 \end{example}
 
 Toutes les limites infinies à l'infini ne donnent pas forcément lieu à une asymptote oblique.
@@ -723,11 +701,9 @@ Toutes les limites infinies à l'infini ne donnent pas forcément lieu à une as
     \end{align}
     
     Nous constatons cependant que le graphique de la fonction ne se rapproche d'aucune droite pour des valeurs de $x$ très grandes.
-    \begin{center}
-        \begin{plot}{0.25}{-12}{-12}{12}{12}
-            \plotfunction{-12:12}{\x*\x/10}
-        \end{plot}
-    \end{center}
+    \begin{plot}{0.25}{-12}{-12}{12}{12}
+        \plotfunction{-12:12}{\x*\x/10}
+    \end{plot}
 \end{example}
 
 \subsection{Calcul des limites à l'infini}
