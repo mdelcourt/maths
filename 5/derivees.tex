@@ -86,6 +86,25 @@ les mathématiques ont acquis le pouvoir d'exprimer les lois naturelles et de mo
 \end{example}
 
 \begin{example}
+    [Dérivée de $x$]
+
+    Calculons la dérivée de $f(x) = x$ en un $a \in \R$ quelconque.
+    Dans ce but,
+    analysons le quotient différentiel
+    \begin{align}
+        \frac {f(x) - f(a)}{x - a}
+        &= \frac {x - a}{x - a}\\
+        &= 1.
+    \end{align}
+
+    En faisant tendre $x$ vers $a$ des deux côtés,
+    on obtient
+    \begin{align}
+        f'(a) = 1.
+    \end{align}
+\end{example}
+
+\begin{example}
     [Dérivée de $x^2$]
 
     Calculons la dérivée de $f(x) = x^2$ en un $a \in \R$ quelconque.
@@ -102,6 +121,26 @@ les mathématiques ont acquis le pouvoir d'exprimer les lois naturelles et de mo
     on obtient
     \begin{align}
         f'(a) = 2a.
+    \end{align}
+\end{example}
+
+\begin{example}
+    [Dérivée de $x^3$]
+
+    Calculons la dérivée de $f(x) = x^3$ en un $a \in \R$ quelconque.
+    Dans ce but,
+    analysons le quotient différentiel
+    \begin{align}
+        \frac {f(x) - f(a)}{x - a}
+        &= \frac {x^3 - a^3}{x - a}\\
+        &= \frac {(x-a)(x^2 + ax + a^2}{x - a}\\
+        &= x^2 + ax + a^2.
+    \end{align}
+
+    En faisant tendre $x$ vers $a$ des deux côtés,
+    on obtient
+    \begin{align}
+        f'(a) = 3a^2.
     \end{align}
 \end{example}
 
