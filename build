@@ -22,6 +22,7 @@ function deploy() {
     # Generate the webpage
     cp web.adoc temp2.adoc
     find -name '*.pdf' | \
+        grep -vf blacklist | \
         sed 's/^\.\///;s/\.pdf$//' | sort | \
         xargs -I {} echo -e '| {}\n| link:/files/{}.pdf[icon:file-pdf[]]\n| https://github.com/khoi-nguyen/maths/tree/master/{}.tex[icon:align-justify[]]\n\n' \
         >> temp2.adoc
