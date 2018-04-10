@@ -707,6 +707,29 @@ mais elle ne sera plus causée par des racines.
     \end{center}
 \end{example}
 
+Toutes les limites infinies à l'infini ne donnent pas forcément lieu à une asymptote oblique.
+
+\begin{example}
+    [Pas d'asymptote oblique]
+
+    Considérons la fonction $f$ définie par
+    \begin{align}
+        f(x) = \frac{x^2}{10}.
+    \end{align}
+
+    Nous voyons que
+    \begin{align}
+        \lim_{x \to \pm \infty} f(x) = + \infty
+    \end{align}
+    
+    Nous constatons cependant que le graphique de la fonction ne se rapproche d'aucune droite pour des valeurs de $x$ très grandes.
+    \begin{center}
+        \begin{plot}{0.25}{-12}{-12}{12}{12}
+            \plotfunction{-12:12}{\x*\x/10}
+        \end{plot}
+    \end{center}
+\end{example}
+
 \subsection{Calcul des limites à l'infini}
 
 \subsubsection{Limite de $k x^n$, $k \neq 0$}
