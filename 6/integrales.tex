@@ -88,4 +88,40 @@
 
 \section{Applications du calcul intégral}
 
+\subsection{Valeur moyenne d'une fonction}
+
+Supposons que nous voulions calculer la valeur moyenne $\mu$ d'une fonction continue $f$ sur un intervalle $\ccinterval a b$.
+
+Une première approximation consisterait à choisir $n + 1$ points équidistants $x_1 = a$, $x_2$, \dots, $x_{n + 1} = b$
+et de calculer
+\begin{align}
+    \mu \approx \frac 1 n \sum_{j = 1}^n f(x_j).
+\end{align}
+
+Notre choix de $n + 1$ points découpe $\ccinterval a b$ en $n$ intervalles de même longueur $\Delta x = \frac {b - a} n$.
+Dès lors,
+la valeur moyenne de $f$ sur $\ccinterval a b$,
+peut être approximée par
+\begin{align}
+    \mu \approx \frac 1 n \sum_{j = 1}^n f(x_j)
+    = \frac 1 {b - a} \sum_{j = 1}^n f(x_j) \Delta x.
+\end{align}
+
+Puisque l'approximation s'améliore au plus $n$ est grand,
+on s'attend alors à ce que
+\begin{align}
+    \mu &= \lim_{n \to \infty} \left(\frac 1 {b - a} \sum_{j = 1}^n f(x_j) \Delta x\right)\\
+        &= \frac 1 {b - a} \int_a^b f(x) \dd x.
+\end{align}
+
+\begin{definition}
+    [Valeur moyenne d'une fonction continue]
+
+    Soit $f$ une fonction continue sur un intervalle $\ccinterval a b$.
+    La \emph{moyenne} de $f$ sur $\ccinterval a b$ est définie par
+    \begin{align}
+        \mu_{f, \ccinterval a b} \defeq \frac 1 {b - a} \int_a^b f(x) \dd x.
+    \end{align}
+\end{definition}
+
 \end{document}
