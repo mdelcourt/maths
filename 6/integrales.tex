@@ -268,4 +268,21 @@ on s'attend alors à ce que
     \end{align}
 \end{definition}
 
+\begin{example}
+    [Moyenne d'une fonction]
+
+    Supposons que nous cherchions à calculer la valeur moyenne $\mu$ de $f(x) = x^2$ sur $\ccinterval 0 3$.
+
+    Nous savons qu'elle vaut
+    \begin{align}
+        \mu = \frac 1 3 \int_0^3 x^2 \dd x = \frac 1 3 \cdot \frac {3^3} 3 = 3.
+    \end{align}
+
+    Cela peut se vérifier graphiquement:
+    \begin{plot}{0.5}{-1}{-1}{4}{10}
+        \plotfunction{0:3}{(\x)^2}
+        \drawline (0, 3) node[left] {\footnotesize{$\mu$}} -- (3, 3);
+    \end{plot}
+\end{example}
+
 \end{document}
