@@ -530,6 +530,31 @@ La \emph{croissance} est liée à la dérivée via le théorème suivant.
     si et seulement si
     $f'$ est positive (resp.\ négative) sur $I$.
 \end{proposition}
+\begin{proof}
+    Supposons que la fonction $f$ est croissante.
+    Soit $a \in I$.
+    Pour $ I \setminus \{a\}$, on a
+    \begin{align}
+        \frac{f(x) - f(a)}{x - a} \ge 0.
+    \end{align}
+    On a donc 
+    \begin{align}
+        f'(a) \ge 0.
+    \end{align}
+    
+    Dans l'autre sens, supposons que $f'$ est positive sur $I$.
+    Prenons $a,b \in I$ deux points distincts.
+    Par le théorème des accroissements finis,
+    il existe $c$ entre $a$ et $b$ tel que 
+    \begin{align}
+        \frac{f(b) - f(a)}{b - a} = f'(c).
+    \end{align}
+    Puisque $f'$ est positive partout sur $I$, 
+    on en déduit que $f$ est croissante.
+    
+    Le cas où $f$ est décroissante est similaire.
+\end{proof}
+
 
 \begin{howto}
     [Étude de croissance]
