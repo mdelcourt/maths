@@ -408,7 +408,7 @@ Une dérivée peut se calculer terme par terme.
 
 La connaissance de la dérivée d'une fonction facilite grandement la recherche des maximums et minimums locaux de la fonction.
 
-Commençons par définir ces deux notions
+Commençons par définir ces deux notions.
 
 \begin{definition}
     [Extremums locaux]
@@ -421,16 +421,47 @@ Commençons par définir ces deux notions
     \end{align}
 \end{definition}
 
+La proposition suivante permet de sélectionner les points qui ont une chance d'être des extremums locaux.
+
 \begin{proposition}
     [Théorème de Fermat]
 
     Soit $f$ une fonction dérivable sur un intervalle \emph{ouvert} $I$.
-    Alors $f$ admet un extremum local en $a \in I$
-    si et seulement si
-    $f'$ change de signe en $a$\footnote{%
-        En rappelant que $0$ est à la fois positif et négatif.
-    }.
+    Si $f$ admet un extremum local en $a \in I$,
+    alors $f'(a) = 0$.
 \end{proposition}
+\begin{proof}
+    Supposons que $a$ est un maximum local de $f$.
+    Si $x \in I$ est \emph{suffisamment proche} de $a$ et si $x < a$, alors
+    \begin{align}
+        \frac{f(x) - f(a)}{x-a} \ge 0.
+    \end{align}
+    On en déduit que 
+    \begin{align}
+        \lim_{x \to a} \frac{f(x) - f(a)}{x-a} \ge 0.
+    \end{align}
+    On a donc
+    \begin{align}
+        f'(a) \ge 0.
+    \end{align}
+    Si $x \in I$ est \emph{suffisamment proche} de $a$ et si $x > a$, alors
+    \begin{align}
+        \frac{f(x) - f(a)}{x-a} \le 0.
+    \end{align}
+    On en déduit que 
+    \begin{align}
+        \lim_{x \to a} \frac{f(x) - f(a)}{x-a} \le 0.
+    \end{align}
+    On a donc
+    \begin{align}
+        f'(a) \le 0.
+    \end{align}
+    On en conclut que 
+    \begin{align}
+        f'(a) = 0.
+    \end{align}
+    La démonstration est similaire si $a$ est un minimum local de $f$.
+\end{proof}
 
 \section{Dérivée et croissance}
 
