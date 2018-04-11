@@ -108,7 +108,22 @@ nous travaillerons toujours avec de telles fonctions.
         \item Pour une fonction positive,
             l'intégrale $\int_a^b f(x) \dd x$ représente l'aire sous la courbe entre $a$ et $b$.
         \item Pour une fonction négative,
-            l'intégrale $\int_a^b f(x) \dd x$ représente l'\emph{opposé} de l'aire sous la courbe entre $a$ et $b$.
+            l'intégrale $\int_a^b f(x) \dd x$ représente l'\emph{opposé} de l'aire au-dessus de la courbe entre $a$ et $b$.
+            En effet,
+            on remarque dans l'image ci-dessous
+            \begin{plot}{0.5}{-2}{-7}{7}{1}
+                \drawriemannsums{-2*sin(\x r) - 4}{1}{6}{10}
+                \def\c{3.25}
+                \pgfmathsetmacro{\Vc}{-2*sin(\c r)-4}
+                \draw[dashed] (\c, 0) node[above] {\footnotesize{$x_j$}} -- (\c, \Vc) -- (0, \Vc) node[left] {\footnotesize{$f(x_j)$}};
+                \filldraw[black] (\c, \Vc) circle (.05cm);
+            \end{plot}
+            que chaque $f(x_j)$, puisque négatif, représente l'\emph{opposé} de la hauteur du rectangle,
+            rendant dès lors chacun des termes de la somme
+            \begin{align}
+                \sum_{j = 1}^n f(x_j) \Delta x
+            \end{align}
+            négatifs.
         \item Pour une fonction quelconque
             l'intégrale $\int_a^b f(x) \dd x$ représente l'aire \emph{signée} sous la courbe entre $a$ et $b$.
     \end{itemize}
