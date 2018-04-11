@@ -46,7 +46,7 @@
         \pgfmathsetmacro{\y}{#1}
         % Draw the rectangle
         \pgfmathsetmacro{\x}{#2+(\n-1)*\L}
-        \draw[fill=grey!20] (\x, \y |- x axis) -- (\x, \y) -- (\x + \L, \y) -- (\x + \L, \y |- x axis) -- cycle;
+        \draw[fill=gray!20] (\x, \y |- x axis) -- (\x, \y) -- (\x + \L, \y) -- (\x + \L, \y |- x axis) -- cycle;
     }
     % Plot the function
     \plotfunction{#2:#3}{#1}
