@@ -18,7 +18,7 @@ find -name '*.tex' | grep -v contributors | xargs latexmk -silent -pdf -cd
 
 function deploy() {
     # Send all PDF files to the website
-    find -name '*.pdf' -print0 | rsync -av --files-from=- --from0 ./ khoi@nguyen.me.uk:~/www/files
+    find -name '*.pdf' -print0 | rsync -av -I --files-from=- --from0 ./ khoi@nguyen.me.uk:~/www/files
 
     # Generate the webpage
     cp web.adoc temp2.adoc
