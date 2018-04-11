@@ -463,6 +463,26 @@ La proposition suivante permet de sélectionner les points qui ont une chance d'
     La démonstration est similaire si $a$ est un minimum local de $f$.
 \end{proof}
 
+Il faut faire bien attention au fait que la réciproque de ce théorème est fausse. 
+En effet, l'exemple suivant montre qu'on peut avoir $f'(a) = 0$ sans avoir d'extremum local en $a$.
+
+\begin{example}
+    Considérons la fonction $f$ définie par
+    \begin{align}
+        f(x) = x^3.
+    \end{align}
+    La dérivée de cette fonction est la fonction
+    \begin{align}
+        f'(x) = 3x^2.
+    \end{align}
+    On constate que $f'(0) = 0$.
+    Cependant, la fonction $f$ n'admet pas d'extremum local en $0$.
+\end{example}
+
+Pour déterminer si les racines de la dérivée correspondent effectivement à des extremums locaux,
+on va étudier plus en détail la croissance de la fonction.
+Heureusement, la dérivée joue également un rôle majeur dans cette étude.
+
 \section{Dérivée et croissance}
 
 Rappelons qu'une fonction $f$ est croissante (resp.\ décroissante) sur un intervalle $I$
