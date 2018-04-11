@@ -3,9 +3,5 @@
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd $DIR
 
-git remote update
-
-if [ $(git status -uno | grep behind | wc -l) = 1 ]; then
-    git pull
-    ./build
-fi
+git pull
+./build
