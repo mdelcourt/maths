@@ -925,11 +925,11 @@ Les limites importantes sont:
         node {$L \in \R$}
         child {%
             node [bordered] {Point creux: $(a, L)$}
-            edge from parent node [above] {$a \notin \dom$}
+            edge from parent node [above] {\footnotesize{$a \notin \dom$}}
         }
         child {%
             node [bordered] {continue en $a$}
-            edge from parent node [above] {$a \in \dom$}
+            edge from parent node [above] {\footnotesize{$a \in \dom$}}
         }
     };
     \draw [->,-latex] (B) to (F);
@@ -979,8 +979,8 @@ alors il faut calculer l'\emph{asymptote oblique}.
             }
             child {%
                 node {$(-\sign k) \infty$}
-                edge from parent node [above] {$n$ impair}
-                edge from parent node [below] {$-\infty$}
+                edge from parent node [above] {\footnotesize{$n$ impair}}
+                edge from parent node [below] {\footnotesize{$-\infty$}}
             }
         }
     };
