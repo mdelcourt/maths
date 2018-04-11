@@ -18,6 +18,7 @@
     L'\emph{intégrale} de $f$ sur $\ccinterval a b$ est définie comme étant le nombre réel
     \begin{align}
         \int_a^b f(x) \dd x \defeq \lim_{n \to \infty} \sum_{j = 1}^n f(x_j) \Delta x.
+        \label{eq:definition:integrale}
     \end{align}
 \end{definition}
 
@@ -31,6 +32,44 @@
             l'intégrale $\int_a^b f(x) \dd x$ représente l'\emph{opposé} de l'aire sous la courbe entre $a$ et $b$.
         \item Pour une fonction quelconque
             l'intégrale $\int_a^b f(x) \dd x$ représente l'aire \emph{signée} sous la courbe entre $a$ et $b$.
+    \end{itemize}
+\end{remark}
+
+\begin{remark}
+    [Pourquoi l'aire signée?]
+
+    Une question légitime serait de se demander pourquoi~\eqref{eq:definition:integrale} ne contient pas de valeur absolue
+    pour s'assurer que chaque contribution soit positive
+    et que l'on mesure bien des aires de rectangle.
+
+    \begin{itemize}
+        \item L'aire \emph{signée} est nettement plus facile à calculer.
+            En effet, la ressemblance formelle entre
+            \begin{align}
+                \int_a^b f(x) \dd x
+                \quad \text{et} \quad
+                \int f(x) \dd x
+            \end{align}
+            suggère l'existence d'un \emph{lien entre intégrale et primitive}.
+            Ce lien est décrit par le \emph{théorème fondamental de l'analyse},
+            et simplifie considérablement le calcul d'intégrales.
+
+            Cependant, pour qu'un lien entre intégrale et primitive soit possible,
+            il faut que ces deux notions se comportent de la même façon.
+            En particulier,
+            un changement de signe d'une fonction
+            change le signe de ses primitives puisque
+            \begin{align}
+                \int -f(x) \dd x = - \int f(x) \dd x.
+            \end{align}
+            Pour qu'une telle propriété soit valide pour l'intégrale,
+            il faut mesurer l'aire signée.
+        \item Le calcul d'aire est très loin d'être l'unique application du calcul intégral.
+            Certaines des applications les plus importantes
+            (citons à titre d'exemple le calcul de moyenne, de centre de masse, de déplacement et de travail)
+            calculent des nombres qui peuvent également être négatifs.
+            En mesurant l'aire signée,
+            on permet à l'intégrale d'être suffisament générale pour traiter des applications nettement plus vastes.
     \end{itemize}
 \end{remark}
 
