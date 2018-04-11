@@ -315,6 +315,16 @@ Les limites se comportent bien avec les opérations algébriques.
             si les limites apparaîssant à droite \emph{existent et sont réelles},
             que la limite à gauche a un sens,
             et la limite du dénominateur est non nulle.
+        \item Si $f$ a une limite en $a$
+            \begin{align}
+                \lim_{x \to a} f(x) = b,
+            \end{align}
+            et si $g$ a une limite en $b$,
+            alors
+            \begin{align}
+                \lim_{x \to a} g(f(x)) = \lim_{y \to b} g(y)
+            \end{align}
+            à condition que la limite à gauche ait un sens.
         \item Si $g$ est une fonction élémentaire (au sens du chapitre précédent),
             alors
             \begin{align*}
