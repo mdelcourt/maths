@@ -17,8 +17,8 @@
     \begin{center}
         \begin{tikzpicture}[>=triangle 45,x=#1cm,y=#1cm]
         \draw [color=cqcqcq,xstep=#1cm,ystep=#1cm] (#2, #3) grid (#4, #5);
-        \draw[->,color=black] (#2, 0) -- (#4, 0) node[below] {$x$};
-        \draw[->,color=black] (0, #3) -- (0, #5) node[left] {$y$};
+        \draw[->,color=black] (#2, 0) -- (#4, 0) coordinate (x axis) node[below] {$x$};
+        \draw[->,color=black] (0, #3) -- (0, #5) coordinate (y axis) node[left] {$y$};
         \clip(#2, #3) rectangle (#4, #5);
 }{
         \end{tikzpicture}
@@ -36,6 +36,21 @@
     \end{center}
 }
 \newcommand{\signrow}[1]{\tkzTabLine{#1}}
+% Riemann sums
+\usepackage{pgfplots}
+\newcommand{\drawriemannsums}[4]{%
+    \foreach \n in {1,...,#4} {%
+        \pgfmathsetmacro{\L}{(#3-#2)/#4}
+        % Evaluate at the middle point
+        \pgfmathsetmacro{\x}{#2+(\n-0.5)*\L}
+        \pgfmathsetmacro{\y}{#1}
+        % Draw the rectangle
+        \pgfmathsetmacro{\x}{#2+(\n-1)*\L}
+        \draw[fill=grey!20] (\x, \y |- x axis) -- (\x, \y) -- (\x + \L, \y) -- (\x + \L, \y |- x axis) -- cycle;
+    }
+    % Plot the function
+    \plotfunction{#2:#3}{#1}
+}
 
 % Operators
 \DeclareMathOperator{\dom}{dom}
