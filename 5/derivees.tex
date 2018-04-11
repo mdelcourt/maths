@@ -65,6 +65,18 @@ les mathématiques ont acquis le pouvoir d'exprimer les lois naturelles et de mo
     une dérivée est une limite d'un quotient différentiel.
 \end{remark}
 
+\begin{definition}
+    [Tangente]
+
+    Soit $f$ une fonction dérivable en un réel $a \in \R$.
+    La \emph{tangente} de $f$ en $a$ est la droite de pente $f'(a)$ passant par $(a, f(a))$.
+    Autrement dit,
+    la tangente est la droite d'équation
+    \begin{align}
+        T_{f, a} \equiv f'(a) (x - a) + f(a).
+    \end{align}
+\end{definition}
+
 \begin{example}
     [Dérivée d'une constante]
 
@@ -404,6 +416,85 @@ Une dérivée peut se calculer terme par terme.
     Calculer la dérivée des fonctions tangente et cotangente.
 \end{exercise}
 
+\subsection{Recherche d'extrémums locaux}
+
+La connaissance de la dérivée d'une fonction facilite grandement la recherche des maximums et minimums locaux de la fonction.
+
+Commençons par définir ces deux notions.
+
+\begin{definition}
+    [Extremums locaux]
+    
+    Soit $f$ une fonction et $a \in \dom f$.
+    On dit que $f$ admet un maximum (resp. minimum) local en $a$ si
+    pour tout $x \in \dom f$ \emph{suffisamment proche} de $a$,
+    \begin{align}
+        f(a) \ge f(x) \text{ (resp. } f(a) \le f(x) \text{)}
+    \end{align}
+\end{definition}
+
+La proposition suivante permet de sélectionner les points qui ont une chance d'être des extremums locaux.
+
+\begin{proposition}
+    [Théorème de Fermat]
+
+    Soit $f$ une fonction dérivable sur un intervalle \emph{ouvert} $I$.
+    Si $f$ admet un extremum local en $a \in I$,
+    alors $f'(a) = 0$.
+\end{proposition}
+\begin{proof}
+    Supposons que $a$ est un maximum local de $f$.
+    Si $x \in I$ est \emph{suffisamment proche} de $a$ et si $x < a$, alors
+    \begin{align}
+        \frac{f(x) - f(a)}{x-a} \ge 0.
+    \end{align}
+    On en déduit que 
+    \begin{align}
+        \lim_{x \to a} \frac{f(x) - f(a)}{x-a} \ge 0.
+    \end{align}
+    On a donc
+    \begin{align}
+        f'(a) \ge 0.
+    \end{align}
+    Si $x \in I$ est \emph{suffisamment proche} de $a$ et si $x > a$, alors
+    \begin{align}
+        \frac{f(x) - f(a)}{x-a} \le 0.
+    \end{align}
+    On en déduit que 
+    \begin{align}
+        \lim_{x \to a} \frac{f(x) - f(a)}{x-a} \le 0.
+    \end{align}
+    On a donc
+    \begin{align}
+        f'(a) \le 0.
+    \end{align}
+    On en conclut que 
+    \begin{align}
+        f'(a) = 0.
+    \end{align}
+    La démonstration est similaire si $a$ est un minimum local de $f$.
+\end{proof}
+
+Il faut faire bien attention au fait que la réciproque de ce théorème est fausse. 
+En effet, l'exemple suivant montre qu'on peut avoir $f'(a) = 0$ sans avoir d'extremum local en $a$.
+
+\begin{example}
+    Considérons la fonction $f$ définie par
+    \begin{align}
+        f(x) = x^3.
+    \end{align}
+    La dérivée de cette fonction est la fonction
+    \begin{align}
+        f'(x) = 3x^2.
+    \end{align}
+    On constate que $f'(0) = 0$.
+    Cependant, la fonction $f$ n'admet pas d'extremum local en $0$.
+\end{example}
+
+Pour déterminer si les racines de la dérivée correspondent effectivement à des extremums locaux,
+on va étudier plus en détail la croissance de la fonction.
+Heureusement, la dérivée joue également un rôle majeur dans cette étude.
+
 \section{Dérivée et croissance}
 
 Rappelons qu'une fonction $f$ est croissante (resp.\ décroissante) sur un intervalle $I$
@@ -418,8 +509,9 @@ La \emph{croissance} est liée à la dérivée via le théorème suivant.
 \begin{proposition}
     [Théorème des accroissements finis]
 
-    Soit $f$ une fonction dérivable sur un intervalle $\ccinterval a b$, avec $a < b$.
-    Il existe $c \in \ccinterval a b$ tel que
+    Soit $f$ une fonction dérivable sur un intervalle $I$.
+    Soit $a,b \in I$ avec $a \neq b$.
+    Il existe $c$ entre $a$ et $b$ tel que
     \begin{align}
         \frac {f(b) - f(a)} {b - a} = f'(c).
     \end{align}
@@ -431,9 +523,9 @@ La \emph{croissance} est liée à la dérivée via le théorème suivant.
     \end{align}
 
     On vérifie que $g(a) = g(b)$ par choix de $g$.
-    Puisque $g$ atteint un extremum sur $\ccinterval a b$,
-    disons en $c \in \ccinterval a b$,
-    et donc on a $g'(c) = 0$ par le théorème de Fermat.
+    On en déduit que $g$ atteint un extremum entre $a$ et $b$,
+    disons en $c$.
+    On a donc $g'(c) = 0$ par le théorème de Fermat.
 
     Cependant,
     \begin{align}
@@ -451,6 +543,31 @@ La \emph{croissance} est liée à la dérivée via le théorème suivant.
     si et seulement si
     $f'$ est positive (resp.\ négative) sur $I$.
 \end{proposition}
+\begin{proof}
+    Supposons que la fonction $f$ est croissante.
+    Soit $a \in I$.
+    Pour $ I \setminus \{a\}$, on a
+    \begin{align}
+        \frac{f(x) - f(a)}{x - a} \ge 0.
+    \end{align}
+    On a donc 
+    \begin{align}
+        f'(a) \ge 0.
+    \end{align}
+    
+    Dans l'autre sens, supposons que $f'$ est positive sur $I$.
+    Prenons $a,b \in I$ deux points distincts.
+    Par le théorème des accroissements finis,
+    il existe $c$ entre $a$ et $b$ tel que 
+    \begin{align}
+        \frac{f(b) - f(a)}{b - a} = f'(c).
+    \end{align}
+    Puisque $f'$ est positive partout sur $I$, 
+    on en déduit que $f$ est croissante.
+    
+    Le cas où $f$ est décroissante est similaire.
+\end{proof}
+
 
 \begin{howto}
     [Étude de croissance]
@@ -462,19 +579,6 @@ La \emph{croissance} est liée à la dérivée via le théorème suivant.
         \item En déduire la croissance.
     \end{enumerate}
 \end{howto}
-
-\subsection{Recherche d'extrémas locaux}
-
-\begin{proposition}
-    [Théorème de Fermat]
-
-    Soit $f$ une fonction dérivable sur un intervalle \emph{ouvert} $I$.
-    Alors $f$ admet un extremum local en $a \in I$
-    si et seulement si
-    $f'$ change de signe en $a$\footnote{%
-        En rappelant que $0$ est à la fois positif et négatif.
-    }.
-\end{proposition}
 
 \section{Dérivée seconde, courbure et concavité}
 

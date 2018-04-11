@@ -13,6 +13,7 @@ done
 
 # Build all .tex files in their respective folders
 find -name '*.tex' | grep -v contributors | xargs latexmk -silent -pdf -cd
+find -name '*.tex' | grep -v contributors | xargs latexmk -silent -pdf -cd
 
 
 function deploy() {
