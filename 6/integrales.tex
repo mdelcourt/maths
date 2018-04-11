@@ -38,6 +38,41 @@ Faisons donc comme s'il n'y avait pas eu d'avancée scientifique ou technologiqu
 et attelons-nous avec enthousiasme à résoudre des problèmes datant de l'Antiquité.
 Le seul anachronisme autorisé est l'utilisation du terme \emph{nombre réel}.
 
+\section{Vers l'intégrale de Cauchy-Riemann}
+
+Supposons que nous cherchons à calculer l'aire entre une courbe et l'axe des abscisses
+de la fonction dont le graphe est esquissé ci-dessous.
+\begin{plot}{0.5}{-1}{-1}{7}{7}
+    \plotfunction{1:6}{2*sin(\x r) + 4}
+\end{plot}
+
+L'idée est d'obtenir une approximation en approximant l'aire sous la courbe
+par $n$ rectangles de même base.
+\begin{plot}{0.5}{-2}{-1}{7}{7}
+    \drawriemannsums{2*sin(\x r) + 4}{1}{6}{10}
+    \def\c{3.25}
+    \pgfmathsetmacro{\Vc}{2*sin(\c r)+4}
+    \draw[dashed] (\c, 0) node[below] {\footnotesize{$x_j$}} -- (\c, \Vc) -- (0, \Vc) node[left] {\footnotesize{$f(x_j)$}};
+    \filldraw[black] (\c, \Vc) circle (.05cm);
+\end{plot}
+Les bases de ces rectangles déterminent des sous-intervalles $I_1, \dots, I_n$ de longueur $\Delta x$.
+La hauteur de chaque rectangle est déterminée par l'image $f(x_j)$ d'un point $x_j \in I_j$,
+de telle sorte que la somme des aires des rectangles est
+\begin{align}
+    \sum_{j = 1}^n f(x_j) \Delta x.
+\end{align}
+
+L'idée est qu'en augmentant le nombre $n$ de rectangles,
+la somme ci-dessus convergera vers l'\emph{aire sous la courbe}.
+\begin{plot}{0.5}{-2}{-1}{7}{7}
+    \drawriemannsums{2*sin(\x r) + 4}{1}{6}{40}
+\end{plot}
+En des termes mathématiques,
+l'aire sous la courbe est donnée par
+\begin{align}
+    \lim_{n \to \infty} \sum_{j = 1}^n f(x_j) \Delta x.
+\end{align}
+
 \section{Définition}
 
 \begin{definition}
