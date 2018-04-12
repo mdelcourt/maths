@@ -346,6 +346,36 @@ en réduisant le calcul d'intégrale à \emph{une primitivation et une soustract
 
 \subsection{Calcul d'aire entre deux courbes}
 
+Supposons que nous cherchions à calculer une aire entre deux courbes
+telle que l'aire grisée suivante.
+\begin{plot}{0.5}{-1}{-1}{7}{7}
+    \node at (3.5, 4.25) {$f$};
+    \node at (3.5, 0.5) {$g$};
+    \areabetweencurves{2*sin(\x r) + 4}{1.25 + 0.25*sin(\x r)}{1}{6}
+    \draw (1, 0) node[below] {$a$};
+    \draw (6, 0) node[below] {$b$};
+\end{plot}
+Il devrait être clair que l'aire grisée est donnée par
+\begin{align}
+    A = \int_a^b f(x) - g(x) \dd x.
+\end{align}
+
+Plus généralement,
+si nous sommes dans la situation suivante
+\begin{plot}{0.5}{-1}{-1}{7}{7}
+    \node at (2.5, 6) {$f$};
+    \node at (2.5, 3.25) {$g$};
+    \areabetweencurves{2*sin(\x r) + 4}{3.50 + 0.25*sin(\x r)}{1}{6}
+    \draw (1, 0) node[below] {$a$};
+    \draw (6, 0) node[below] {$b$};
+    \draw (3.4, 0) node[below] {$c$};
+    \draw[dashed] (3.4, 0) -- (3.4, 3.5);
+\end{plot}
+alors l'aire grisée est donnée cette fois par
+\begin{align}
+    A = \int_a^c f(x) - g(x) \dd x + \int_c^b g(x) - f(x) \dd x.
+\end{align}
+
 \subsection{Volumes de solides de révolution}
 
 Cherchons à calculer le volume obtenu par révolution du graphe autour de l'axe des abscisses.
