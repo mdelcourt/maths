@@ -211,7 +211,20 @@ en réduisant le calcul d'intégrale à \emph{une primitivation et une soustract
         \int_a^b f'(x) \dd x = f(b) - f(a).
     \end{align*}
 \end{theorem}
-\begin{proof}
+
+\begin{remark}
+    [Théorème fondamental en terme de primitives]
+
+    En pratique,
+    on utilise plutôt l'énoncé comme suit:
+    \begin{align}
+        \int_a^b f(x) = F(b) - F(a),
+    \end{align}
+    où $f$ est continue sur $\ccinterval a b$
+    et $F$ est une \emph{primitive} de $f$ sur $\ccinterval a b$.
+\end{remark}
+
+\begin{proof}{Preuve du théorème fondamental}
     Divisons $\ccinterval a b$ en $n$ intervalles $I_j = \ccinterval {a_j} {a_{j + 1}}$ de longueurs égales $\Delta x$.
     On remarque que
     \begin{align}
