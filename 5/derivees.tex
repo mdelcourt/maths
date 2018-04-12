@@ -20,6 +20,21 @@ les mathématiques ont acquis le pouvoir d'exprimer les lois naturelles et de mo
 
 \section{Définition et premières propriétés}
 
+\begin{plot}
+    {0.5}{-6}{-6}{6}{6}
+    
+    % Fonction
+    \renewcommand{\f}{1/5*(\x)^2 - 2}
+    \renewcommand{\der}{2/5*(\x)}
+
+    \plotfunction{-6:6}{\f}
+    \drawsecant{\f}{1}{4}{-1:5}
+    \showcoordinates{\f}{1}{[above] {$a$}}{[left] {$f(a)$}}
+    \showcoordinates{\f}{4}{[below] {$x$}}{[left] {$f(a)$}}
+
+    \drawtangent{\f}{\der}{-4}{-5:-2}
+\end{plot}
+
 \begin{definition}
     [Dérivée]
 
