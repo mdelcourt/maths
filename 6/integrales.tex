@@ -506,4 +506,85 @@ on s'attend alors à ce que
     \end{plot}
 \end{example}
 
+\subsection{Applications à la mécanique classique}
+
+\subsubsection{La cinématique}
+
+Supposons que nous avançons en ligne droite et que notre vitesse soit donnée
+par la fonction dont le graphe est représenté ci-dessous.
+
+\labelaxes t v
+\begin{plot}{0.5}{-1}{-3}{6}{3}
+    \plotfunction{0:5}{2*sin(\x r)}
+\end{plot}
+
+Où se trouve le déplacement effectué à un instant $t$ dans le graphe ci-dessus?
+Le déplacement est en fait exactement l'\emph{aire signée jusque $t$} sous le graphe.
+Il est aisé de se convaincre que si la vitesse est négative,
+alors le déplacement total est réduit,
+d'où le fait que l'aire soit signée.
+
+\begin{plot}{0.5}{-1}{-3}{6}{3}
+    \plotfunction{0:5}{2*sin(\x r)}
+    \areaundercurve {2*sin(\x r)} 0 4
+    \drawline (4, 0) node[above] {$t$} -- (4, -1.5);
+\end{plot}
+
+Pour le reste,
+étudions d'abord le cas du \emph{mouvement rectiligne uniforme}
+\begin{plot}{0.5}{-3}{-3}{6}{1}
+    \plotfunction{0:5}{-2}
+    \areaundercurve {-2} 0 4
+    \drawline (4, 0) node[above] {$t$} -- (4, -2);
+\end{plot}
+pour lequel il est évident que le déplacement $v t$ et l'aire \emph{signée} grisée coïncident.
+La formule liant $\Delta x = v \Delta t$ étant approximativement valable dans le cadre général,
+on en conclut que pour une vitesse quelconque,
+le déplacement peut être approximé par l'aire signée des rectangles comme dans la figure ci-dessous.
+\begin{plot}{0.5}{-1}{-3}{6}{3}
+    \plotfunction{0:5}{2*sin(\x r)}
+    \drawriemannsums {2*sin(\x r)} 0 4 {10}
+    \drawline (4, 0) node[above] {$t$} -- (4, -1.5);
+\end{plot}
+
+En faisant tendre le nombre d'intervalle $n$ vers l'infini,
+l'approximation s'améliore,
+et on en conclut que le déplacement $x$ après $t$ secondes est donné par
+\begin{align}
+    x(t) = x_0 + \int_0^t v(t') \dd t'.
+\end{align}
+
+En argumentant de manière identique,
+on montre également que
+\begin{align}
+    v(t) = v_0 + \int_0^t a(t') \dd t',
+    \label{eq:vitesse}
+\end{align}
+où $a(t)$ représente l'\emph{accélération au cours du temps}.
+
+\begin{example}
+    [Formules du MRUA]
+
+    Dans un MRUA,
+    l'accélération au fil du temps est constante:
+    \begin{align}
+        a(t) = a.
+    \end{align}
+
+    Par~\eqref{eq:vitesse},
+    on en déduit que
+    \begin{align}
+        v(t) = v_0 + \int_0^t a \dd t' = v_0 + a t.
+    \end{align}
+
+    En intégrant à nouveau pour obtenir le déplacement,
+    nous obtenons
+    \begin{align}
+        x(t) &= x_0 + \int_0^t v_0 + at' \dd t'\\
+             &= x_0 + \left[v_0 t' + \frac 1 2 a t'^2 \right]^t_0\\
+             &= x_0 + v_0 t + \frac 1 2 a t^2.
+    \end{align}
+\end{example}
+
+\labelaxes x y
 \end{document}
