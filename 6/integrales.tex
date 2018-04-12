@@ -116,6 +116,9 @@ nous travaillerons toujours avec de telles fonctions.
     \begin{itemize}
         \item Pour une fonction positive,
             l'intégrale $\int_a^b f(x) \dd x$ représente l'aire sous la courbe entre $a$ et $b$.
+            \begin{plot}{0.5}{-6}{-1}{6}{3}
+                \areaundercurve{(sin (\x r))^2 + 1}{-5}{5}
+            \end{plot}
         \item Pour une fonction négative,
             l'intégrale $\int_a^b f(x) \dd x$ représente l'\emph{opposé} de l'aire au-dessus de la courbe entre $a$ et $b$.
             En effet,
@@ -135,6 +138,11 @@ nous travaillerons toujours avec de telles fonctions.
             négatifs.
         \item Pour une fonction quelconque
             l'intégrale $\int_a^b f(x) \dd x$ représente l'aire \emph{signée} sous la courbe entre $a$ et $b$.
+            \begin{plot}{0.5}{-6}{-2}{6}{2}
+                \areaundercurve{1.5*sin(45*\x)}{-4}{4}
+                \node at (2,0.75) {$+$};
+                \node at (-2,-0.75) {$-$};
+            \end{plot}
     \end{itemize}
 \end{remark}
 
