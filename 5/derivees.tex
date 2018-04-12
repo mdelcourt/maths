@@ -463,6 +463,13 @@ La proposition suivante permet de sélectionner les points qui ont une chance d'
     \subsubsection{Thèse}
 
     On a $f'(a) = 0$.
+
+    \begin{plot}{0.3}{-6}{-6}{6}{6}
+        \renewcommand{\f}{-1/5*(\x)^2 + 2}
+        \renewcommand{\der}{-2/5*(\x)}
+        \plotfunction{-6:6}{\f}
+        \drawtangent{\f}{\der}{0}{-2:2}
+    \end{plot}
 \end{proposition}
 \begin{proof}
     Supposons que $a$ est un maximum local de $f$.
