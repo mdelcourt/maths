@@ -196,19 +196,26 @@ Les théorèmes fondamentaux du calcul différentiel et intégral décrivent le 
     \end{align*}
 \end{theorem}
 \begin{proof}
-    Divisons $\ccinterval a b$ en $n$ intervalles $I_j = \ccinterval {a_j} {b_j}$ de longueurs égales $\Delta x$.
+    Divisons $\ccinterval a b$ en $n$ intervalles $I_j = \ccinterval {a_j} {a_{j + 1}}$ de longueurs égales $\Delta x$.
     On remarque que
     \begin{align}
         f(b) - f(a)
-        &= f(b_n) - f(a_1)\\
-        &= f(b_n) - f(a_n) + f(b_{n - 1}) - f(a_{n - 1}) + \cdots + f(b_1) - f(a_1)\\
-        &= \sum_{j = 1}^n (f(b_j) - f(a_j)).
+        &= f(a_{n + 1}) - f(a_1)\\
+        &= f(a_{n + 1}) - f(a_n) + f(a_n) - f(a_{n - 1}) + \cdots + f(a_2) - f(a_1)\\
+        &= \sum_{j = 1}^n (f(a_{j + 1}) - f(a_j)).
+    \end{align}
+
+    En se souvenant que $a_{j + 1} - a_j = \Delta x$,
+    on obtient
+    \begin{align}
+        f(b) - f(a)
+        &= \sum_{j = 1}^n \frac {f(a_{j + 1}) - f(a_j)} {a_{j + 1} - a_j} \Delta x.
     \end{align}
 
     Par le théorème des accroissements finis,
-    nous pouvons choisir $x_j \in \ccinterval {a_j} {b_j}$, $j = 1, \dots, n$ tels que
+    nous pouvons choisir $x_j \in \ccinterval {a_j} {a_{j + 1}}$, $j = 1, \dots, n$ tels que
     \begin{align}
-        f(b_j) - f(a_j) = f'(x_j) (b_j - a_j) = f'(x_j) \Delta x.
+        \frac {f(a_{j + 1}) - f(a_j)} {a_{j + 1} - a_j} = f'(x_j).
     \end{align}
 
     Dès lors, on a
