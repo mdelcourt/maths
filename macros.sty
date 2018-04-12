@@ -39,6 +39,24 @@
 \newcommand{\drawpoint}[2][white]{\draw [fill=#1] (#2) circle (2.5pt);}
 \newcommand{\drawline}{\draw[line width=1.2pt]}
 \newcommand{\plotfunction}[3][200]{\draw[line width=1.2pt,smooth,samples=#1,domain=#2] plot (\x, {#3});}
+\newcommand{\drawsecant}[4]{%
+    % Computing the slope
+    \pgfmathsetmacro{\x}{#3}
+    \pgfmathsetmacro{\fx}{#1}
+    \pgfmathsetmacro{\x}{#2}
+    \pgfmathsetmacro{\fa}{#1}
+    \pgfmathsetmacro{\slope}{(\fx - \fa)/(#3 - #2)}
+    % Drawing the secant
+    \plotfunction{#4}{\slope*(\x - #2) + \fa}
+}
+\newcommand{\drawtangent}[4]{%
+    \pgfmathsetmacro{\x}{#3}
+    \pgfmathsetmacro{\fa}{#1}
+    \pgfmathsetmacro{\slope}{#2}
+    % Drawing the tangent
+    \plotfunction{#4}{\slope*(\x - #3) + \fa}
+    \drawpoint[black]{#3, \fa}
+}
 \newcommand{\signtable}[3]{%
     \begin{center}
         \begin{tikzpicture}
