@@ -595,6 +595,43 @@ La \emph{croissance} est liée à la dérivée via le théorème suivant.
     \end{enumerate}
 \end{howto}
 
+L'exemple suivant éclaire la marche à suivre.
+
+\begin{example}
+     Soit $f$ la fonction définie par 
+     \begin{align}
+         f(x) = x^5 - \frac {10} 3 x^3.
+     \end{align}
+     Il n'y a aucune condition d'existence donc $\dom f = \R$.
+     
+     Pour tout $x \in \R$, on a 
+     \begin{align}
+         f'(x)
+         &= 5 x^4 - 10 x^2\\
+         &= 5 x^2 (x^2 - 2). 
+     \end{align}
+     
+     Le tableau de signe de $f'$ nous permet d'étudier les variations de $f$.
+     
+     \signtable{$x$/0.75, $5 x^2$/0.75, $x^2 - 2$/0.75, $f'(x)$/0.75, $f(x)$/2}{,$- \sqrt{2}$,$0$,$\sqrt{2}$,}{%
+        \signrow{,+,+,+,0,+,+,+,}
+        \signrow{,+,0,-,-,-,0,+,}
+        \signrow{,+,0,-,0,-,0,+,}
+        \tkzTabVar{-/ $-\infty$, +/ $\frac{8\sqrt{2}}{3}$, R/, -/ $- \frac{8\sqrt{2}}{3}$, +/ $+\infty$}
+        \tkzTabIma{2}{4}{3}{$0$}
+    }
+    
+    On constate que $f$ admet un maximum local en $- \sqrt 2$ et un minimum local en $ \sqrt 2$.
+    La dérivée s'annule en $0$ mais il n'y a pas d'extremum local en ce point.
+    
+    Voici le graphique de $f$ qui confirme nos résultats :
+     
+     \begin{plot}
+    {0.5}{-5}{-5}{5}{5}
+    \plotfunction{-5:5}{(\x)^5 - (10/3)*(\x)^3}
+    \end{plot}
+\end{example}
+
 \section{Dérivée seconde, courbure et concavité}
 
 La \emph{dérivée seconde} d'une fonction $f$,
