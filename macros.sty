@@ -79,6 +79,19 @@
     \drawline (#2, 0) -- (#3, 0);
     \plotfunction{#2:#3}{#1}
 }
+\newcommand{\areabetweencurves}[4]{%
+    \pgfmathsetmacro{\x}{#3}
+    \pgfmathsetmacro{\ga}{#2}
+    \pgfmathsetmacro{\fa}{#1}
+    \pgfmathsetmacro{\x}{#4}
+    \pgfmathsetmacro{\gb}{#2}
+    \pgfmathsetmacro{\fb}{#1}
+    \fill [gray!20, domain=#3:#4, variable=\x] (#3, \ga) -- plot ({\x}, {#1}) -- (#4, \gb) -- plot({\x}, {#2});
+    \drawline (#3, \ga) -- (#3, \fa);
+    \drawline (#4, \gb) -- (#4, \fb);
+    \plotfunction{#3:#4}{#1}
+    \plotfunction{#3:#4}{#2}
+}
 \newcommand{\drawriemannsums}[4]{%
     \foreach \n in {1,...,#4} {%
         \pgfmathsetmacro{\L}{(#3-#2)/#4}
