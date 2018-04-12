@@ -83,13 +83,28 @@ les mathématiques ont acquis le pouvoir d'exprimer les lois naturelles et de mo
 \begin{definition}
     [Tangente]
 
-    Soit $f$ une fonction dérivable en un réel $a \in \R$.
-    La \emph{tangente} de $f$ en $a$ est la droite de pente $f'(a)$ passant par $(a, f(a))$.
-    Autrement dit,
-    la tangente est la droite d'équation
+    \subsubsection{Cadre}
+
+    \begin{itemize}
+        \item $f$ une fonction dérivable en $a \in \R$.
+    \end{itemize}
+
+    \subsubsection{Définition}
+
+    La droite de pente $f'(a)$ passant par $(a, f(a))$,
+    dont l'équation est
     \begin{align}
         T_{f, a} \equiv f'(a) (x - a) + f(a).
     \end{align}
+    est appelée \emph{tangente} de $f$ en $a$.
+
+    \begin{plot}{0.3}{-6}{-4}{6}{6}
+        \renewcommand{\f}{-1/5*(\x)^2 + 4}
+        \renewcommand{\der}{-2/5*(\x)}
+        \plotfunction{-6:6}{\f}
+        \drawtangent{\f}{\der}{-3}{-6:6}
+        \showcoordinates{\f}{-3}{[below] {$a$}}{[right] {$f(a)$}}
+    \end{plot}
 \end{definition}
 
 \begin{example}
