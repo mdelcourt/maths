@@ -453,37 +453,44 @@ La proposition suivante permet de sélectionner les points qui ont une chance d'
 \begin{proposition}
     [Théorème de Fermat]
 
-    Soit $f$ une fonction dérivable sur un intervalle \emph{ouvert} $I$.
-    Si $f$ admet un extremum local en $a \in I$,
-    alors $f'(a) = 0$.
+    \subsubsection{Hypothèses}
+
+    \begin{itemize}
+        \item $f$ est une fonction dérivable en $a \in \R$
+        \item $f$ admet un extremum local en $a$;
+    \end{itemize}
+
+    \subsubsection{Thèse}
+
+    On a $f'(a) = 0$.
 \end{proposition}
 \begin{proof}
     Supposons que $a$ est un maximum local de $f$.
-    Si $x \in I$ est \emph{suffisamment proche} de $a$ et si $x < a$, alors
-    \begin{align}
-        \frac{f(x) - f(a)}{x-a} \ge 0.
-    \end{align}
-    On en déduit que
-    \begin{align}
-        \lim_{x \to a} \frac{f(x) - f(a)}{x-a} \ge 0.
-    \end{align}
-    On a donc
-    \begin{align}
-        f'(a) \ge 0.
-    \end{align}
-    Si $x \in I$ est \emph{suffisamment proche} de $a$ et si $x > a$, alors
-    \begin{align}
-        \frac{f(x) - f(a)}{x-a} \le 0.
-    \end{align}
-    On en déduit que
-    \begin{align}
-        \lim_{x \to a} \frac{f(x) - f(a)}{x-a} \le 0.
-    \end{align}
-    On a donc
-    \begin{align}
-        f'(a) \le 0.
-    \end{align}
-    On en conclut que
+    Soit $x \in \dom f$.
+
+    \begin{multicols}{2}
+        Si $x$ est \emph{suffisamment proche} de $a$ avec $x < a$,
+        alors on en déduit que
+        \begin{align}
+            \frac{f(x) - f(a)}{x-a} \ge 0,
+        \end{align}
+        ce qui, en faisant tendre $x$ vers $a$, devient
+        \begin{align}
+            f'(a) \ge 0.
+        \end{align}
+
+        Si $x$ est \emph{suffisamment proche} de $a$ avec $x > a$,
+        alors on en déduit que
+        \begin{align}
+            \frac{f(x) - f(a)}{x-a} \le 0,
+        \end{align}
+        ce qui, en faisant tendre $x$ vers $a$, devient
+        \begin{align}
+            f'(a) \le 0.
+        \end{align}
+    \end{multicols}
+
+    On en conclut donc que
     \begin{align}
         f'(a) = 0.
     \end{align}
