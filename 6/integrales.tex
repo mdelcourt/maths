@@ -256,6 +256,14 @@ en réduisant le calcul d'intégrale à \emph{une primitivation et une soustract
         \quad x \in \ccinterval a b
     \end{align*}
     est appelée \emph{intégrale indéfinie} de $f$.
+    \begin{plot}{0.5}{-3}{-1}{6}{5}
+        \plotfunction{-2:5}{1/10*(\x)^3 - 1/2*(\x)^2 + 4}
+        \areaundercurve{1/10*(\x)^3 - 1/2*(\x)^2 + 4}{-2}{3}
+        \drawline (-2, 0) node[below] {$a$} -- (-2, 1.2);
+        \drawline (5, 0) node[below] {$b$} -- (5, 4);
+        \drawline (3, 0) node[below] {$x$} -- (3, 2.2);
+        \node at (0.5, 1.5) {$\begin{aligned}\int_a^x f(t) \dd t\end{aligned}$};
+    \end{plot}
 \end{definition}
 
 \begin{theorem}
