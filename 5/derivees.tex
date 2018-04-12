@@ -22,7 +22,7 @@ les mathématiques ont acquis le pouvoir d'exprimer les lois naturelles et de mo
 
 \begin{plot}
     {0.5}{-6}{-6}{6}{6}
-    
+
     % Fonction
     \renewcommand{\f}{1/5*(\x)^2 - 2}
     \renewcommand{\der}{2/5*(\x)}
@@ -439,7 +439,7 @@ Commençons par définir ces deux notions.
 
 \begin{definition}
     [Extremums locaux]
-    
+
     Soit $f$ une fonction et $a \in \dom f$.
     On dit que $f$ admet un maximum (resp. minimum) local en $a$ si
     pour tout $x \in \dom f$ \emph{suffisamment proche} de $a$,
@@ -463,7 +463,7 @@ La proposition suivante permet de sélectionner les points qui ont une chance d'
     \begin{align}
         \frac{f(x) - f(a)}{x-a} \ge 0.
     \end{align}
-    On en déduit que 
+    On en déduit que
     \begin{align}
         \lim_{x \to a} \frac{f(x) - f(a)}{x-a} \ge 0.
     \end{align}
@@ -475,7 +475,7 @@ La proposition suivante permet de sélectionner les points qui ont une chance d'
     \begin{align}
         \frac{f(x) - f(a)}{x-a} \le 0.
     \end{align}
-    On en déduit que 
+    On en déduit que
     \begin{align}
         \lim_{x \to a} \frac{f(x) - f(a)}{x-a} \le 0.
     \end{align}
@@ -483,14 +483,14 @@ La proposition suivante permet de sélectionner les points qui ont une chance d'
     \begin{align}
         f'(a) \le 0.
     \end{align}
-    On en conclut que 
+    On en conclut que
     \begin{align}
         f'(a) = 0.
     \end{align}
     La démonstration est similaire si $a$ est un minimum local de $f$.
 \end{proof}
 
-Il faut faire bien attention au fait que la réciproque de ce théorème est fausse. 
+Il faut faire bien attention au fait que la réciproque de ce théorème est fausse.
 En effet, l'exemple suivant montre qu'on peut avoir $f'(a) = 0$ sans avoir d'extremum local en $a$.
 
 \begin{example}
@@ -565,24 +565,23 @@ La \emph{croissance} est liée à la dérivée via le théorème suivant.
     \begin{align}
         \frac{f(x) - f(a)}{x - a} \ge 0.
     \end{align}
-    On a donc 
+    On a donc
     \begin{align}
         f'(a) \ge 0.
     \end{align}
-    
+
     Dans l'autre sens, supposons que $f'$ est positive sur $I$.
     Prenons $a,b \in I$ deux points distincts.
     Par le théorème des accroissements finis,
-    il existe $c$ entre $a$ et $b$ tel que 
+    il existe $c$ entre $a$ et $b$ tel que
     \begin{align}
         \frac{f(b) - f(a)}{b - a} = f'(c).
     \end{align}
-    Puisque $f'$ est positive partout sur $I$, 
+    Puisque $f'$ est positive partout sur $I$,
     on en déduit que $f$ est croissante.
-    
+
     Le cas où $f$ est décroissante est similaire.
 \end{proof}
-
 
 \begin{howto}
     [Étude de croissance]
@@ -598,21 +597,21 @@ La \emph{croissance} est liée à la dérivée via le théorème suivant.
 L'exemple suivant éclaire la marche à suivre.
 
 \begin{example}
-     Soit $f$ la fonction définie par 
+     Soit $f$ la fonction définie par
      \begin{align}
          f(x) = x^5 - \frac {10} 3 x^3.
      \end{align}
      Il n'y a aucune condition d'existence donc $\dom f = \R$.
-     
-     Pour tout $x \in \R$, on a 
+
+     Pour tout $x \in \R$, on a
      \begin{align}
          f'(x)
          &= 5 x^4 - 10 x^2\\
-         &= 5 x^2 (x^2 - 2). 
+         &= 5 x^2 (x^2 - 2).
      \end{align}
-     
+
      Le tableau de signe de $f'$ nous permet d'étudier les variations de $f$.
-     
+
      \signtable{$x$/0.75, $5 x^2$/0.75, $x^2 - 2$/0.75, $f'(x)$/0.75, $f(x)$/2}{,$- \sqrt{2}$,$0$,$\sqrt{2}$,}{%
         \signrow{,+,+,+,0,+,+,+,}
         \signrow{,+,0,-,-,-,0,+,}
@@ -620,12 +619,12 @@ L'exemple suivant éclaire la marche à suivre.
         \tkzTabVar{-/ $-\infty$, +/ $\frac{8\sqrt{2}}{3}$, R/, -/ $- \frac{8\sqrt{2}}{3}$, +/ $+\infty$}
         \tkzTabIma{2}{4}{3}{$0$}
     }
-    
+
     On constate que $f$ admet un maximum local en $- \sqrt 2$ et un minimum local en $ \sqrt 2$.
     La dérivée s'annule en $0$ mais il n'y a pas d'extremum local en ce point.
-    
+
     Voici le graphique de $f$ qui confirme nos résultats :
-     
+
     \begin{plot}{0.5}{-5}{-5}{5}{5}
         \plotfunction{-5:5}{(\x)^5 - (10/3)*(\x)^3}
     \end{plot}
@@ -635,14 +634,14 @@ Dans l'exemple suivant, on revisite une formule vue l'an passé.
 
 \begin{example}
     [Sommet d'une parabole]
-    
+
     Soit $f$ la fonction du deuxième degré
     \begin{align}
         f(x) = a x^2 + bx + c
     \end{align}
     avec $a \neq 0$.
-    
-    Pour tout $x \in \R$, on a 
+
+    Pour tout $x \in \R$, on a
     \begin{align}
         f'(x) = 2ax + b.
     \end{align}
