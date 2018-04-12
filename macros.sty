@@ -46,6 +46,13 @@
 \usepackage{pgfplots}
 \newcommand{\areaundercurve}[3]{%
     \fill [gray!20, domain=#2:#3, variable=\x] (#2, 0) -- plot ({\x}, {#1}) -- (#3, 0) -- cycle;
+    \pgfmathsetmacro{\x}{#2}
+    \pgfmathsetmacro{\y}{#1}
+    \drawline (\x, 0) -- (\x, \y);
+    \pgfmathsetmacro{\x}{#3}
+    \pgfmathsetmacro{\y}{#1}
+    \drawline (\x, 0) -- (\x, \y);
+    \drawline (#2, 0) -- (#3, 0);
     \plotfunction{#2:#3}{#1}
 }
 \newcommand{\drawriemannsums}[4]{%
