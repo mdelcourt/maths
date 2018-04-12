@@ -90,7 +90,7 @@ nous travaillerons toujours avec de telles fonctions.
 
     \begin{itemize}
         \item $\ccinterval a b$ est sudvidisé en $n$ sous-intervalles de même longueur $\Delta x$;
-        \item $x_j$ appartient au $i$\textsuperscript{è} sous-intervalle pour chaque $j = 1, \dots, n$.
+        \item $x_j$ appartient au $j$\textsuperscript{è} sous-intervalle pour chaque $j = 1, \dots, n$.
     \end{itemize}
 
     L'\emph{intégrale} de $f$ sur $\ccinterval a b$ est définie comme étant le nombre réel
@@ -284,7 +284,7 @@ en réduisant le calcul d'intégrale à \emph{une primitivation et une soustract
         F(x) \defeq \int_a^x f(t) \dd t
     \end{align*}
     est une primitive de $f$ sur $\ccinterval a b$,
-    c'est-à-dire $F'(x) = f$ pour $x \in \ccinterval a b$.
+    c'est-à-dire $F'(x) = f(x)$ pour $x \in \ccinterval a b$.
 \end{theorem}
 
 \section{Propriétés de l'intégrale}
@@ -301,7 +301,7 @@ en réduisant le calcul d'intégrale à \emph{une primitivation et une soustract
             \end{align}
         \item Si $k \in \R$, on a
             \begin{align}
-                \int (k f)(x) \dd x &= k \int f(x) \dd x,\\
+                \int_a^b (k f)(x) \dd x &= k \int_a^b f(x) \dd x,\\
                 \int_a^b (f + g)(x) \dd x &= \int_a^b f(x) \dd x + \int_a^b g(x) \dd x.
             \end{align}
         \item Si $c \in \ccinterval a b$, alors
@@ -401,7 +401,7 @@ nous nous rapprochons du volume de révolution si le nombre de cylindre $n$ augm
 
 Nous en concluons que le volume de révolution est donné par
 \begin{align}
-    \lim_{n \to \infty} \sum_{j = 1}^n \pi f^2(x) \Delta x
+    \lim_{n \to \infty} \sum_{j = 1}^n \pi f^2(x_j) \Delta x
     = \pi \int_a^b f^2(x) \dd x.
 \end{align}
 
@@ -425,7 +425,7 @@ Nous en concluons que le volume de révolution est donné par
         V = \pi \int_{-2}^2 \left(2 - \frac 1 {10} x^2\right)^2 \dd x.
     \end{align}
 
-    Ca a l'air pénible comme calcul donc je laisse de l'espace pour que vous puissiez le faire vous-même:
+    Ça a l'air pénible comme calcul donc je laisse de l'espace pour que vous puissiez le faire vous-même:
 
     \vspace{10cm}
 \end{example}
