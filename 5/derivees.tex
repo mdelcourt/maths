@@ -575,10 +575,23 @@ La \emph{croissance} est liée à la dérivée via le théorème suivant.
 \end{proof}
 
 \begin{proposition}
+    \subsubsection{Hypothèse}
     Soit $f$ une fonction dérivable sur un intervalle $I$.
+
+    \subsubsection{Thèse}
     Alors $f$ est croissante (resp.\ décroissante) sur $I$
     si et seulement si
     $f'$ est positive (resp.\ négative) sur $I$.
+
+    \begin{plot}
+        {0.5}{-6}{-2}{3}{6}
+        \renewcommand{\f}{e^(\x) - 1}
+        \renewcommand{\der}{e^(\x)}
+        \plotfunction{-6:3}{\f}
+        \drawtangent{\f}{\der}{1}{0.75:1.25}
+        \drawtangent{\f}{\der}{0}{-0.75:0.75}
+        \drawtangent{\f}{\der}{-2}{-3:-1}
+    \end{plot}
 \end{proposition}
 \begin{proof}
     Supposons que la fonction $f$ est croissante.
