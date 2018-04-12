@@ -440,12 +440,28 @@ Commençons par définir ces deux notions.
 \begin{definition}
     [Extremums locaux]
 
-    Soit $f$ une fonction et $a \in \dom f$.
-    On dit que $f$ admet un maximum (resp.\ minimum) local en $a$ si
+    \subsubsection{Cadre}
+
+    \begin{itemize}
+        \item $f$ une fonction.
+        \item $a \in \dom f$.
+    \end{itemize}
+
+    \subsubsection{Définition}
+
+    On dit que $f$ admet un \emph{maximum} (resp.\ \emph{minimum}) \emph{local} en $a$ si
     pour tout $x \in \dom f$ \emph{suffisamment proche} de $a$,
     \begin{align}
         f(a) \ge f(x) \quad \left(\text{resp.}\ f(a) \le f(x)\right)
     \end{align}
+
+    \begin{plot}
+        {0.5}{-4}{-3}{6}{5}
+        \renewcommand{\f}{-0.2*(\x - 1)^2 + 3}
+        \plotfunction{-6:6}{\f}
+        \showcoordinates{\f}{1}{[below] {$a$}}{[left] {$f(a)$}}
+        \showcoordinates{\f}{4}{[below] {$x$}}{[left] {$f(x)$}}
+    \end{plot}
 \end{definition}
 
 La proposition suivante permet de sélectionner les points qui ont une chance d'être des extremums locaux.
