@@ -8,7 +8,8 @@
 Historiquement,
 le calcul intégral trouve ses origines dans de simples calculs d'aire ou de volumes de tonneaux de vin.
 Durant la deuxième partie du XVII\textsuperscript{è} siècle,
-l'intégrale est promue au rang d'outil fondamental de l'analyse et de la physique.
+l'intégrale (par l'intermédiaire du théorème fondamental)
+est promue au rang d'outil fondamental de l'analyse et de la physique.
 Elle fait désormais partie intégrante du langage des lois de la nature,
 mais surtout elle est l'unique outil apte à les \emph{résoudre}.
 
@@ -244,6 +245,18 @@ en réduisant le calcul d'intégrale à \emph{une primitivation et une soustract
         f(b) - f(a) = \int_a^b f'(x) \dd x.
     \end{align}
 \end{proof}
+
+\begin{definition}
+    [Intégrale indéfinie]
+
+    Soit $f$ une fonction continue sur $\ccinterval a b$.
+    La fonction
+    \begin{align*}
+        F(x) = \int_a^x f(t) \dd t,
+        \quad x \in \ccinterval a b
+    \end{align*}
+    est appelée \emph{intégrale indéfinie} de $f$.
+\end{definition}
 
 \begin{theorem}
     [Théorème fondamental de l'analyse --- Partie II]
