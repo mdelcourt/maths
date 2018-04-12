@@ -242,6 +242,30 @@ Les théorèmes fondamentaux du calcul différentiel et intégral décrivent le 
     est une primitive de $f$.
 \end{theorem}
 
+\section{Propriétés de l'intégrale}
+
+\begin{proposition}
+    [Propriétés de l'intégrale]
+
+    Soit $f$ et $g$ deux fonctions continues sur $\ccinterval a b$.
+
+    \begin{itemize}
+        \item L'intégrale sur un intervalle de longueur $0$ est nulle:
+            \begin{align}
+                \int_a^a f(x) \dd x = 0.
+            \end{align}
+        \item Si $k \in \R$, on a
+            \begin{align}
+                \int (k f)(x) \dd x &= k \int f(x) \dd x,\\
+                \int_a^b (f + g)(x) \dd x &= \int_a^b f(x) \dd x + \int_a^b g(x) \dd x.
+            \end{align}
+        \item Si $c \in \ccinterval a b$, alors
+            \begin{align}
+                \int_a^b f(x) \dd x = \int_a^c f(x) \dd x + \int_c^a f(x) \dd x.
+            \end{align}
+    \end{itemize}
+\end{proposition}
+
 \section{Applications du calcul intégral}
 
 \subsection{Calcul d'aire entre deux courbes}
