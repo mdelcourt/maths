@@ -19,6 +19,12 @@
     \renewcommand{\xaxis}{#1}
     \renewcommand{\yaxis}{#2}
 }
+\newcommand{\showcoordinates}[4]{%
+    \def\x{#2}
+    \pgfmathsetmacro{\y}{#1}
+    \draw[dashed] (\x, 0) node#3 -- (\x, \y) -- (0, \y) node#4;
+    \filldraw[black] (\x, \y) circle (.05cm);
+}
 \newenvironment{plot}[5]{%
     \begin{center}
         \begin{tikzpicture}[>=triangle 45,x=#1cm,y=#1cm]
