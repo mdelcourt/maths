@@ -510,14 +510,22 @@ En effet, l'exemple suivant montre qu'on peut avoir $f'(a) = 0$ sans avoir d'ext
 \begin{example}
     Considérons la fonction $f$ définie par
     \begin{align}
-        f(x) = x^3.
+        f(x) = \frac 1 {20} x^3.
     \end{align}
     La dérivée de cette fonction est la fonction
     \begin{align}
-        f'(x) = 3x^2.
+        f'(x) = \frac 3 {20} x^2.
     \end{align}
     On constate que $f'(0) = 0$.
-    Cependant, la fonction $f$ n'admet pas d'extremum local en $0$.
+    Cependant, la fonction $f$ n'admet pas d'extremum local en $0$,
+    comme le montre le graphe ci-dessous.
+
+    \begin{plot}{0.3}{-6}{-6}{6}{6}
+        \renewcommand{\f}{1/20*(\x)^3}
+        \renewcommand{\der}{3/20*(\x)^2}
+        \plotfunction{-6:6}{\f}
+        \drawtangent{\f}{\der}{0}{-2:2}
+    \end{plot}
 \end{example}
 
 Pour déterminer si les racines de la dérivée correspondent effectivement à des extremums locaux,
