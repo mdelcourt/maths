@@ -51,6 +51,24 @@
     % Plot the function
     \plotfunction{#2:#3}{#1}
 }
+\newcommand{\drawcylinders}[4]{%
+    \foreach \n in {1,...,#4} {%
+        \pgfmathsetmacro{\L}{(#3-#2)/#4}
+        % Evaluate at the middle point
+        \pgfmathsetmacro{\x}{#2+(\n-0.5)*\L}
+        \pgfmathsetmacro{\y}{#1}
+        % Draw cylinder
+        \pgfmathsetmacro{\x}{#2+(\n-1)*\L}
+        \draw[fill=gray!20] (\x,0) circle [x radius =.2 , y radius =\y];
+        \fill[gray!20] (\x,-\y) rectangle (\x + \L, \y);
+        \draw[fill=gray!20] (\x + \L,0) circle [x radius =.2 , y radius =\y];
+        \draw[fill=gray!20] (\x, \y) -- (\x + \L, \y);
+        \draw[fill=gray!20] (\x, -\y) -- (\x + \L, -\y);
+    }
+    % Plot the function
+    \plotfunction{#2:#3}{#1}
+    \plotfunction{#2:#3}{-(#1)}
+}
 
 % Operators
 \DeclareMathOperator{\dom}{dom}
