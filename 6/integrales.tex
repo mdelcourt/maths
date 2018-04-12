@@ -319,6 +319,31 @@ Nous en concluons que le volume de révolution est donné par
 \end{align}
 
 \begin{example}
+    [Volume du tonneau de vin]
+
+    Pour des raisons historiques,
+    calculons le volume du tonneau suivant
+    \begin{plot}
+        {0.5}{-3}{-3}{3}{3}
+        \drawcylinders{(-1/10)*(\x)^2 + 2}{-2}{2}{10}
+    \end{plot}
+    obtenu par la révolution de la fonction
+    \begin{align}
+        f(x) = 2 -\frac 1 {10} x^2
+    \end{align}
+    autour de l'axe des abscisses entre $\ccinterval {-2} 2$.
+
+    Le volume recherché est
+    \begin{align}
+        V = \pi \int_{-2}^2 \left(2 - \frac 1 {10} x^2\right)^2 \dd x.
+    \end{align}
+
+    Ca a l'air pénible comme calcul donc je laisse de l'espace pour que vous puissiez le faire vous-même:
+
+    \vspace{10cm}
+\end{example}
+
+\begin{example}
     [Volume de la boule]
 
     La boule de rayon $r$ est obtenue par révolution de la fonction
