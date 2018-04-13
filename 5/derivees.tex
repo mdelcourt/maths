@@ -792,4 +792,52 @@ Pour étudier la convexité d'une fonction $f$, on étudie le \emph{signe} de sa
     La dérivée seconde de $f$, notée $f''$, est la dérivée de $f'$\footnote{où si vous aimez embêter vos profs de français avec des répétitions, c'est la dérivée de la dérivée de $f$}.
 \end{definition}
 
+Si la dérivée seconde de $f$ existe, on dit que $f$ est \emph{deux fois dérivable}.
+
+\begin{proposition}
+    [Lien entre dérivée seconde et convexité]
+    
+    Soit $f$ une fonction deux fois dérivable.
+    La fonction $f$ est convexe (resp. concave) sur un intervalle $I \subset \dom f$ si et seulement si $f''(x) \ge 0$ (resp. $f''(x) \le 0$)  pour tout $x \in I$.
+\end{proposition}
+
+Reprenons l'étude de fonction de la section précédente afin de la compléter.
+
+\begin{example}
+     Soit $f$ la fonction définie par
+     \begin{align}
+         f(x) = x^5 - \frac {10} 3 x^3.
+     \end{align}
+
+     On avait calculé, pour tout $x \in \R$,
+     \begin{align}
+         f'(x) = 5 x^4 - 10 x^2
+     \end{align}
+
+     En redérivant, on trouve, pour tout $x \in \R$,
+     \begin{align}
+         f''(x) 
+         &= 20 x^3 - 20 x\\
+         &= 20x (x^2 - 1).
+     \end{align}
+     
+     Cette fois, on étudie le signe de $f''$.
+
+     \signtable{$x$/0.75, $20 x$/0.75, $x^2 - 1$/0.75, $f''(x)$/0.75}{,$-1$,$0$,$1$,}{%
+        \signrow{,-,-,-,0,+,+,+,}
+        \signrow{,+,0,-,-,-,0,+,}
+        \signrow{,-,0,+,0,-,0,+,}
+    }
+
+    On constate que $f$ est convexe sur $\ccinterval{-1}{0}$ et sur $\cointerval{1}{+ \infty}$ et
+    que $f$ est concave sur $\ocinterval{- \infty}{-1}$ et sur $\ccinterval{0}{1}$.
+    La fonction $f$ admet trois points d'inflexion en $-1$, $0$, et $1$.
+
+    (Re)Voici le graphique de $f$ qui (re)confirme nos résultats :
+
+    \begin{plot}{0.5}{-5}{-5}{5}{5}
+        \plotfunction{-5:5}{(\x)^5 - (10/3)*(\x)^3}
+    \end{plot}
+\end{example}
+
 \end{document}
