@@ -1,0 +1,524 @@
+\documentclass{beamer}
+\usepackage{../macros}
+\usetheme{Berlin}
+\usecolortheme{beaver}
+\title{Introduction aux dérivées}
+\author{K.~Nguyen}
+\begin{document}
+
+\section{Introduction}
+
+\subsection{Structure}
+
+\begin{frame}
+    {Structure de l'exposé}
+
+    Deux parties:
+    \begin{enumerate}
+        \item Contexte historique,
+            importance dans l'histoire des sciences,
+            importance aujourd'hui dans les applications.
+            \pause{}
+        \item Toute la théorie du chapitre (en vulgarisé).
+    \end{enumerate}
+\end{frame}
+
+\subsection{Importance du concept de dérivée}
+
+\begin{frame}
+    {Où sommes-nous?}
+
+    \begin{enumerate}
+        \item \textbf{Fonctions}: modélise la variabilité d'un réel p/r à une variable. % TODO
+            \begin{enumerate}
+                \item Fonctions \textbf{élémentaires}
+                \item \textbf{Opérations} pour construire des fonctions plus compliquées ($\pm$, $/$, $\cdot$, $\circ$)
+            \end{enumerate}
+            \pause{}
+        \item \textbf{Limite}: ``évaluation'' hors du domaine.
+            Le prof a prétendu:
+            \begin{quote}
+                Les limites sont tellement fondamentales
+                et ont des applications tellement importantes
+                que les mathématiques se sont adaptées pour les incorporer
+                (e.g.\ degrés/radians, nombres réels, etc.)
+            \end{quote}
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}
+    {Petites corrections}
+
+    \begin{enumerate}
+        \item La limite est fondamentale car elle est nécéssaire
+            à la \textbf{formulation moderne de dérivée}.\footnote{La dérivée précède historiquement (de loin!) la notion de limite}
+            \pause{}
+        \item La \textbf{dérivée} (pas la limite directement) a des applications
+            \textbf{extrêmement importantes}.
+            \pause{}
+        \item La limite (hors dérivée) est quand même importante pour étudier les cas extrêmes d'une théorie.
+            \pause{}
+    \end{enumerate}
+
+    La seule chose qui était vraie:
+    les nombres réels ont été définis pour avoir plus de limites.
+\end{frame}
+
+\begin{frame}
+    {Il nous manque un outil \dots}
+
+    \begin{exampleblock}
+        {Questions}
+
+        Les fonctions ne donnent que des informations \textbf{ponctuelles}.
+
+        \begin{enumerate}
+            \item Comment étudier/décrire la variation de quantités?
+                \pause{}
+            \item Où sont les extremas d'une fonction?
+                \pause{}
+            \item Comment résoudre $f(x) = 0$?\footnote{Sans calculatrice}
+                \pause{}
+            \item Comment la calculatrice évalue-t-elle $\sin \alpha$, $\log x$?
+        \end{enumerate}
+    \end{exampleblock}
+
+    Remarque: si on sait dessiner le graphe, c'est qu'on connaît déjà les variations.
+\end{frame}
+
+\begin{frame}
+    {Variations et lois scientifiques}
+
+    Comment écrire mathématiquement ces lois?
+
+    \begin{enumerate}
+        \item Le PIB varie proportionnellement en fonction de lui-même.
+            \pause{}
+        \item Au plus la quantité d'atomes de carbone 14 est importante, au plus cette quantité décroît rapidement.
+            \pause{}
+        \item Au plus la température de l'eau est loin de la température ambiante, au plus elle décroît rapidement.
+    \end{enumerate}
+
+    \pause{}
+    \begin{alertblock}
+        {Constat}
+
+        Il nous manque un ingrédient crucial avant que les mathématiques aient le pouvoir de \textbf{modéliser} et \textbf{prédire}.
+    \end{alertblock}
+\end{frame}
+
+\begin{frame}
+    {Réflexion sur les lois de Newton}
+
+    Une loi universelle ne peut explicitement décrire une quantité,
+    mais seulement ses variations.
+
+    \begin{alertblock}
+        {Deuxième loi de Newton}
+        \begin{align*}
+            \vec F = m \vec a
+        \end{align*}
+    \end{alertblock}
+    \pause{}
+
+    \begin{exampleblock}
+        {Explication}
+
+        L'accéleration est la \textbf{variation} de la vitesse,
+        qui est la \textbf{variation} de la position.
+    \end{exampleblock}
+\end{frame}
+
+\subsection{Un peu d'histoire}
+
+\begin{frame}
+    {Un peu d'histoire}
+
+    \begin{enumerate}
+        \item 1637: (de Fermat) méthode des tangentes pour trouver les extrémas.
+            \pause{}
+        \item 1665: Newton --- Peste noire à Cambridge\\
+            \begin{itemize}
+                \item 1666: étudie et développe les travaux de Fermat,
+                    travaille sur l'optique et la gravitation universelle.
+                \item 1669: Rédaction d'un compte rendu intitulé ``méthode des fluxions'' --- naissance de l'analyse mathématique.
+            \end{itemize}
+            \pause{}
+        \item 1675--1677: Travaux de Leibniz (meilleures notations etc.).
+            \pause{}
+        \item 1687: Philosophiæ Naturalis Principia Mathematica\\
+            \begin{itemize}
+                \item Début de la \textbf{mathématisation} de la physique.
+                \item Réunion mécanique terrestre/céleste, début de la révolution scientifique
+                \item Plus grande oeuvre scientifique de tous les temps?
+            \end{itemize}
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}
+    {Principia}
+    \begin{exampleblock}
+        {Citation --- A.~Einstein}
+
+        \begin{quote}
+            ``In order to put his system into mathematical form at all,
+            Newton had to devise the concept of differential quotients
+            and propound the laws of motion in the form of total differential equations
+            —perhaps \textbf{the greatest advance in thought that a single individual was ever privileged to make}.''
+        \end{quote}
+    \end{exampleblock}
+\end{frame}
+
+\begin{frame}
+    {Déterminisme}
+
+    Les travaux mathématiques sur la dérivée et les équations de Newton
+    ont eu une importance considérable sur la philosophie.
+    \begin{exampleblock}
+        {Théorème --- Déterminisme}
+
+        Les équations de Newton sont entièrement solubles,
+        et une connaissance parfaite du présent permet de connaître le passé et de prédire l'avenir.
+    \end{exampleblock}
+\end{frame}
+
+\begin{frame}
+    {Arguments mathématiques}
+    \begin{enumerate}
+        \item L'analyse a maintenant le pouvoir de \textbf{modéliser} et \textbf{prédire} les phénomènes naturels.
+            \pause{}
+        \item Cependant, des arguments mathématiques douteux
+            (utilisation de nombres \emph{infiniment petits})
+            ralentissent son développement.
+            \pause{}
+        \item Une nouvelle période commence: l'âge de la rigueur.
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}
+    {Un peu d'histoire}
+
+    \textbf{Le XVIII\textsuperscript{è} siècle}
+    \begin{itemize}
+        \item d'Alembert: La dérivée doit être vue comme une limite,
+            mais peine à définir ça rigoureusement.
+            \pause{}
+        \item Lagrange: introduction du terme \textbf{dérivée}.
+    \end{itemize}
+    \pause{}
+
+    \textbf{Le XIX\textsuperscript{è} siècle}
+
+    Cauchy introduit la rigueur en analyse.
+
+    \begin{itemize}
+        \item Cauchy, Weierstrass: première définition rigoureuse de limite.
+            \pause{}
+        \item Erreurs dans les travaux de Cauchy,
+            car les nombres réels n'étaient pas connus.
+            \pause{}
+        \item Dedekind: première définition de nombre réel.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    {Ordre historique vs votre cours de maths}
+
+    Programme:
+    \begin{enumerate}
+        \item nombres réels
+        \item limites
+        \item dérivées
+        \item intégrales
+    \end{enumerate}
+    \pause{}
+
+    Historiquement:
+    \begin{enumerate}
+        \item intégrales
+            \pause{}
+        \item dérivées
+            \pause{}
+        \item limites
+            \pause{}
+        \item nombres réels
+    \end{enumerate}
+\end{frame}
+
+\section{Les dérivées}
+
+\begin{frame}
+    {TL;DR}
+
+    La dérivée est un processus liant une quantité à sa \emph{variation}.
+    \pause{}
+
+    \begin{center}
+        \begin{tabular}
+            {|l|l|}
+
+            \toprule
+            quantité & quantité \emph{dérivée}\\
+            \midrule
+
+            hauteur & croissance\\
+            croissance & concavité\\
+            déplacement & vitesse\\
+            vitesse & accélération\\
+            masse & masse volumique\\
+            énergie potentielle & force\\
+            travail & puissance\\
+            \bottomrule
+        \end{tabular}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    {Dérivée}
+
+    \begin{exampleblock}
+        {Question introductive}
+
+        Imaginons que l'on vous bande les yeux et que l'on vous dépose au Stimont.
+
+        \pause{}
+        Comment savoir si vous êtes en montée ou en descente?
+    \end{exampleblock}
+\end{frame}
+
+\begin{frame}
+    {Dérivée: définition}
+
+    Imaginons que l'on marche sur la courbe d'un graphe, de gauche à droite.
+
+    \begin{exampleblock}
+        {Définition --- nombre dérivé}
+
+        Le nombre dérivé en $x$ est un nombre décrivant l'inclinaison de votre pied (sa \textbf{pente}) lorque vous êtes en $(x, f(x))$.
+    \end{exampleblock}
+
+    \begin{plot}{0.25}{-10}{-2}{10}{10}
+        \plotfunction{-10:10}{-0.09*(\x)^2 + 6}
+        \plotfunction{-1:3}{-0.18*(\x - 1) + 6 - 0.09}
+    \end{plot}
+\end{frame}
+
+\begin{frame}
+    {Dérivée: signification}
+
+    Interprétation du nombre dérivée:
+    \begin{itemize}
+        \item Si la dérivée est \textbf{très positive}: pied très incliné vers le \textbf{haut};
+            \pause{}
+        \item Si la dérivée est \textbf{positive}: pied incliné vers le \textbf{haut};
+            \pause{}
+        \item Si la dérivée est \textbf{nulle}: pied \textbf{plat};
+            \pause{}
+        \item Si la dérivée est \textbf{négative}: pied incliné vers le \textbf{bas};
+            \pause{}
+        \item Si la dérivée est \textbf{très négative}: pied très incliné vers le \textbf{bas};
+            \pause{}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    {Fonction dérivée}
+
+    \begin{exampleblock}
+        {Définition: fonction dérivée}
+
+        La fonction dérivée $f'$ de $f$ est la fonction qui à chaque point
+        associe la pente du pied en ce point lorsque l'on marche sur le graphe
+    \end{exampleblock}
+    \pause{}
+
+    \begin{plot}{0.25}{-10}{-2}{10}{10}
+        \plotfunction{-10:10}{0.09*(\x)^2}
+        \plotfunction{-10:10}{0.18*(\x)}
+    \end{plot}
+    Si l'on considère la position en fonction du temps,
+    la dérivée est la vitesse.
+\end{frame}
+
+\begin{frame}
+    {Dérivabilité}
+
+    Parfois,
+    on ne peut pas poser son pied sur le graphe sans tomber\footnote{Merci Mme Deroeux pour la suggestion}.
+    \begin{plot}{0.25}{-10}{-1}{10}{10}
+        \plotfunction{-10:10}{abs(\x)}
+        \plotfunction{0:10}{5*sqrt(\x)}
+    \end{plot}
+    \pause{}
+
+    \begin{exampleblock}
+        {Définition -- dérivabilité}
+
+        Une fonction $f$ est dérivable en un point si l'on peut poser son pied à cet endroit sur le graphe sans tomber.
+    \end{exampleblock}
+\end{frame}
+
+\begin{frame}
+    {Théorème de Fermat}
+
+    \begin{exampleblock}
+        {Théorème de Fermat}
+
+        Si la montagne est lisse,
+        alors un sommet se repère par un changement d'inclinaison du pied.
+    \end{exampleblock}
+    \pause{}
+
+    \begin{alertblock}
+        {Théorème de Fermat}
+        Si la fonction est dérivable,
+        alors un extremum se repère par un changement de signe de la dérivée.
+    \end{alertblock}
+\end{frame}
+
+\begin{frame}
+    {Croissance et signe de la dérivée}
+
+    \begin{exampleblock}
+        {Théorème}
+
+        Sur une montagne lisse, une section est une montée (resp.\ descente) ssi votre pied est plat ou tourné vers le haut (resp.\ bas) sur toute cette section.
+    \end{exampleblock}
+    \pause{}
+
+    \begin{alertblock}
+        {Théorème}
+
+        Si une fonction est dérivable, elle est croissante (resp.\ décroissante) sur un intervalle ssi la dérivée est positive (resp.\ négative) sur cet intervalle.
+    \end{alertblock}
+
+    \pause{}
+    En termes de vitesse: un véhicule avance (resp.\ recule) ssi sa vitesse est positive (resp.\ négative).
+\end{frame}
+
+\begin{frame}
+    {Pourquoi le radian?}
+
+    Rappelons qu'il faut presque $4$ mètres de papier pour tracer le graphe de $\sin$ en degrés sur une période dans un repère orthonormé.
+    \pause{}
+
+    \begin{exampleblock}
+        {Théorème}
+
+        Le radian est l'unique mesure d'angle pour laquelle la dérivée de $\sin$ est $\cos$ (au lieu de $k \cos$).
+    \end{exampleblock}
+\end{frame}
+
+\begin{frame}
+    {Propriétés des dérivées}
+
+    Le succès des dérivées repose sur la propriété suivante.
+    \begin{exampleblock}
+        {Proposition}
+
+        La dérivée d'une somme, produit, différence, division, composition peut être déduite à partir des dérivées des fonctions de départ.
+    \end{exampleblock}
+    \pause{}
+
+    \begin{alertblock}
+        {Remarque}
+
+        Il suffit de connaître les dérivées de fonctions élémentaires,
+        et de comprendre le comportement sous les différentes opérations.
+    \end{alertblock}
+\end{frame}
+
+\begin{frame}
+    {Dérivée seconde}
+
+    On peut s'intéresser à la variation de la variation (e.g.\ accélération).
+    \begin{exampleblock}
+        {Définition}
+
+        La dérivée seconde $f''$ d'une fonction $f$ est la dérivée de $f'$.
+    \end{exampleblock}
+\end{frame}
+
+\begin{frame}
+    {Dérivée seconde et concavité}
+
+    Si $f'' > 0$, $f'$ croît.
+    Mon pied s'inclinera de plus en plus vers le haut.
+
+    \begin{exampleblock}
+        {Théorème}
+
+        Si la dérivée seconde est positive,
+        on est dans une vallée.
+    \end{exampleblock}
+
+    \begin{plot}{0.25}{-10}{-2}{10}{10}
+        \plotfunction{-10:10}{0.09*(\x)^2}
+    \end{plot}
+\end{frame}
+
+\begin{frame}
+    {Variations: vitesses, débit}
+
+    Nous avons principalement parlé de variation en termes de \textbf{croissance}.
+
+    La dérivée modélise en fait également
+    \begin{enumerate}
+        \item les variations de la position: vitesse, accélération, etc.
+            \pause{}
+        \item des débits.
+            \pause{}
+        \item des densités de masse, probabilité, etc.
+            \pause{}
+        \item des trucs en économie dont j'ai oublié le nom.
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}
+    {Applications des dérivées}
+
+    \begin{enumerate}
+        \item Écrire des équations modélisant la réalité.
+            \pause{}
+        \item Étude de variations d'une fonction.
+            \pause{}
+        \item Approximations polynômiales
+            \begin{enumerate}
+                \item Simplifications de problèmes scientifiques (e.g.\ pendule)
+                    \pause{}
+                \item Méthode de Newton-Raphson pour trouver des racines.
+                    \pause{}
+                \item Calculatrice: évaluation de fonctions $\log$, $\sin$, etc.
+            \end{enumerate}
+            \pause{}
+        \item Facilite le calcul d'aire, volume, travail, probabilité, etc.\\
+            \pause{}
+            La relation aire/dérivée est à la base du fonctionnement de la radio, télévision, manipulations de son/image.
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}
+    {Conclusion}
+
+    \begin{enumerate}
+        \item La dérivée étudie est un outil d'étude de \textbf{variations} avec des applications extrêmement vastes.
+            \pause{}
+        \item La dérivée est le \textbf{langage naturel} des lois scientifiques, économiques, etc.
+            \pause{}
+        \item Son introduction a complètement boulversé l'histoire des sciences, et même l'histoire
+            (Galilée, Newton, Lumières).
+            \pause{}
+        \item Les énoncés théoriques du chapitre sont stupides
+            \pause{}
+        \item Le calcul des dérivées peut (devrait\footnote{Qui signe ma pétition?}) se faire à l'ordinateur.
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}
+    {Fin}
+
+    Le chapitre est fini.
+    Il ne reste plus que le calcul!
+\end{frame}
+
+\end{document}
