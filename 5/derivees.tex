@@ -31,20 +31,61 @@ est considéré comme l'un des tournants de l'histoire de la pensée humaine.
 
 \section{Définition et premières propriétés}
 
+Supposons que nous souhaitons trouver l'inclinaison ou la pente de la \emph{tangente} au graphe d'une fonction $f$ au point $(a, f(a))$,
+comme dans le graphique ci-dessous.
+
 \begin{plot}
-    {0.5}{-6}{-6}{6}{6}
+    {0.5}{-6}{-5}{6}{6}
 
     % Fonction
-    \renewcommand{\f}{1/5*(\x)^2 - 2}
-    \renewcommand{\der}{2/5*(\x)}
+    \def\f{1/5*(\x)^2 - 3}
+    \def\der{2/5*(\x)}
 
     \plotfunction{-6:6}{\f}
-    \drawsecant{\f}{1}{4}{-1:5}
-    \showcoordinates{\f}{1}{[above] {$a$}}{[left] {$f(a)$}}
-    \showcoordinates{\f}{4}{[below] {$x$}}{[left] {$f(a)$}}
-
-    \drawtangent{\f}{\der}{-4}{-5:-2}
+    \showcoordinates{\f}{2.5}{[above] {$a$}}{[left] {$f(a)$}}
+    \drawtangent{\f}{\der}{2.5}{-6:6}
 \end{plot}
+
+L'idée est d'approximer la \emph{tangente} en choisissant un point $x \in \dom f \setminus \{a\}$
+et en traçant la droite \emph{sécante} passant par $(a, f(a))$ et $(x, f(x))$.
+
+\begin{plot}
+    {0.5}{-6}{-5}{6}{6}
+
+    % Fonction
+    \def\f{1/5*(\x)^2 - 3}
+    \def\der{2/5*(\x)}
+
+    \plotfunction{-6:6}{\f}
+    \showcoordinates{\f}{2.5}{[above] {$a$}}{[left] {$f(a)$}}
+    \showcoordinates{\f}{4.5}{[below] {$x$}}{[left] {$f(x)$}}
+    \drawsecant{\f}{2.5}{4.5}{-6:6}
+\end{plot}
+
+Remarquons que la pente de cette sécante est donnée par
+\begin{align}
+    \frac {f(x) - f(a)} {x - a}.
+\end{align}
+
+Lorsque $x$ s'approche de $a$,
+on remarque que la sécante s'approche de la tangente.
+\begin{plot}
+    {0.5}{-6}{-5}{6}{6}
+
+    % Fonction
+    \def\f{1/5*(\x)^2 - 3}
+    \def\der{2/5*(\x)}
+
+    \plotfunction{-6:6}{\f}
+    \drawsecant{\f}{2.5}{3}{-6:6}
+\end{plot}
+
+Pour obtenir la \emph{tangente},
+on fait tendre $x$ vers $a$,
+et la droite résultante a comme pente
+\begin{align}
+    \lim_{x \to a} \frac {f(x) - f(a)} {x - a}.
+\end{align}
 
 \begin{definition}
     [Dérivée]
