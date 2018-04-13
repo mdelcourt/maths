@@ -110,8 +110,8 @@ est considéré comme l'un des tournants de l'histoire de la pensée humaine.
     est appelée \emph{tangente} de $f$ en $a$.
 
     \begin{plot}{0.3}{-6}{-4}{6}{6}
-        \renewcommand{\f}{-1/5*(\x)^2 + 4}
-        \renewcommand{\der}{-2/5*(\x)}
+        \def\f{-1/5*(\x)^2 + 4}
+        \def\der{-2/5*(\x)}
         \plotfunction{-6:6}{\f}
         \drawtangent{\f}{\der}{-3}{-6:6}
         \showcoordinates{\f}{-3}{[below] {$a$}}{[right] {$f(a)$}}
@@ -567,7 +567,7 @@ Commençons par définir ces deux notions.
 
     \begin{plot}
         {0.5}{-4}{-3}{6}{5}
-        \renewcommand{\f}{-0.2*(\x - 1)^2 + 3}
+        \def\f{-0.2*(\x - 1)^2 + 3}
         \plotfunction{-6:6}{\f}
         \showcoordinates{\f}{1}{[below] {$a$}}{[left] {$f(a)$}}
         \showcoordinates{\f}{4}{[below] {$x$}}{[left] {$f(x)$}}
@@ -591,8 +591,8 @@ La proposition suivante permet de sélectionner les points qui ont une chance d'
     On a $f'(a) = 0$.
 
     \begin{plot}{0.3}{-6}{-6}{6}{6}
-        \renewcommand{\f}{-1/5*(\x)^2 + 2}
-        \renewcommand{\der}{-2/5*(\x)}
+        \def\f{-1/5*(\x)^2 + 2}
+        \def\der{-2/5*(\x)}
         \plotfunction{-6:6}{\f}
         \drawtangent{\f}{\der}{0}{-2:2}
     \end{plot}
@@ -647,8 +647,8 @@ En effet, l'exemple suivant montre qu'on peut avoir $f'(a) = 0$ sans avoir d'ext
     comme le montre le graphe ci-dessous.
 
     \begin{plot}{0.3}{-6}{-6}{6}{6}
-        \renewcommand{\f}{1/20*(\x)^3}
-        \renewcommand{\der}{3/20*(\x)^2}
+        \def\f{1/20*(\x)^3}
+        \def\der{3/20*(\x)^2}
         \plotfunction{-6:6}{\f}
         \drawtangent{\f}{\der}{0}{-2:2}
     \end{plot}
@@ -711,8 +711,8 @@ La \emph{croissance} est liée à la dérivée via le théorème suivant.
 
     \begin{plot}
         {0.5}{-6}{-2}{3}{6}
-        \renewcommand{\f}{e^(\x) - 1}
-        \renewcommand{\der}{e^(\x)}
+        \def\f{e^(\x) - 1}
+        \def\der{e^(\x)}
         \plotfunction{-6:3}{\f}
         \drawtangent{\f}{\der}{1}{0.75:1.25}
         \drawtangent{\f}{\der}{0}{-0.75:0.75}
@@ -822,8 +822,8 @@ Dans l'exemple suivant, on revisite une formule vue l'an passé.
     \begin{plot}
     {0.5}{-6}{-6}{6}{6}
 
-    \renewcommand{\f}{1/5*(\x)^2 - 2}
-    \renewcommand{\der}{2/5*(\x)}
+    \def\f{1/5*(\x)^2 - 2}
+    \def\der{2/5*(\x)}
 
     \plotfunction{-6:6}{\f}
 
@@ -840,8 +840,8 @@ Dans l'exemple suivant, on revisite une formule vue l'an passé.
     \begin{plot}
     {0.5}{-6}{-6}{6}{6}
 
-    \renewcommand{\f}{-1/5*(\x)^2 + 2}
-    \renewcommand{\der}{-2/5*(\x)}
+    \def\f{-1/5*(\x)^2 + 2}
+    \def\der{-2/5*(\x)}
 
     \plotfunction{-6:6}{\f}
 
