@@ -24,7 +24,7 @@
     \def\x{#2}
     \pgfmathsetmacro{\y}{#1}
     \draw[dashed] (\x, 0) node#3 -- (\x, \y) -- (0, \y) node#4;
-    \filldraw[black] (\x, \y) circle (.05cm);
+    \drawpoint[black]{\x, \y};
 }
 \newenvironment{plot}[5]{%
     \begin{center}
@@ -49,6 +49,8 @@
     \pgfmathsetmacro{\slope}{(\fx - \fa)/(#3 - #2)}
     % Drawing the secant
     \plotfunction{#4}{\slope*(\x - #2) + \fa}
+    \drawpoint[black]{#2, \fa};
+    \drawpoint[black]{#3, \fx};
 }
 \newcommand{\drawtangent}[4]{%
     \pgfmathsetmacro{\x}{#3}
