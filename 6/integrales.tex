@@ -352,6 +352,25 @@ en réduisant le calcul d'intégrale à \emph{une primitivation et une soustract
     \end{align}
 \end{definition}
 
+La définition ci-dessus est motivé par le résultat suivant:
+
+\begin{theorem}
+    [Intégration par changement de variables]
+
+    \subsubsection{Hypothèses}
+    \begin{enumerate}
+        \item $u$ est une fonction dérivable sur $\ccinterval a b$.
+        \item $u'$ est continue sur $\ccinterval a b$.
+        \item $f$ est une fonction continue sur $u(\ccinterval a b)$.
+    \end{enumerate}
+
+    \subsubsection{Thèse}
+    On a:
+    \begin{align}
+        \int_a^b f(u(x)) u'(x) \dd x = \int_{u(a)}^{u(b)} f(x) \dd x.
+    \end{align}
+\end{theorem}
+
 \section{Applications du calcul intégral}
 
 \subsection{Calcul d'aire entre deux courbes}
