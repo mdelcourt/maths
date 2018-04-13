@@ -105,7 +105,7 @@ est considéré comme l'un des tournants de l'histoire de la pensée humaine.
     La droite de pente $f'(a)$ passant par $(a, f(a))$,
     dont l'équation est
     \begin{align}
-        T_{f, a} \equiv f'(a) (x - a) + f(a).
+        T_{f, a} \equiv y = f'(a) (x - a) + f(a).
     \end{align}
     est appelée \emph{tangente} de $f$ en $a$.
 
@@ -345,6 +345,27 @@ Une dérivée peut se calculer terme par terme.
     \end{align}
 \end{proof}
 
+\begin{example}
+    Soit $f$ la fonction définie par 
+    \begin{align}
+        f(x) = x^4 + \sqrt x.
+    \end{align}
+    Pour tout $x \in \R_0^+$, on a 
+    \begin{align}
+        f'(x) = 4x^3 + \frac{1}{2\sqrt x}.
+    \end{align}
+\end{example}
+
+\begin{example}
+    [Dérivée de $f(x) + k$]
+    Soit $f$ une fonction dérivable.
+    Soit $k \in \R$ une constante. 
+    La fonction $f + k$ est dérivable et pour tout $x \in \dom f$, on a 
+    \begin{align}
+        (f + k)'(x) = f'(x) + 0 = f'(x).
+    \end{align}
+\end{example}
+
 \begin{proposition}
     [Dérivée d'une différence]
 
@@ -354,6 +375,17 @@ Une dérivée peut se calculer terme par terme.
         (f - g)'(a) = f'(a) - g'(a).
     \end{align}
 \end{proposition}
+
+\begin{example}
+    Soit $f$ la fonction définie par 
+    \begin{align}
+        f(x) = \frac{1}{x} - \cos x.
+    \end{align}
+    Pour tout $x \in \R_0$, on a 
+    \begin{align}
+        f'(x) = -\frac{1}{x^2} + \sin x.
+    \end{align}
+\end{example}
 
 \begin{proposition}
     [Dérivée d'un produit]
@@ -380,6 +412,27 @@ Une dérivée peut se calculer terme par terme.
         (f g)'(a) = f'(a) g(a) + f(a) g'(a).
     \end{align}
 \end{proof}
+
+\begin{example}
+    Soit $f$ la fonction définie par 
+    \begin{align}
+        f(x) = x^2 \sin x.
+    \end{align}
+    Pour tout $x \in \R_0^+$, on a 
+    \begin{align}
+        f'(x) = 2x \cdot \sin x + x^2 \cdot \cos x.
+    \end{align}
+\end{example}
+
+\begin{example}
+    [Dérivée de $k f(x)$]
+    Soit $f$ une fonction dérivable.
+    Soit $k \in \R$ une constante. 
+    La fonction $kf$ est dérivable et pour tout $x \in \dom f$, on a 
+    \begin{align}
+        (kf)'(x) = 0 \cdot f(x) + k \cdot f'(x) = kf'(x).
+    \end{align}
+\end{example}
 
 \begin{proposition}
     [Dérivée d'une composée]
@@ -415,6 +468,17 @@ Une dérivée peut se calculer terme par terme.
         (g \circ f)'(a) = g'(f(a)) f'(a).
     \end{align}
 \end{proof}
+
+\begin{example}
+    Soit $f$ la fonction définie par 
+    \begin{align}
+        f(x) = \sin (4x + 1).
+    \end{align}
+    Pour tout $x \in \R$, on a 
+    \begin{align}
+        f'(x) = \cos (4x + 1) \cdot (4x + 1)' = 4\cos (4x + 1).
+    \end{align}
+\end{example}
 
 \begin{proposition}
     [Dérivée d'un quotient]
@@ -459,6 +523,19 @@ Une dérivée peut se calculer terme par terme.
         &= \frac {f'(a) g(a) - f(a) g'(a)} {g^2(a)}
     \end{align}
 \end{proof}
+
+\begin{example}
+    Soit $f$ la fonction définie par 
+    \begin{align}
+        f(x) = \frac{x^3 - 1}{x^2 + 2}.
+    \end{align}
+    Pour tout $x \in \R$, on a 
+    \begin{align}
+        f'(x) 
+        &= \frac{3x^2 \cdot (x^2 + 2) - (x^3 - 1) \cdot 2x}{(x^2 + 2)^2}\\
+        &= \frac{x^4 + 6 x^2 + 2x}{(x^2 + 2)^2}.
+    \end{align}
+\end{example}
 
 \begin{exercise}
     Calculer la dérivée des fonctions tangente et cotangente.
@@ -733,18 +810,122 @@ Dans l'exemple suivant, on revisite une formule vue l'an passé.
     Par le théorème de Fermat, l'abscisse du sommet de $f$ est donc $- \frac{b}{2a}$.
 \end{example}
 
-\section{Dérivée seconde, courbure et concavité}
-
-La \emph{dérivée seconde} d'une fonction $f$,
-notée $f''$,
-est la dérivée de $f'$.
+\section{Dérivée seconde, convexité et points d'inflexion}
 
 \begin{definition}
     [Convexité]
 
-    Soit $f$ une fonction deux fois dérivable.
-    On dit que $f$ est \emph{convexe} (resp.\ \emph{concave}) sur un intervalle $I \subset \dom f$
-    si $f''$ est \emph{positive} (resp.\ \emph{négative}) sur $I$.
+    Soit $f$ une fonction.
+    On dit que $f$ est \emph{convexe} sur un intervalle $I \subset \dom f$
+    si le graphique de $f$ sur $I$ est toujours au dessus de chacune de ses tangentes.
+    
+    \begin{plot}
+    {0.5}{-6}{-6}{6}{6}
+
+    \renewcommand{\f}{1/5*(\x)^2 - 2}
+    \renewcommand{\der}{2/5*(\x)}
+
+    \plotfunction{-6:6}{\f}
+
+    \drawtangent{\f}{\der}{-4}{-4.9:-3.1}
+    \drawtangent{\f}{\der}{-2}{-2.9:-1.1}
+    \drawtangent{\f}{\der}{0}{-0.9:0.9}
+    \drawtangent{\f}{\der}{2}{1.1:2.9}
+    \drawtangent{\f}{\der}{4}{3.1:4.9}
+    \end{plot}
+    
+    On dit que $f$ est \emph{concave} sur un intervalle $I \subset \dom f$
+    si le graphique de $f$ sur $I$ est toujours en dessous de chacune de ses tangentes.
+    
+    \begin{plot}
+    {0.5}{-6}{-6}{6}{6}
+
+    \renewcommand{\f}{-1/5*(\x)^2 + 2}
+    \renewcommand{\der}{-2/5*(\x)}
+
+    \plotfunction{-6:6}{\f}
+
+    \drawtangent{\f}{\der}{-4}{-4.9:-3.1}
+    \drawtangent{\f}{\der}{-2}{-2.9:-1.1}
+    \drawtangent{\f}{\der}{0}{-0.9:0.9}
+    \drawtangent{\f}{\der}{2}{1.1:2.9}
+    \drawtangent{\f}{\der}{4}{3.1:4.9}
+    \end{plot}
 \end{definition}
+
+Si vous n'avez rien compris à cette définition, lisez la remarque ultra pédagogique qui suit.
+
+\begin{remark}
+    [La convexité pour les nuls]
+    
+    Une fonction $f$ est \emph{convexe} si son graphique ressemble à la bouche d'un smiley content\footnote{ou à la bouche de M. Nguyen lorsqu'il y a à manger devant lui}.
+    Une fonction $f$ est \emph{concave} si son graphique ressemble à la bouche d'un smiley fâché\footnote{ou à la bouche de M. Bertrand quand il regarde un match du Standard de Liège}.
+\end{remark}
+
+\begin{definition}
+    [Point d'inflexion]
+    
+    Soit $f$ une fonction.
+    Soit $a \in \dom f$.
+    On dit que $f$ admet un \emph{point d'inflexion} en $a$ si la convexité de $f$ change en $a$\footnote{elle passe de convexe à concave ou de concave à convexe}.
+\end{definition}
+
+Pour étudier la convexité d'une fonction $f$, on étudie le \emph{signe} de sa \emph{dérivée seconde}.
+
+\begin{definition}
+    [Dérivée seconde]
+    
+    Soit $f$ une fonction.
+    Supposons que $f'$ est dérivable.
+    La dérivée seconde de $f$, notée $f''$, est la dérivée de $f'$\footnote{où si vous aimez embêter vos profs de français avec des répétitions, c'est la dérivée de la dérivée de $f$}.
+\end{definition}
+
+Si la dérivée seconde de $f$ existe, on dit que $f$ est \emph{deux fois dérivable}.
+
+\begin{proposition}
+    [Lien entre dérivée seconde et convexité]
+    
+    Soit $f$ une fonction deux fois dérivable.
+    La fonction $f$ est convexe (resp. concave) sur un intervalle $I \subset \dom f$ si et seulement si $f''(x) \ge 0$ (resp. $f''(x) \le 0$)  pour tout $x \in I$.
+\end{proposition}
+
+Reprenons l'étude de fonction de la section précédente afin de la compléter.
+
+\begin{example}
+     Soit $f$ la fonction définie par
+     \begin{align}
+         f(x) = x^5 - \frac {10} 3 x^3.
+     \end{align}
+
+     On avait calculé, pour tout $x \in \R$,
+     \begin{align}
+         f'(x) = 5 x^4 - 10 x^2
+     \end{align}
+
+     En redérivant, on trouve, pour tout $x \in \R$,
+     \begin{align}
+         f''(x) 
+         &= 20 x^3 - 20 x\\
+         &= 20x (x^2 - 1).
+     \end{align}
+     
+     Cette fois, on étudie le signe de $f''$.
+
+     \signtable{$x$/0.75, $20 x$/0.75, $x^2 - 1$/0.75, $f''(x)$/0.75}{,$-1$,$0$,$1$,}{%
+        \signrow{,-,-,-,0,+,+,+,}
+        \signrow{,+,0,-,-,-,0,+,}
+        \signrow{,-,0,+,0,-,0,+,}
+    }
+
+    On constate que $f$ est convexe sur $\ccinterval{-1}{0}$ et sur $\cointerval{1}{+ \infty}$ et
+    que $f$ est concave sur $\ocinterval{- \infty}{-1}$ et sur $\ccinterval{0}{1}$.
+    La fonction $f$ admet trois points d'inflexion en $-1$, $0$, et $1$.
+
+    (Re)Voici le graphique de $f$ qui (re)confirme nos résultats :
+
+    \begin{plot}{0.5}{-5}{-5}{5}{5}
+        \plotfunction{-5:5}{(\x)^5 - (10/3)*(\x)^3}
+    \end{plot}
+\end{example}
 
 \end{document}
