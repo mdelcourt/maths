@@ -334,6 +334,27 @@ Une dérivée peut se calculer terme par terme.
     \end{align}
 \end{proof}
 
+\begin{example}
+    Soit $f$ la fonction définie par 
+    \begin{align}
+        f(x) = x^4 + \sqrt x.
+    \end{align}
+    Pour tout $x \in \R_0^+$, on a 
+    \begin{align}
+        f'(x) = 4x^3 + \frac{1}{2\sqrt x}.
+    \end{align}
+\end{example}
+
+\begin{example}
+    [Dérivée de $f(x) + k$]
+    Soit $f$ une fonction dérivable.
+    Soit $k \in \R$ une constante. 
+    La fonction $f + k$ est dérivable et pour tout $x \in \dom f$, on a 
+    \begin{align}
+        (f + k)'(x) = f'(x) + 0 = f'(x).
+    \end{align}
+\end{example}
+
 \begin{proposition}
     [Dérivée d'une différence]
 
@@ -343,6 +364,17 @@ Une dérivée peut se calculer terme par terme.
         (f - g)'(a) = f'(a) - g'(a).
     \end{align}
 \end{proposition}
+
+\begin{example}
+    Soit $f$ la fonction définie par 
+    \begin{align}
+        f(x) = \frac{1}{x} - \cos x.
+    \end{align}
+    Pour tout $x \in \R_0$, on a 
+    \begin{align}
+        f'(x) = -\frac{1}{x^2} + \sin x.
+    \end{align}
+\end{example}
 
 \begin{proposition}
     [Dérivée d'un produit]
@@ -369,6 +401,27 @@ Une dérivée peut se calculer terme par terme.
         (f g)'(a) = f'(a) g(a) + f(a) g'(a).
     \end{align}
 \end{proof}
+
+\begin{example}
+    Soit $f$ la fonction définie par 
+    \begin{align}
+        f(x) = x^2 \sin x.
+    \end{align}
+    Pour tout $x \in \R_0^+$, on a 
+    \begin{align}
+        f'(x) = 2x \cdot \sin x + x^2 \cdot \cos x.
+    \end{align}
+\end{example}
+
+\begin{example}
+    [Dérivée de $k f(x)$]
+    Soit $f$ une fonction dérivable.
+    Soit $k \in \R$ une constante. 
+    La fonction $kf$ est dérivable et pour tout $x \in \dom f$, on a 
+    \begin{align}
+        (kf)'(x) = 0 \cdot f(x) + k \cdot f'(x) = kf'(x).
+    \end{align}
+\end{example}
 
 \begin{proposition}
     [Dérivée d'une composée]
@@ -404,6 +457,17 @@ Une dérivée peut se calculer terme par terme.
         (g \circ f)'(a) = g'(f(a)) f'(a).
     \end{align}
 \end{proof}
+
+\begin{example}
+    Soit $f$ la fonction définie par 
+    \begin{align}
+        f(x) = \sin (4x + 1).
+    \end{align}
+    Pour tout $x \in \R$, on a 
+    \begin{align}
+        f'(x) = \cos (4x + 1) \cdot (4x + 1)' = 4\cos (4x + 1).
+    \end{align}
+\end{example}
 
 \begin{proposition}
     [Dérivée d'un quotient]
@@ -448,6 +512,19 @@ Une dérivée peut se calculer terme par terme.
         &= \frac {f'(a) g(a) - f(a) g'(a)} {g^2(a)}
     \end{align}
 \end{proof}
+
+\begin{example}
+    Soit $f$ la fonction définie par 
+    \begin{align}
+        f(x) = \frac{x^3 - 1}{x^2 + 2}.
+    \end{align}
+    Pour tout $x \in \R$, on a 
+    \begin{align}
+        f'(x) 
+        &= \frac{3x^2 \cdot (x^2 + 2) - (x^3 - 1) \cdot 2x}{(x^2 + 2)^2}\\
+        &= \frac{x^4 + 6 x^2 + 2x}{(x^2 + 2)^2}.
+    \end{align}
+\end{example}
 
 \begin{exercise}
     Calculer la dérivée des fonctions tangente et cotangente.
