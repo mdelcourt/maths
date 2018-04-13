@@ -722,18 +722,56 @@ Dans l'exemple suivant, on revisite une formule vue l'an passé.
     Par le théorème de Fermat, l'abscisse du sommet de $f$ est donc $- \frac{b}{2a}$.
 \end{example}
 
-\section{Dérivée seconde, courbure et concavité}
-
-La \emph{dérivée seconde} d'une fonction $f$,
-notée $f''$,
-est la dérivée de $f'$.
+\section{Dérivée seconde, convexité et points d'inflexion}
 
 \begin{definition}
     [Convexité]
 
-    Soit $f$ une fonction deux fois dérivable.
-    On dit que $f$ est \emph{convexe} (resp.\ \emph{concave}) sur un intervalle $I \subset \dom f$
-    si $f''$ est \emph{positive} (resp.\ \emph{négative}) sur $I$.
+    Soit $f$ une fonction.
+    On dit que $f$ est \emph{convexe} sur un intervalle $I \subset \dom f$
+    si le graphique de $f$ sur $I$ est toujours au dessus de chacune de ses tangentes.
+    
+    \begin{plot}
+    {0.5}{-6}{-6}{6}{6}
+
+    \renewcommand{\f}{1/5*(\x)^2 - 2}
+    \renewcommand{\der}{2/5*(\x)}
+
+    \plotfunction{-6:6}{\f}
+
+    \drawtangent{\f}{\der}{-4}{-4.9:-3.1}
+    \drawtangent{\f}{\der}{-2}{-2.9:-1.1}
+    \drawtangent{\f}{\der}{0}{-0.9:0.9}
+    \drawtangent{\f}{\der}{2}{1.1:2.9}
+    \drawtangent{\f}{\der}{4}{3.1:4.9}
+    \end{plot}
+    
+    On dit que $f$ est \emph{concave} sur un intervalle $I \subset \dom f$
+    si le graphique de $f$ sur $I$ est toujours en dessous de chacune de ses tangentes.
+    
+    \begin{plot}
+    {0.5}{-6}{-6}{6}{6}
+
+    \renewcommand{\f}{-1/5*(\x)^2 + 2}
+    \renewcommand{\der}{-2/5*(\x)}
+
+    \plotfunction{-6:6}{\f}
+
+    \drawtangent{\f}{\der}{-4}{-4.9:-3.1}
+    \drawtangent{\f}{\der}{-2}{-2.9:-1.1}
+    \drawtangent{\f}{\der}{0}{-0.9:0.9}
+    \drawtangent{\f}{\der}{2}{1.1:2.9}
+    \drawtangent{\f}{\der}{4}{3.1:4.9}
+    \end{plot}
 \end{definition}
+
+Si vous n'avez rien compris à cette définition, lisez la remarque ultra pédagogique qui suit.
+
+\begin{remark}
+    [La convexité pour les nuls]
+    
+    Une fonction $f$ est \emph{convexe} si son graphique ressemble à la bouche d'un smiley content\footnote{ou à la bouche de M. Nguyen lorsqu'il y a à manger devant lui}.
+    Une fonction $f$ est \emph{concave} si son graphique ressemble à la bouche d'un smiley fâché\footnote{ou à la bouche de M. Bertrand quand il regarde un match du Standard de Liège}.
+\end{remark}
 
 \end{document}
