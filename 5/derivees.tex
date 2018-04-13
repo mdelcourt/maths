@@ -408,9 +408,16 @@ Une dérivée peut se calculer terme par terme.
 \begin{proposition}
     [Dérivée d'un quotient]
 
-    Soient $f, g$ deux fonctions dérivables en $a \in \R$.
-    Si $g'(a) \neq 0$,
-    alors $\frac f g$ est dérivable en $a$ et
+    \subsubsection{Hypothèses}
+
+    \begin{itemize}
+        \item $f, g$ deux fonctions dérivables en $a \in \R$.
+        \item $g'(a) \neq 0$.
+    \end{itemize}
+
+    \subsubsection{Thèse}
+
+    Le quotient $\frac f g$ est dérivable en $a$ et
     \begin{align}
         \left(\frac f g\right)'(a) = \frac {f'(a) g(a) - f(a) g'(a)} {g^2(a)}
     \end{align}
