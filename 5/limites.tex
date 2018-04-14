@@ -601,6 +601,10 @@ mais elle ne sera plus causée par des racines.
     lorsque \emph{$x$ est suffisament grand avec $x \in \dom f$}.
 \end{definition}
 
+\begin{exercise}
+    Définissez limite réelle en moins l'infini.
+\end{exercise}
+
 \begin{example}
     [Limite réelle à l'infini]
 
@@ -651,6 +655,10 @@ mais elle ne sera plus causée par des racines.
     si \emph{$f(x)$ devient supérieur (resp. inférieur) à n'importe quel nombre réel}
     lorsque \emph{$x$ est suffisament grand avec $x \in \dom f$}.
 \end{definition}
+
+\begin{exercise}
+    Définissez limite infinie en moins l'infini.
+\end{exercise}
 
 \begin{definition}
     [Asymptote oblique]
@@ -718,9 +726,9 @@ Toutes les limites infinies à l'infini ne donnent pas forcément lieu à une as
 
 \subsection{Calcul des limites à l'infini}
 
-\subsubsection{Limite de $k x^n$, $k \neq 0$}
+\subsubsection{Limite de $k x^n$, $k \neq 0$, $n \in \N_0$}
 
-Les limites à l'infini de $k x^n$, $k \neq 0$ sont infinies.
+Les limites à l'infini de $k x^n$, $k \neq 0$, $n \in \N_0$ sont infinies.
 Le signe se détermine par une étude de signe pour les très grandes (resp.\ petites) valeurs.
 De manière très (trop\footnote{Si les auteurs du document étaient de bons pédagogues, ils n'encourageraient pas cette pratique}) pragmatique,
 on a
@@ -733,7 +741,7 @@ on a
     \end{cases}
 \end{align*}
 
-\subsubsection{Limite de $\frac k {x^n}$, $k \neq 0$}
+\subsubsection{Limite de $\frac k {x^n}$, $n \in \N_0$}
 
 Ca vaut toujours $0$,
 vu qu'on divise $k$ par quelque chose qui devient de plus en plus grand.
@@ -972,7 +980,7 @@ alors il faut calculer l'\emph{asymptote oblique}.
             }
         }
         child {%
-            node {$\begin{aligned}\lim_{x \to \pm \infty} k x^n\end{aligned}$, $k,n \neq 0$}
+            node {$\begin{aligned}\lim_{x \to \pm \infty} k x^n\end{aligned}$}
             child {%
                 node {$(\sign k) \infty$}
                 edge from parent node [below] {sinon}
