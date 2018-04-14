@@ -731,44 +731,42 @@ La proposition suivante permet de sélectionner les points qui ont une chance d'
     Supposons que $a$ est un maximum local de $f$.
     Soit $x \in \dom f$ \emph{suffisament proche de $a$}.
 
-    \setlength{\columnseprule}{0.5pt}
-    \begin{multicols}{2}
-        Si $x < a$,
-        alors on en déduit que
-        la sécante est tournée vers le \emph{haut}
-        \begin{plot}{0.3}{-6}{-3}{6}{6}
-            \def\f{-1/5*(\x)^2 + 2}
-            \plotfunction{-6:6}{\f}
-            \drawsecant{\f}{-1}{0}{-4:3}
-            \showxcoordinate{\f}{-1}{[below] {$x$}}
-        \end{plot}
-        ce qui se traduit mathématiquement par
-        \begin{align}
-            \frac{f(x) - f(a)}{x-a} \ge 0.
-        \end{align}
-        En faisant tendre $x$ vers $a$, on obtient
-        \begin{align}
-            f'(a) \ge 0.
-        \end{align}
-
-        Si $x > a$,
-        alors on en déduit que
-        la sécante est tournée vers le \emph{bas}
-        \begin{plot}{0.3}{-6}{-3}{6}{6}
-            \def\f{-1/5*(\x)^2 + 2}
-            \plotfunction{-6:6}{\f}
-            \drawsecant{\f}{1}{0}{-3:4}
-            \showxcoordinate{\f}{1}{[below] {$x$}}
-        \end{plot}
-        ce qui se traduit mathématiquement par
-        \begin{align}
-            \frac{f(x) - f(a)}{x-a} \le 0,
-        \end{align}
-        En faisant tendre $x$ vers $a$, on obtientd
-        \begin{align}
-            f'(a) \le 0.
-        \end{align}
-    \end{multicols}
+    \begin{itemize}
+        \item Si $x < a$,
+            alors puisque $a$ est un maximum on en déduit que
+            la sécante est tournée vers le \emph{haut}
+            \begin{plot}{0.3}{-6}{-3}{6}{6}
+                \def\f{-1/5*(\x)^2 + 2}
+                \plotfunction{-6:6}{\f}
+                \drawsecant{\f}{-1}{0}{-4:3}
+                \showxcoordinate{\f}{-1}{[below] {$x$}}
+            \end{plot}
+            ce qui se traduit mathématiquement par
+            \begin{align}
+                \frac{f(x) - f(a)}{x-a} \ge 0.
+            \end{align}
+            En faisant tendre $x$ vers $a$, on obtient
+            \begin{align}
+                f'(a) \ge 0.
+            \end{align}
+        \item Si $x > a$,
+            alors puisque $a$ est un maximum on en déduit que
+            la sécante est tournée vers le \emph{bas}
+            \begin{plot}{0.3}{-6}{-3}{6}{6}
+                \def\f{-1/5*(\x)^2 + 2}
+                \plotfunction{-6:6}{\f}
+                \drawsecant{\f}{1}{0}{-3:4}
+                \showxcoordinate{\f}{1}{[below] {$x$}}
+            \end{plot}
+            ce qui se traduit mathématiquement par
+            \begin{align}
+                \frac{f(x) - f(a)}{x-a} \le 0,
+            \end{align}
+            En faisant tendre $x$ vers $a$, on obtient
+            \begin{align}
+                f'(a) \le 0.
+            \end{align}
+    \end{itemize}
 
     On en conclut donc que
     \begin{align}
