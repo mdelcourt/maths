@@ -350,6 +350,47 @@ On peut extrapoler l'exemple suivant.
     \end{align}
 \end{proof}
 
+Il faut bien noter que ce résultat est valable seulement dans un sens.
+En effet, voici deux exemples qui montrent qu'une fonction peut être \emph{continue} en un point sans être \emph{dérivable} en ce point.
+
+\begin{example}
+    [Une fonction continue non dérivable]
+    
+    Soit $f$ la fonction définie par 
+    \begin{align}
+        f(x) = |x|
+    \end{align}
+    
+    Un simple regard sur son graphique permet de se convaincre qu'elle est continue partout sur $\R$.
+    \begin{plot}{0.5}{-4}{-4}{4}{4}
+        \plotfunction{-4:0}{-\x}
+        \plotfunction{0:4}{\x}
+    \end{plot}
+    
+    Cependant, on s'aperçoit que la courbe change brusquement de direction en $0$ et qu'il n'y a donc par de tangente à $f$ en ce point/
+    La fonction $f$ n'est donc pas dérivable en $0$.
+\end{example}
+
+Voici un deuxième exemple.
+
+\begin{example}
+    [Une autre fonction continue non dérivable]
+    
+    Soit $f$ la fonction définie par 
+    \begin{align}
+        f(x) = \sqrt {x-1}
+    \end{align}
+    
+    Un simple regard sur son graphique permet de se convaincre qu'elle est continue partout sur $\R^+$.
+    \begin{plot}{0.5}{-2}{-2}{6}{4}
+        \plotfunction{1:6}{(\x - 1)^(1/2)}
+        \drawline (1,-2)--(1,6);
+    \end{plot}
+    
+    On s'aperçoit également qu'en $0$, la tangente de $f$ est verticale.
+    La pente d'une droite verticale n'étant pas un nombre réel, on en conclut que $f$ n'est pas dérivable en $0$.
+\end{example}
+
 Le choix de mesurer les angles en radian
 (c'est-à-dire une unité où le tour complet est représenté par un nombre \emph{irrationnel}\footnote{%
     Formulé comme ça, ça a quand même l'air d'être une décision vachement stupide.
