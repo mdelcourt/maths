@@ -142,6 +142,8 @@ et la droite résultante a comme pente
 \end{remark}
 
 \begin{remark}
+    [Quotient différentiel]
+
     Une expression telle que
     \begin{align}
         \frac {f(x) - f(a)} {x - a}
@@ -149,6 +151,18 @@ et la droite résultante a comme pente
     est appelée \emph{quotient différentiel}.
     Dans ce langage,
     une dérivée est une limite d'un quotient différentiel.
+
+    Il est absolument crucial
+    de garder en tête tout au long de ce chapitre
+    que le quotient différentiel représente l'\emph{inclinaison} ou la \emph{pente} de la sécante
+    reliant $(a, f(a))$ et $(x, f(x))$.
+    \begin{plot}{0.5}{-6}{-6}{6}{3}
+        \def\f{(\x)^2 - 4}
+        \plotfunction{-6:6}{\f}
+        \drawsecant{\f}{-1}{1.5}{-6:6}
+        \showxcoordinates{\f}{-1}{[above] {$a$}}
+        \showxcoordinates{\f}{1.5}{[above] {$x$}}
+    \end{plot}
 \end{remark}
 
 \begin{definition}
