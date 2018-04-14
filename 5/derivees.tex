@@ -403,7 +403,8 @@ Voici un deuxième exemple.
     Un simple regard sur son graphique permet de se convaincre qu'elle est continue partout sur $\cointerval{1}{+ \infty}$.
     \begin{plot}{0.5}{-2}{-2}{6}{4}
         \plotfunction{1:6}{(\x - 1)^(1/2)}
-        \drawline (1,-2)--(1,6);
+        \drawpoint[black]{1, 0}
+        \drawline (1, -1)--(1, 1);
     \end{plot}
     
     On s'aperçoit également qu'en $0$, la tangente de $f$ est verticale.
