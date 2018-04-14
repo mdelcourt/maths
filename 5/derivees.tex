@@ -963,49 +963,6 @@ Dans l'exemple suivant, on revisite une formule vue l'an passé.
 
 \section{Dérivée seconde, convexité et points d'inflexion}
 
-\begin{definition}
-    [Convexité]
-
-    Soit $f$ une fonction.
-    On dit que $f$ est \emph{convexe} sur un intervalle $I \subset \dom f$
-    si le graphique de $f$ sur $I$ est toujours au dessus de chacune de ses tangentes.
-    
-    \begin{plot}
-    {0.5}{-6}{-6}{6}{6}
-
-    \def\f{1/5*(\x)^2 - 2}
-    \def\der{2/5*(\x)}
-
-    \plotfunction{-6:6}{\f}
-
-    \drawtangent{\f}{\der}{-4}{-4.9:-3.1}
-    \drawtangent{\f}{\der}{-2}{-2.9:-1.1}
-    \drawtangent{\f}{\der}{0}{-0.9:0.9}
-    \drawtangent{\f}{\der}{2}{1.1:2.9}
-    \drawtangent{\f}{\der}{4}{3.1:4.9}
-    \end{plot}
-    
-    On dit que $f$ est \emph{concave} sur un intervalle $I \subset \dom f$
-    si le graphique de $f$ sur $I$ est toujours en dessous de chacune de ses tangentes.
-    
-    \begin{plot}
-    {0.5}{-6}{-6}{6}{6}
-
-    \def\f{-1/5*(\x)^2 + 2}
-    \def\der{-2/5*(\x)}
-
-    \plotfunction{-6:6}{\f}
-
-    \drawtangent{\f}{\der}{-4}{-4.9:-3.1}
-    \drawtangent{\f}{\der}{-2}{-2.9:-1.1}
-    \drawtangent{\f}{\der}{0}{-0.9:0.9}
-    \drawtangent{\f}{\der}{2}{1.1:2.9}
-    \drawtangent{\f}{\der}{4}{3.1:4.9}
-    \end{plot}
-\end{definition}
-
-Si vous n'avez rien compris à cette définition, lisez la remarque ultra pédagogique qui suit.
-
 \begin{remark}
     [La convexité pour les nuls]
     
