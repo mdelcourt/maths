@@ -366,7 +366,7 @@ En effet, voici deux exemples qui montrent qu'une fonction peut être \emph{cont
     \end{align}
     
     Un simple regard sur son graphique permet de se convaincre qu'elle est continue partout sur $\R$.
-    \begin{plot}{0.5}{-4}{-4}{4}{4}
+    \begin{plot}{0.5}{-4}{-1}{4}{4}
         \plotfunction{-4:0}{-\x}
         \plotfunction{0:4}{\x}
     \end{plot}
@@ -385,7 +385,7 @@ Voici un deuxième exemple.
         f(x) = \sqrt {x-1}
     \end{align}
     
-    Un simple regard sur son graphique permet de se convaincre qu'elle est continue partout sur $\R^+$.
+    Un simple regard sur son graphique permet de se convaincre qu'elle est continue partout sur $\cointerval{1}{+ \infty}$.
     \begin{plot}{0.5}{-2}{-2}{6}{4}
         \plotfunction{1:6}{(\x - 1)^(1/2)}
         \drawline (1,-2)--(1,6);
