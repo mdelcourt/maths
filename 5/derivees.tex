@@ -29,6 +29,10 @@ Le moment où Newton introduit les dérivées
 et écrit les équations qui gouvernent l'Univers en termes de ces dérivées
 est considéré comme l'un des tournants de l'histoire de la pensée humaine.
 
+Lorsque l'on tente de définir la vitesse ou une autre quantité mentionné ci-dessus,
+le problème sous-jacent est le même,
+à savoir de déterminer la tangente au graphe.
+
 \section{Définition et premières propriétés}
 
 Supposons que nous souhaitons trouver l'inclinaison ou la pente de la \emph{tangente} au graphe d'une fonction $f$ au point $(a, f(a))$,
@@ -1007,9 +1011,20 @@ Pour étudier la convexité d'une fonction $f$, on étudie le \emph{signe} de sa
 \begin{definition}
     [Dérivée seconde]
     
-    Soit $f$ une fonction.
-    Supposons que $f'$ est dérivable.
-    La dérivée seconde de $f$, notée $f''$, est la dérivée de $f'$\footnote{où si vous aimez embêter vos profs de français avec des répétitions, c'est la dérivée de la dérivée de $f$}.
+    \subsubsection{Cadre}
+
+    \begin{itemize}
+        \item $f$ est une fonction dérivable.
+        \item $f'$ est également dérivable.
+    \end{itemize}
+
+    \subsubsection{Définition}
+
+    La dérivée de $f'$\footnote{%
+        Si vous aimez embêter vos profs de français avec des répétitions,
+        c'est la dérivée de la dérivée de $f$.
+    } est appelée \emph{dérivée seconde} de $f$,
+    que l'on notera $f''$.
 \end{definition}
 
 Si la dérivée seconde de $f$ existe, on dit que $f$ est \emph{deux fois dérivable}.
