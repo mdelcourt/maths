@@ -727,13 +727,46 @@ La \emph{croissance} est liée à la dérivée via le théorème suivant.
 \begin{proposition}
     [Théorème des accroissements finis]
 
-    Soit $f$ une fonction dérivable sur un intervalle $I$.
-    Soit $a,b \in I$ avec $a \neq b$.
+    \subsubsection{Hypothèses}
+
+    \begin{itemize}
+        \item $f$ une fonction dérivable sur un intervalle $I$.
+        \item $a,b \in I$ deux points distincts.
+    \end{itemize}
+    \subsubsection{Thèse}
+
     Il existe $c$ entre $a$ et $b$ tel que
     \begin{align}
         \frac {f(b) - f(a)} {b - a} = f'(c).
     \end{align}
 \end{proposition}
+
+\begin{remark}
+    [Interprétation des accroissements finis]
+
+    La formule
+    \begin{align}
+        \frac {f(b) - f(a)} {b - a} = f'(c).
+    \end{align}
+    signifie que la tangente en $c$
+    est parallèle à la sécante passant par $(a, f(a))$ et $(b, f(b))$
+    comme ci-dessous.
+
+    \begin{plot}{0.5}{-6}{-2}{6}{6}
+        \def\a{-3}
+        \def\b{3}
+        \def\c{1.25}
+        \def\f{e^(\x - 2) + 1}
+        \def\der{e^(\x - 2)}
+        \plotfunction{-6:6}{\f}
+        \drawsecant{\f}{\a}{\b}{-6:6}
+        \drawtangent{\f}{\der}{\c}{0:2.5}
+        \showxcoordinates{\f}{\a}{[below] {$a$}}
+        \showxcoordinates{\f}{\b}{[below] {$b$}}
+        \showxcoordinates{\f}{\c}{[below] {$c$}}
+    \end{plot}
+\end{remark}
+
 \begin{proof}[Ébauche de preuve]
     Définissons la fonction
     \begin{align}
