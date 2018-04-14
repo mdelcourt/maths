@@ -715,13 +715,13 @@ La proposition suivante permet de sélectionner les points qui ont une chance d'
 \end{proposition}
 \begin{proof}
     Supposons que $a$ est un maximum local de $f$.
-    Soit $x \in \dom f$.
+    Soit $x \in \dom f$ \emph{suffisament proche de $a$}.
 
     \setlength{\columnseprule}{0.5pt}
     \begin{multicols}{2}
-        Si $x$ est \emph{suffisamment proche} de $a$ avec $x < a$,
+        Si $x < a$,
         alors on en déduit que
-        les sécantes par la \emph{gauche} sont tournées vers le \emph{haut}
+        la sécante est tournée vers le \emph{haut}
         \begin{plot}{0.3}{-6}{-3}{6}{6}
             \def\f{-1/5*(\x)^2 + 2}
             \plotfunction{-6:6}{\f}
@@ -737,9 +737,9 @@ La proposition suivante permet de sélectionner les points qui ont une chance d'
             f'(a) \ge 0.
         \end{align}
 
-        Si $x$ est \emph{suffisamment proche} de $a$ avec $x > a$,
+        Si $x > a$,
         alors on en déduit que
-        les sécantes par la \emph{droite} sont tournées vers le \emph{bas}
+        la sécante est tournée vers le \emph{bas}
         \begin{plot}{0.3}{-6}{-3}{6}{6}
             \def\f{-1/5*(\x)^2 + 2}
             \plotfunction{-6:6}{\f}
