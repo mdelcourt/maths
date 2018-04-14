@@ -721,22 +721,36 @@ La proposition suivante permet de sélectionner les points qui ont une chance d'
     \begin{multicols}{2}
         Si $x$ est \emph{suffisamment proche} de $a$ avec $x < a$,
         alors on en déduit que
+        les sécantes par la \emph{gauche} sont tournées vers le \emph{haut}
+        \begin{plot}{0.3}{-6}{-3}{6}{6}
+            \def\f{-1/5*(\x)^2 + 2}
+            \plotfunction{-6:6}{\f}
+            \drawsecant{\f}{-1}{0}{-4:3}
+            \showxcoordinates{\f}{-1}{[below] {$x$}}
+        \end{plot}
+        ce qui se traduit mathématiquement par
         \begin{align}
-            \frac{f(x) - f(a)}{x-a} \ge 0,
+            \frac{f(x) - f(a)}{x-a} \ge 0.
         \end{align}
-        (les sécantes par la \emph{gauche} sont tournées vers le \emph{haut})
-        ce qui, en faisant tendre $x$ vers $a$, devient
+        En faisant tendre $x$ vers $a$, on obtient
         \begin{align}
             f'(a) \ge 0.
         \end{align}
 
         Si $x$ est \emph{suffisamment proche} de $a$ avec $x > a$,
         alors on en déduit que
+        les sécantes par la \emph{droite} sont tournées vers le \emph{bas}
+        \begin{plot}{0.3}{-6}{-3}{6}{6}
+            \def\f{-1/5*(\x)^2 + 2}
+            \plotfunction{-6:6}{\f}
+            \drawsecant{\f}{1}{0}{-3:4}
+            \showxcoordinates{\f}{1}{[below] {$x$}}
+        \end{plot}
+        ce qui se traduit mathématiquement par
         \begin{align}
             \frac{f(x) - f(a)}{x-a} \le 0,
         \end{align}
-        (les sécantes par la \emph{droite} sont tournées vers le \emph{bas})
-        ce qui, en faisant tendre $x$ vers $a$, devient
+        En faisant tendre $x$ vers $a$, on obtientd
         \begin{align}
             f'(a) \le 0.
         \end{align}
