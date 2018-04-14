@@ -1202,7 +1202,11 @@ Reprenons l'étude de fonction de la section précédente afin de la compléter.
     (Re)Voici le graphique de $f$ qui (re)confirme nos résultats :
 
     \begin{plot}{0.5}{-5}{-5}{5}{5}
-        \plotfunction{-5:5}{(\x)^5 - (10/3)*(\x)^3}
+        \def\f{(\x)^5 - (10/3)*(\x)^3}
+        \plotfunction{-5:5}{\f}
+        \showxcoordinates{\f}{-1}{[below] {$-1$}}
+        \showxcoordinates{\f}{1}{[above] {$1$}}
+        \drawpoint[black]{0, 0}
     \end{plot}
 \end{example}
 
