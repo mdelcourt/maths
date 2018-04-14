@@ -1062,10 +1062,24 @@ on dit que $f$ est \emph{deux fois dérivable} sur $I$.
 
 \begin{definition}
     [Point d'inflexion]
-    
-    Soit $f$ une fonction.
-    Soit $a \in \dom f$.
+
+    \subsubsection{Cadre}
+
+    \begin{itemize}
+        \item $f$ une fonction deux fois dérivable sur un intervalle $I$.
+        \item $a \in I$.
+    \end{itemize}
+
+    \subsubsection{Définition}
+
     On dit que $f$ admet un \emph{point d'inflexion} en $a$ si la convexité de $f$ change en $a$\footnote{elle passe de convexe à concave ou de concave à convexe}.
+
+    \begin{plot}
+        {0.5}{-6}{-6}{6}{6}
+
+        \plotfunction{-6:6}{1/15*(\x)^3}
+        \drawpoint[black]{0,0}
+    \end{plot}
 \end{definition}
 
 Reprenons l'étude de fonction de la section précédente afin de la compléter.
