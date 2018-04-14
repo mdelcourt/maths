@@ -160,8 +160,8 @@ et la droite résultante a comme pente
         \def\f{(\x)^2 - 4}
         \plotfunction{-6:6}{\f}
         \drawsecant{\f}{-1}{1.5}{-6:6}
-        \showxcoordinates{\f}{-1}{[above] {$a$}}
-        \showxcoordinates{\f}{1.5}{[above] {$x$}}
+        \showxcoordinate{\f}{-1}{[above] {$a$}}
+        \showxcoordinate{\f}{1.5}{[above] {$x$}}
     \end{plot}
 \end{remark}
 
@@ -740,7 +740,7 @@ La proposition suivante permet de sélectionner les points qui ont une chance d'
             \def\f{-1/5*(\x)^2 + 2}
             \plotfunction{-6:6}{\f}
             \drawsecant{\f}{-1}{0}{-4:3}
-            \showxcoordinates{\f}{-1}{[below] {$x$}}
+            \showxcoordinate{\f}{-1}{[below] {$x$}}
         \end{plot}
         ce qui se traduit mathématiquement par
         \begin{align}
@@ -758,7 +758,7 @@ La proposition suivante permet de sélectionner les points qui ont une chance d'
             \def\f{-1/5*(\x)^2 + 2}
             \plotfunction{-6:6}{\f}
             \drawsecant{\f}{1}{0}{-3:4}
-            \showxcoordinates{\f}{1}{[below] {$x$}}
+            \showxcoordinate{\f}{1}{[below] {$x$}}
         \end{plot}
         ce qui se traduit mathématiquement par
         \begin{align}
@@ -838,8 +838,8 @@ est toujours \emph{positif} (resp.\ \emph{négatif}).
         \def\der{e^(\x - 2)}
         \plotfunction{-6:6}{\f}
         \drawsecant{\f}{\a}{\b}{-6:6}
-        \showxcoordinates{\f}{\a}{[below] {$a$}}
-        \showxcoordinates{\f}{\b}{[below] {$b$}}
+        \showxcoordinate{\f}{\a}{[below] {$a$}}
+        \showxcoordinate{\f}{\b}{[below] {$b$}}
     \end{plot}
 
     Essentiellement,
@@ -867,8 +867,8 @@ est toujours \emph{positif} (resp.\ \emph{négatif}).
         \def\der{-e^(\x - 2)}
         \plotfunction{-6:6}{\f}
         \drawsecant{\f}{\a}{\b}{-6:6}
-        \showxcoordinates{\f}{\a}{[below] {$a$}}
-        \showxcoordinates{\f}{\b}{[below] {$b$}}
+        \showxcoordinate{\f}{\a}{[below] {$a$}}
+        \showxcoordinate{\f}{\b}{[below] {$b$}}
     \end{plot}
 
     Essentiellement,
@@ -915,9 +915,9 @@ La \emph{croissance} est liée à la dérivée via le théorème suivant.
         \plotfunction{-6:6}{\f}
         \drawsecant{\f}{\a}{\b}{-6:6}
         \drawtangent{\f}{\der}{\c}{0:2.5}
-        \showxcoordinates{\f}{\a}{[below] {$a$}}
-        \showxcoordinates{\f}{\b}{[below] {$b$}}
-        \showxcoordinates{\f}{\c}{[below] {$c$}}
+        \showxcoordinate{\f}{\a}{[below] {$a$}}
+        \showxcoordinate{\f}{\b}{[below] {$b$}}
+        \showxcoordinate{\f}{\c}{[below] {$c$}}
     \end{plot}
 
     Dès lors,
@@ -1218,8 +1218,8 @@ Reprenons l'étude de fonction de la section précédente afin de la compléter.
     \begin{plot}{0.5}{-5}{-5}{5}{5}
         \def\f{(\x)^5 - (10/3)*(\x)^3}
         \plotfunction{-5:5}{\f}
-        \showxcoordinates{\f}{-1}{[below] {$-1$}}
-        \showxcoordinates{\f}{1}{[above] {$1$}}
+        \showxcoordinate{\f}{-1}{[below] {$-1$}}
+        \showxcoordinate{\f}{1}{[above] {$1$}}
         \drawpoint[black]{0, 0}
     \end{plot}
 \end{example}

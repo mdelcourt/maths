@@ -26,7 +26,7 @@
     \draw[dashed] (\x, 0) node#3 -- (\x, \y) -- (0, \y) node#4;
     \drawpoint[black]{\x, \y};
 }
-\newcommand{\showxcoordinates}[3]{%
+\newcommand{\showxcoordinate}[3]{%
     \def\x{#2}
     \pgfmathsetmacro{\y}{#1}
     \draw[dashed] (\x, 0) node#3 -- (\x, \y);
