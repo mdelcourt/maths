@@ -1001,6 +1001,56 @@ on dit que $f$ est \emph{deux fois dérivable} sur $I$.
 \end{definition}
 
 \begin{remark}
+    [Interprétation de la convexité et de la concavité]
+
+    \subsubsection{Convexité}
+
+    Si $f'' \geq 0$ sur $I$,
+    alors $f'$ est \emph{croissante} sur $I$.
+    Il s'ensuit que les tangentes sont de plus en plus tournée vers le \emph{haut},
+    comme dans le graphique suivant:
+    \begin{plot}{0.5}{-6}{-3}{6}{6}
+		\def\f{1/5*(\x)^2 - 2}
+		\def\der{2/5*(\x)}
+
+		\plotfunction{-6:6}{\f}
+
+		\drawtangent{\f}{\der}{-4}{-4.9:-3.1}
+		\drawtangent{\f}{\der}{-2}{-2.9:-1.1}
+		\drawtangent{\f}{\der}{0}{-0.9:0.9}
+		\drawtangent{\f}{\der}{2}{1.1:2.9}
+		\drawtangent{\f}{\der}{4}{3.1:4.9}
+    \end{plot}
+
+    \subsubsection{Concavité}
+
+    Si $f'' \leq 0$ sur $I$,
+    alors $f'$ est \emph{décroissante} sur $I$.
+    Il s'ensuit que les tangentes sont de plus en plus tournée vers le \emph{bas},
+    comme dans le graphique suivant:
+    \begin{plot}{0.5}{-6}{-6}{6}{3}
+		\def\f{-1/5*(\x)^2 + 2}
+		\def\der{-2/5*(\x)}
+	 
+		\plotfunction{-6:6}{\f}
+	 
+		\drawtangent{\f}{\der}{-4}{-4.9:-3.1}
+		\drawtangent{\f}{\der}{-2}{-2.9:-1.1}
+		\drawtangent{\f}{\der}{0}{-0.9:0.9}
+		\drawtangent{\f}{\der}{2}{1.1:2.9}
+		\drawtangent{\f}{\der}{4}{3.1:4.9}
+    \end{plot}
+
+    \subsubsection{TLDR}
+
+    Une fonction $f$ est
+    \begin{itemize}
+        \item \emph{convexe} si son graphe courbe vers le \emph{haut};
+        \item \emph{concave} si son graphe courbe vers le \emph{bas};
+    \end{itemize}
+\end{remark}
+
+\begin{remark}
     [La convexité pour les nuls]
 
     Une fonction $f$ est:
