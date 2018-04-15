@@ -145,6 +145,7 @@ et la droite résultante a comme pente
     [Interprétation géométrique de la dérivabilité]
     
     Une fonction $f$ est dérivable en $a \in \dom f$ si son graphique admet une tangente non verticale en $a$.
+    Dans le cas où $f$ est dérivable en $a$, le nombre dérivé de $f$ en $a$ est la pente de la tangente de $f$ en $a$.
     
     Sur le graphique suivant, on voit que $f$ est dérivable partout sauf en $0$.
     
@@ -171,6 +172,30 @@ et la droite résultante a comme pente
     associe le nombre dérivé de $f$ en $x$.
     On la note $f'$.
 \end{definition}
+
+\begin{remark}
+    [Interprétation géométrique de la fonction dérivée]
+    
+    La fonction dérivée associe à chaque $x \in \dom f$ l'``inclinaison'' du graphique de $f$
+    
+    \begin{plot}{0.5}{-6}{-3}{6}{6}
+		\def\f{1/5*(\x)^2 - 2}
+		\def\der{2/5*(\x)}
+
+		\plotfunction{-6:6}{\f}
+
+		\drawtangent{\f}{\der}{-4}{-4.9:-3.1}
+		\drawtangent{\f}{\der}{-2}{-2.9:-1.1}
+		\drawtangent{\f}{\der}{0}{-0.9:0.9}
+		\drawtangent{\f}{\der}{2}{1.1:2.9}
+		\drawtangent{\f}{\der}{4}{3.1:4.9}
+		\showxcoordinate{\f}{-4}{[below] {}}
+		\showxcoordinate{\f}{-2}{[below] {}}
+		\showxcoordinate{\f}{0}{[below] {}}
+		\showxcoordinate{\f}{2}{[below] {}}
+		\showxcoordinate{\f}{4}{[below] {}}
+    \end{plot}
+\end{remark}
 
 \begin{remark}
     [Terminologie]
