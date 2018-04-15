@@ -608,9 +608,11 @@ Une dérivée peut se calculer terme par terme.
     \begin{align}
         f(x) = x^2 \sin x.
     \end{align}
-    Pour tout $x \in \R_0^+$, on a 
+    Pour tout $x \in \R$, on a 
     \begin{align}
-        f'(x) = 2x \cdot \sin x + x^2 \cdot \cos x.
+        f'(x)
+        &= (x^2)' \cdot \sin x + x^2 \cdot (\cos x)'\\
+        &=2x \sin x + x^2 \cos x.
     \end{align}
 \end{example}
 
@@ -620,7 +622,10 @@ Une dérivée peut se calculer terme par terme.
     Soit $k \in \R$ une constante. 
     La fonction $kf$ est dérivable en $a$ et on a 
     \begin{align}
-        (kf)'(a) = 0 \cdot f(a) + k \cdot f'(a) = kf'(a).
+        (kf)'(a) 
+        &= (k)' \cdot f(a) + k \cdot f'(a)\\
+        &= 0 \cdot f(a) + k \cdot f'(a)\\
+        &= kf'(a).
     \end{align}
 \end{example}
 
@@ -722,6 +727,7 @@ Une dérivée peut se calculer terme par terme.
     Pour tout $x \in \R$, on a 
     \begin{align}
         f'(x) 
+        &= \frac{(x^3 -1)' \cdot (x^2 +2) - (x^3-1) \cdot (x^2 + 2)'}{(x^2 +2)^2}\\
         &= \frac{3x^2 \cdot (x^2 + 2) - (x^3 - 1) \cdot 2x}{(x^2 + 2)^2}\\
         &= \frac{x^4 + 6 x^2 + 2x}{(x^2 + 2)^2}.
     \end{align}
