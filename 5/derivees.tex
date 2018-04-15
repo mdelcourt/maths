@@ -1054,8 +1054,43 @@ Dans l'exemple suivant, on revisite une formule vue l'an passé.
     \begin{align}
         f'(x) = 2ax + b.
     \end{align}
-    L'unique racine de $f'$ est $x = - \frac{b}{2a}$.
-    Par le théorème de Fermat, l'abscisse du sommet de $f$ est donc $- \frac{b}{2a}$.
+    
+    On va séparer l'étude de $f'$ suivant le signe de $a$.
+    
+    \subsubsection{Si $a > 0$}
+    Si $a > 0$, $f'$ est une droite \emph{croissante} et
+    sa racine est $x = - \frac{b}{2a}$.
+    
+    \signtable{$x$/0.75, $f'(x)$/0.75, $f(x)$/2}{,$- \frac b {2a}$,}{%
+        \signrow{,-,0,+,}
+        \tkzTabVar{+/ $+\infty$, -/ $\frac{- \Delta}{4a}$, +/ $+\infty$}
+    }
+    
+    La fonction $f$ admet un minimum local en $- \frac b {2a}$.
+    
+    \begin{plot}{0.5}{-2}{-2}{6}{6}
+        \def\f{(\x - 2)^2 - 1}
+        \plotfunction{-2:6}{\f}
+        \showxcoordinate{\f}{2}{[above] {$- \frac{b}{2a}$}}
+    \end{plot}
+
+    \subsubsection{Si $a < 0$}
+    Si $a > 0$, $f'$ est une droite \emph{décroissante} et
+    sa racine est $x = - \frac{b}{2a}$.
+    
+    \signtable{$x$/0.75, $f'(x)$/0.75, $f(x)$/2}{,$- \frac b {2a}$,}{%
+        \signrow{,+,0,-,}
+        \tkzTabVar{-/ $-\infty$, +/ $\frac{- \Delta}{4a}$, -/ $-\infty$}
+    }
+    
+    La fonction $f$ admet un maximum local en $- \frac b {2a}$.
+    
+    \begin{plot}{0.5}{-5}{-6}{3}{2}
+        \def\f{-(\x + 1)^2 + 1}
+        \plotfunction{-5:3}{\f}
+        \showxcoordinate{\f}{-1}{[below] {$- \frac{b}{2a}$}}
+    \end{plot}
+    
 \end{example}
 
 \section{Dérivée seconde, convexité et points d'inflexion}
