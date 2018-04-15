@@ -107,7 +107,7 @@ et la droite résultante a comme pente
 \end{align}
 
 \begin{definition}
-    [Dérivée]
+    [Nombre dérivé]
 
     \subsubsection*{Cadre}
 
@@ -127,7 +127,7 @@ et la droite résultante a comme pente
     \begin{align}
         f'(a) \defeq \lim_{x \to a} \frac {f(x) - f(a)} {x - a}
     \end{align}
-    est appelé la \emph{dérivée} de $f$ en $a$.
+    est appelé le \emph{nombre dérivé} de $f$ en $a$.
 \end{definition}
 
 \begin{remark}
@@ -135,10 +135,27 @@ et la droite résultante a comme pente
 
     \begin{itemize}
         \item Nous dirons qu'une fonction $f$ est \textbf{dérivable en $a$}
-            si la dérivée de $f$ en $a$ a un sens et existe.
+            si le nombre dérivé de $f$ en $a$ a un sens et existe.
         \item Nous dirons qu'une fonction $f$ est \textbf{dérivable}
             si elle est dérivable en tout point de son domaine.
     \end{itemize}
+\end{remark}
+
+\begin{definition}
+    [Fonction dérivée]
+    
+    La fonction dérivée de $f$ est la fonction qui à chaque $x \in \dom f$ où $f$ est dérivable
+    associe le nombre dérivé de $f$ en $x$.
+    On la note $f'$.
+\end{definition}
+
+\begin{remark}
+    [Terminologie]
+
+    Dans la pratique, on confond souvent le \emph{nombre dérivé} de $f$ en $a$
+    et l'évaluation de la \emph{fonction dérivée} $f'$ en $a$
+    \footnote{En même temps, c'est la même chose et ça se note pareil}.
+    Dans cette optique, on parlera désormais de \emph{dérivée} de $f$ en $a$.
 \end{remark}
 
 \begin{remark}
@@ -197,7 +214,7 @@ et la droite résultante a comme pente
 
     Soit $k \in \R$ une constante.
     Calculons la dérivée de $f(x) = k$ en un $a \in \R$ quelconque.
-    Dans ce but,
+    Pour $x \in \R \setminus \{a\}$,
     analysons le quotient différentiel
     \begin{align}
         \frac {f(x) - f(a)}{x - a}
@@ -217,13 +234,20 @@ et la droite résultante a comme pente
     \begin{plot}{0.5}{-6}{-1}{6}{3}
         \plotfunction{-6:6}{1}
     \end{plot}
+    
+    La dérivée d'une fonction constante $f(x) = k$ est donc $f'(x) = 0$.
+    Nous noterons parfois
+    \begin{align}
+        (k)'=0.
+    \end{align}
+
 \end{example}
 
 \begin{example}
     [Dérivée de $x$]
 
     Calculons la dérivée de $f(x) = x$ en un $a \in \R$ quelconque.
-    Dans ce but,
+    Pour $x \in \R \setminus \{a\}$,
     analysons le quotient différentiel
     \begin{align}
         \frac {f(x) - f(a)}{x - a}
@@ -243,13 +267,19 @@ et la droite résultante a comme pente
     \begin{plot}{0.25}{-6}{-6}{6}{6}
         \plotfunction{-6:6}{\x}
     \end{plot}
+    
+    La dérivée de la fonction $f(x) = x$ est donc $f'(x) = 1$.
+    Nous noterons parfois
+    \begin{align}
+        (x)'=1.
+    \end{align}
 \end{example}
 
 \begin{example}
     [Dérivée de $x^2$]
 
     Calculons la dérivée de $f(x) = x^2$ en un $a \in \R$ quelconque.
-    Dans ce but,
+    Pour $x \in \R \setminus \{a\}$,
     analysons le quotient différentiel
     \begin{align}
         \frac {f(x) - f(a)}{x - a}
@@ -263,13 +293,19 @@ et la droite résultante a comme pente
     \begin{align}
         f'(a) = 2a.
     \end{align}
+    
+    La dérivée de la fonction $f(x) = x^2$ est donc $f'(x) = 2x$.
+    Nous noterons parfois
+    \begin{align}
+        (x^2)'=2x.
+    \end{align}
 \end{example}
 
 \begin{example}
     [Dérivée de $x^3$]
 
     Calculons la dérivée de $f(x) = x^3$ en un $a \in \R$ quelconque.
-    Dans ce but,
+    Pour $x \in \R \setminus \{a\}$,
     analysons le quotient différentiel
     \begin{align}
         \frac {f(x) - f(a)}{x - a}
@@ -283,6 +319,12 @@ et la droite résultante a comme pente
     \begin{align}
         f'(a) = 3a^2.
     \end{align}
+    
+    La dérivée de la fonction $f(x) = x^3$ est donc $f'(x) = 3x^2$.
+    Nous noterons parfois
+    \begin{align}
+        (x^3)'=3x^2.
+    \end{align}
 \end{example}
 
 On peut extrapoler l'exemple suivant.
@@ -292,7 +334,7 @@ On peut extrapoler l'exemple suivant.
 
     Soit $n \in \N$.
     Calculons la dérivée de $f(x) = x^n$ en un $a \in \R$ quelconque.
-    Dans ce but,
+    Pour $x \in \R \setminus \{a\}$,
     analysons le quotient différentiel
     \begin{align}
         \frac {f(x) - f(a)}{x - a}
@@ -306,13 +348,19 @@ On peut extrapoler l'exemple suivant.
     \begin{align}
         f'(a) = na^{n-1}.
     \end{align}
+    
+    La dérivée de la fonction $f(x) = x^n$ est donc $f'(x) = n x^{n-1}$.
+    Nous noterons parfois
+    \begin{align}
+        (x^n)'=n x^{n-1}.
+    \end{align}
 \end{example}
 
 \begin{example}
     [Dérivée de $\sqrt x$]
 
-    Calculons la dérivée de $f(x) = \sqrt x$ en un $a \in \R^+$ quelconque.
-    Dans ce but,
+    Calculons la dérivée de $f(x) = \sqrt x$ en un $a \in \R_0^+$ quelconque.
+    Pour $x \in \R_0^+ \setminus \{a\}$,
     analysons le quotient différentiel
     \begin{align}
         \frac {f(x) - f(a)}{x - a}
@@ -328,25 +376,37 @@ On peut extrapoler l'exemple suivant.
     \begin{align}
         f'(a) = \frac 1 {2 \sqrt a}
     \end{align}
+    
+    La dérivée de la fonction $f(x) = \sqrt x$ est donc $f'(x) = \frac 1 {2 \sqrt x}$.
+    Nous noterons parfois
+    \begin{align}
+        (\sqrt x)'=\frac 1 {2 \sqrt x}.
+    \end{align}
 \end{example}
 
 \begin{example}
     [Dérivée de $\frac 1 x$]
 
     Calculons la dérivée de $f(x) = \frac 1 x$ en un $a \in \R_0$ quelconque.
-    Dans ce but,
+    Pour $x \in \R_0 \setminus \{a\}$,
     analysons le quotient différentiel
     \begin{align}
         \frac {f(x) - f(a)} {x - a}
         &= \frac {\frac 1 x - \frac 1 a}{x - a}\\
         &= \frac{\frac{a - x}{ax}}{x - a}\\
-        &= \frac {-1}{ax}
+        &= - \frac {1}{ax}
     \end{align}
 
     En faisant tendre $x$ vers $a$ des deux côtés,
     on obtient
     \begin{align}
-        f'(a) = \frac {-1} {a^2}.
+        f'(a) = - \frac {1} {a^2}.
+    \end{align}
+    
+    La dérivée de la fonction $f(x) = \frac 1 x$ est donc $f'(x) = - \frac{1}{x^2}$.
+    Nous noterons parfois
+    \begin{align}
+        \left(\frac 1 x\right)'=- \frac 1 {x^2}.
     \end{align}
 \end{example}
 
@@ -442,8 +502,8 @@ est justifié par la proposition suivante (admise sans preuve).
     Pour tout $x \in \R$,
     nous avons
     \begin{align}
-        \sin' x &= \cos x\\
-        \cos' x &= -\sin x.
+        (\sin x)' &= \cos x\\
+        (\cos x)' &= -\sin x.
     \end{align}
 \end{proposition}
 
