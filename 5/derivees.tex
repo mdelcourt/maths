@@ -603,6 +603,7 @@ Une dérivée peut se calculer terme par terme.
     \end{align}
 
     En faisant tendre $x$ vers $a$ des deux côtés,
+    et en se souvenant qu'alors $g(x)$ tend vers $g(a)$ par continuité,
     on obtient
     \begin{align}
         (f g)'(a) = f'(a) g(a) + f(a) g'(a).
@@ -652,6 +653,10 @@ Une dérivée peut se calculer terme par terme.
         (g \circ f)'(a) = g'(f(a)) f'(a).
     \end{align}
 \end{proposition}
+
+On va prouver ce résultat dans le cas particulier où $f$ est \emph{injective}
+c'est-à-dire qu'elle associe des images \emph{différentes} à chaque valeur de sa variable.
+
 \begin{proof}[Preuve lorsque $f$ est injective]
     Soit $x \in \dom f \setminus \{a\}$.
     Le quotient différentiel de $g \circ f$ s'écrit
