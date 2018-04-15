@@ -143,26 +143,66 @@ et la droite résultante a comme pente
 
 \begin{remark}
     [Interprétation géométrique de la dérivabilité]
-    
-    Une fonction $f$ est dérivable en $a \in \dom f$ si son graphique admet une tangente non verticale en $a$.
-    Dans le cas où $f$ est dérivable en $a$, le nombre dérivé de $f$ en $a$ est la pente de la tangente de $f$ en $a$.
-    
-    Sur le graphique suivant, on voit que $f$ est dérivable partout sauf en $0$.
-    
-    \begin{plot}
-    {0.5}{-4}{-2}{4}{2}
 
-    \def\f{(\x)^(1/3)}
-    \def\g{-(-\x)^(1/3)}
-    \def\derf{(1/3)*(\x)^(-2/3)}
-    \def\derg{(1/3)*(-\x)^(-2/3)}
+    \begin{itemize}
+        \item Une fonction est \emph{dérivable} en un point si son graphique admet une \emph{tangente non verticale} en ce point.
 
-    \plotfunction{0:4}{\f}
-    \plotfunction{-4:0}{\g}
-    \drawtangent{\f}{\derf}{2}{0.5:3.5}
-    \drawtangent{\g}{\derg}{-2}{-3.5:-0.5}
-    \drawline (0,-1) -- (0,1);
-    \end{plot}
+            Par exemple,
+            la fonction ci-dessous est dérivable partout \emph{sauf en $0$},
+            où la tangente est verticale.
+            \begin{plot}{0.5}{-4}{-2}{4}{2}
+                \def\f{(\x)^(1/3)}
+                \def\g{-(-\x)^(1/3)}
+                \def\derf{(1/3)*(\x)^(-2/3)}
+                \def\derg{(1/3)*(-\x)^(-2/3)}
+
+                \plotfunction{0:4}{\f}
+                \plotfunction{-4:0}{\g}
+                \drawtangent{\f}{\derf}{2}{0.5:3.5}
+                \drawtangent{\g}{\derg}{-2}{-3.5:-0.5}
+                \drawline (0,-1) -- (0,1);
+                \drawpoint[black]{0, 0}
+            \end{plot}
+        \item Lorsqu'une fonction est \emph{dérivable} en un point,
+            la dérivée est la \emph{pente} de la tangente,
+            et donc donne une information sur l'\emph{inclinaison} de cette dernière.
+            \begin{itemize}
+                \item Si la dérivée est \emph{strictement positive},
+                    la tangente est \emph{inclinée vers le haut}.
+                    \begin{plot}{0.5}{-4}{-2}{4}{2}
+                        \def\f{e^(0.5*\x) - 1}
+                        \def\der{0.5*e^(0.5*\x)}
+                        \plotfunction{-4:4}{\f}
+                        \drawtangent{\f}{\der}{-1}{-4:4}
+                    \end{plot}
+                    Nous verrons que cela implique que la fonction \emph{croît} localement.
+                \item Si la dérivée est \emph{nulle},
+                    la tangente est \emph{horizontale}.
+                    \begin{plot}{0.5}{-4}{-2}{4}{2}
+                        \def\f{0.5*(\x)^2 - 1}
+                        \def\der{2*0.5*\x}
+                        \plotfunction{-4:4}{\f}
+                        \drawtangent{\f}{\der}{0}{-4:4}
+                    \end{plot}
+                    Nous verrons que de tels points sont souvent des \emph{extrémums} de fonctions,
+                    mais pas toujours comme le montre le graphe suivant.
+                    \begin{plot}{0.5}{-4}{-2}{4}{2}
+                        \def\f{0.1*(\x)^3}
+                        \def\der{3*0.1*(\x)^2}
+                        \plotfunction{-4:4}{\f}
+                        \drawtangent{\f}{\der}{0}{-4:4}
+                    \end{plot}
+                \item Si la dérivée est \emph{strictement négative},
+                    la tangente est \emph{inclinée vers le haut}.
+                    \begin{plot}{0.5}{-4}{-2}{4}{2}
+                        \def\f{e^(-0.5*\x) - 1}
+                        \def\der{-0.5*e^(-0.5*\x)}
+                        \plotfunction{-4:4}{\f}
+                        \drawtangent{\f}{\der}{-1}{-4:4}
+                    \end{plot}
+                    Nous verrons que cela implique que la fonction \emph{décroît} localement.
+            \end{itemize}
+    \end{itemize}
 \end{remark}
 
 \begin{definition}
