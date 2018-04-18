@@ -119,7 +119,19 @@ Nous arrivons donc au compromis suivant
 \begin{definition}
     [Espérance (cas équiprobable)]
 
-    Soit
+    \subsubsection{Cadre}
+    \begin{itemize}
+        \item On conduit une expérience aléatoire \emph{équiprobable}.
+        \item $\Omega$ désigne toutes les $n$ issues possibles de cette expérience.
+        \item $X$ est une variable aléatoire sur $\Omega$.
+    \end{itemize}
+
+    \subsubsection{Définition}
+    La moyenne des valeurs atteintes par $X$ sur $\Omega$,
+    \begin{align}
+        \E(X) \defeq \frac 1 n \sum_{I \in \Omega} X(I)
+    \end{align}
+    est appelée l'\emph{espérance} de $X$.
 \end{definition}
 
 \end{document}
